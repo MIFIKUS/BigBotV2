@@ -1,4 +1,4 @@
-from l2m_ui_funcs.main_screen import open_menu, open_market, open_settings
+from l2m_ui_funcs.main_screen import open_menu, open_settings
 from l2m_ui_funcs.actions_in_menus.settings import settings
 
 
