@@ -14,7 +14,7 @@ def global_market_opened() -> bool:
     """Проверка на то, что мировой аукцион открыт"""
     screenshot_name = 'l2m_ui_funcs\\imgs\\screenshots\\is_global_market_opened.png'
     color = [255, 255, 255]
-    area_of_screenshot = (1341, 92, 1342, 93)
+    area_of_screenshot = (1335, 93, 1336, 94)
 
     return check_color(color, screenshot_name, area_of_screenshot)
 
@@ -23,7 +23,7 @@ def sell_menu_opened() -> bool:
     """Проверка на то, что вкладка Продажа открыта"""
     screenshot_name = 'l2m_ui_funcs\\imgs\\screenshots\\is_sell_menu_opened.png'
     color = [255, 255, 255]
-    area_of_screenshot = (351, 175, 352, 176)
+    area_of_screenshot = (355, 175, 356, 176)
 
     return check_color(color, screenshot_name, area_of_screenshot)
 
@@ -32,7 +32,7 @@ def sold_menu_opened() -> bool:
     """Проверка на то, что вкладка Продано открыта"""
     screenshot_name = 'l2m_ui_funcs\\imgs\\screenshots\\is_sold_menu_opened.png'
     color = [255, 255, 255]
-    area_of_screenshot = (598, 175, 599, 176)
+    area_of_screenshot = (603, 175, 604, 176)
 
     return check_color(color, screenshot_name, area_of_screenshot)
 

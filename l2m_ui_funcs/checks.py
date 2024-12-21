@@ -62,4 +62,4 @@ def settings_opened() -> bool:
     template_name = 'l2m_ui_funcs\\imgs\\templates\\settings_opened.png'
     screenshot_name = 'l2m_ui_funcs\\imgs\\screenshots\\is_settings_opened.png'
 
-    return check(screenshot_name, template_name, (1495, 70, 1740, 130))
+    return check(screenshot_name, template_name, (1485, 65, 1740, 130))

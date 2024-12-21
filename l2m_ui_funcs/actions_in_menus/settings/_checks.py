@@ -14,7 +14,7 @@ def collect_menu_opened() -> bool:
     """Проверяет открыта ли вкладка подбор"""
     screenshot_name = 'l2m_ui_funcs\\imgs\\screenshots\\is_collect_opened.png'
     color = [255, 255, 255]
-    area_of_screenshot = (134, 380, 135, 381)
+    area_of_screenshot = (134, 385, 135, 386)
 
     return check_color(color, screenshot_name, area_of_screenshot)
 
