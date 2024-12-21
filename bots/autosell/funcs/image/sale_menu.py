@@ -1,3 +1,5 @@
+import time
+
 from general.funcs import string_work
 from general.funcs.checks import check
 from general.funcs.string_work import delete_junk_symbols
@@ -72,6 +74,7 @@ def get_equiped_item_cords() -> tuple or bool:
     if not cords:
         mouse.move(1600, 520)
         mouse.wheel_down(17)
+        time.sleep(2)
 
     cords = image.get_matching_image_cords(screenshot_name, template_name)
 
