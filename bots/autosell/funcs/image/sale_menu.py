@@ -70,6 +70,7 @@ def get_equiped_item_cords() -> tuple or bool:
     cords = image.get_matching_image_cords(screenshot_name, template_name)
 
     if not cords:
+        mouse.move(1600, 520)
         mouse.wheel_down(17)
 
     cords = image.get_matching_image_cords(screenshot_name, template_name)
