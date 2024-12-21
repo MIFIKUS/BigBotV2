@@ -76,6 +76,7 @@ def get_equiped_item_cords() -> tuple or bool:
         mouse.wheel_down(17)
         time.sleep(2)
 
+    image.take_screenshot(screenshot_name, area_of_screenshot)
     cords = image.get_matching_image_cords(screenshot_name, template_name)
 
     if not cords:
