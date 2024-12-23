@@ -1,4 +1,5 @@
 from l2m_ui_funcs.main_screen import unlock_screen, lock_screen
+from l2m_ui_funcs.actions_in_menus.respawn.respawn import respawn, get_lost_items, dead
 
 import win32gui
 import win32com.client
@@ -20,6 +21,10 @@ def switch_windows(func):
                 break
             except:
                 pass
+
+        if dead():
+            respawn()
+            get_lost_items()
 
         unlock_screen()
         func()

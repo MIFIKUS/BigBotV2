@@ -1,7 +1,7 @@
 from main_funcs import image
 
 
-def check(screenshot_name: str, template_name: str, area_of_screenshot: tuple) -> bool:
+def check(screenshot_name: str, template_name: str, area_of_screenshot: tuple or None) -> bool:
     """Макет для проверки картинки, в основном используется для проверки открыты ли менюшки"""
 
     image.take_screenshot(screenshot_name, area_of_screenshot)
