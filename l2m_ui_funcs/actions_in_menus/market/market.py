@@ -46,6 +46,7 @@ def take_off_item_from_sell() -> None or bool:
         if inventory_overflow():
             return False
 
+
 def take_item_to_sell(x: int, y: int):
     """Нажимает на шмотку в инвентаре, для дальнейшей продажи"""
     while not sell_item_menu_opened():

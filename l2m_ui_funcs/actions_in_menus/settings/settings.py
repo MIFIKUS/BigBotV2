@@ -47,11 +47,11 @@ def turn_off_auto_collect():
 def turn_on_auto_collect(need_to_open_menu: bool):
     """Включает автоподбор снаряжения"""
     def _turn_on_auto_collect_equipment():
-        while not equipment_auto_collect_off():
+        while equipment_auto_collect_off():
             mouse.move_and_click(1220, 360)
 
     def _turn_on_items_auto_collect():
-        while not items_auto_collect_off():
+        while items_auto_collect_off():
             mouse.move_and_click(1450, 500)
 
     if need_to_open_menu:
