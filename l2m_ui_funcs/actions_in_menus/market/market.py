@@ -38,12 +38,13 @@ def take_off_item_from_sell() -> None or bool:
 
     while not item_taking_off():
         mouse.move_and_click(1310, 360) #Нажимает кнопку забрать
-        if inventory_overflow():
-            return False
 
     while item_taking_off():
         _accept()
 
+    for _ in range(2):
+        if inventory_overflow():
+            return False
 
 def take_item_to_sell(x: int, y: int):
     """Нажимает на шмотку в инвентаре, для дальнейшей продажи"""
