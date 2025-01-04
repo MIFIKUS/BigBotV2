@@ -15,6 +15,8 @@ def check_color(color: list[int], screenshot_name: str, area_of_screenshot: tupl
 
     img_color = image.get_main_color(screenshot_name)
 
+    print(img_color)
+
     threshold = 10 #Разброс по цвету, например 200 - threshold(10) = 190
 
     color_red, color_green, color_blue = color

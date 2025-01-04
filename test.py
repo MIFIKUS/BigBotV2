@@ -1,4 +1,9 @@
-from l2m_ui_funcs.actions_in_menus.respawn.respawn import get_lost_items
+from bots.sbor.sbor_bot import *
 
 
-get_lost_items()
+collect_adena_market()
+collect_messages()
+collect_clan()
+collect_bonuses()
+collect_battle_pass()
+collect_sellers()

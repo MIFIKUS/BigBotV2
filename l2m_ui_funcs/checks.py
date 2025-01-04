@@ -9,6 +9,22 @@ def window_locked() -> bool:
     return check(screenshot_name, template_name, (400, 200, 1250, 800))
 
 
+def map_opened() -> bool:
+    """Проверка на то, что карта открыта"""
+    template_name = 'l2m_ui_funcs\\imgs\\templates\\map_opened.png'
+    screenshot_name = 'l2m_ui_funcs\\imgs\\screenshots\\is_map_opened.png'
+
+    return check(screenshot_name, template_name, (1605, 70, 1735, 120))
+
+
+def sellers_menu_opened() -> bool:
+    """Проверка на то, что меню торговцев открыто"""
+    template_name = 'l2m_ui_funcs\\imgs\\templates\\sellers_menu_opened.png'
+    screenshot_name = 'l2m_ui_funcs\\imgs\\screenshots\\is_sellers_menu_opened.png'
+
+    return check(screenshot_name, template_name, (65, 160, 100, 520))
+
+
 def menu_opened() -> bool:
     """Проверка на то, открыто ли меню"""
     template_name = 'l2m_ui_funcs\\imgs\\templates\\menu_opened.png'
@@ -19,7 +35,7 @@ def menu_opened() -> bool:
 
 def adena_market_opened() -> bool:
     """Проверка на то, открыт ли адена шоп"""
-    template_name = 'l2m_ui_funcs\\imgs\\templates\\adena_shop_opened.png'
+    template_name = 'l2m_ui_funcs\\imgs\\templates\\adena_market_opened.png'
     screenshot_name = 'l2m_ui_funcs\\imgs\\screenshots\\is_adena_shop_opened.png'
 
     return check(screenshot_name, template_name, (1455, 70, 1745, 115))
@@ -55,6 +71,38 @@ def market_opened() -> bool:
     screenshot_name = 'l2m_ui_funcs\\imgs\\screenshots\\is_market_opened.png'
 
     return check(screenshot_name, template_name, (1560, 65, 1745, 120))
+
+
+def clan_menu_opened() -> bool:
+    """Проверка на то, что меню клана открыто"""
+    template_name = 'l2m_ui_funcs\\imgs\\templates\\clan_menu_opened.png'
+    screenshot_name = 'l2m_ui_funcs\\imgs\\screenshots\\is_clan_menu_opened.png'
+
+    return check(screenshot_name, template_name, (1625, 70, 1735, 110))
+
+
+def bonuses_opened() -> bool:
+    """Проверка на то, что меню бонусов открыто"""
+    template_name = 'l2m_ui_funcs\\imgs\\templates\\bonuses_opened.png'
+    screenshot_name = 'l2m_ui_funcs\\imgs\\screenshots\\is_bonuses_opened.png'
+
+    return check(screenshot_name, template_name, (1250, 65, 1735, 120))
+
+
+def messages_opened() -> bool:
+    """Проверка на то, что меню сообщений открыто"""
+    template_name = 'l2m_ui_funcs\\imgs\\templates\\messages_opened.png'
+    screenshot_name = 'l2m_ui_funcs\\imgs\\screenshots\\is_messages_opened.png'
+
+    return check(screenshot_name, template_name, (1595, 70, 1735, 110))
+
+
+def battle_pass_opened() -> bool:
+    """Проверка на то, что меню сезонного пропуска открыто"""
+    template_name = 'l2m_ui_funcs\\imgs\\templates\\battle_pass_opened.png'
+    screenshot_name = 'l2m_ui_funcs\\imgs\\screenshots\\is_battle_pass_opened.png'
+
+    return check(screenshot_name, template_name, (1300, 65, 1740, 125))
 
 
 def settings_opened() -> bool:

@@ -1,4 +1,4 @@
-from general.funcs.checks import check, check_color
+from general.funcs.checks import check_color
 
 
 def loading_complete() -> bool:

@@ -48,3 +48,15 @@ def wheel_down(amount_of_spins: int):
             break
         except:
             pass
+
+
+def wheel_up(amount_of_spins: int):
+    """Вращает колесико мышки вверх"""
+    while True:
+        try:
+            for _ in range(amount_of_spins):
+                ahk.wheel_up()
+            break
+        except:
+            pass
+

@@ -1,10 +1,10 @@
-import time
-
 from general.funcs import string_work
 from general.funcs.checks import check
 from general.funcs.string_work import delete_junk_symbols
 
 from main_funcs import image, mouse
+
+import time
 
 
 def get_old_price() -> int or bool:
