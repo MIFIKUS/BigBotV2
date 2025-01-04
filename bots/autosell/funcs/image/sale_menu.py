@@ -83,7 +83,7 @@ def get_equiped_item_cords() -> tuple or bool:
         return False
 
     x = cords[0] + 1450
-    y = cords[1] + 360
+    y = cords[1] + 355
 
     return x, y
 
