@@ -2,6 +2,8 @@ from main_funcs import mouse
 from l2m_ui_funcs.actions_in_menus.settings._checks import *
 from l2m_ui_funcs.checks import settings_opened
 
+from l2m_ui_funcs.main_screen import open_menu, open_settings
+
 import time
 
 
@@ -40,6 +42,27 @@ def turn_off_auto_collect():
 
     _turn_off_auto_collect_equipment()
     _turn_off_items_auto_collect()
+
+
+def turn_on_auto_collect(need_to_open_menu: bool):
+    """Включает автоподбор снаряжения"""
+    def _turn_on_auto_collect_equipment():
+        while not equipment_auto_collect_off():
+            mouse.move_and_click(1220, 360)
+
+    def _turn_on_items_auto_collect():
+        while not items_auto_collect_off():
+            mouse.move_and_click(1450, 500)
+
+    if need_to_open_menu:
+        open_menu()
+        open_settings()
+
+    open_attack_menu()
+    open_collect_menu()
+
+    _turn_on_auto_collect_equipment()
+    _turn_on_items_auto_collect()
 
 
 def open_information_menu():

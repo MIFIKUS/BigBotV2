@@ -30,7 +30,7 @@ def open_sold_menu():
         mouse.move_and_click(650, 190)
 
 
-def take_off_item_from_sell():
+def take_off_item_from_sell() -> None or bool:
     """Убрать вещь с меню продажи"""
     def _accept():
         """Подтверждает снятие шмотки с аука"""
@@ -38,6 +38,8 @@ def take_off_item_from_sell():
 
     while not item_taking_off():
         mouse.move_and_click(1310, 360) #Нажимает кнопку забрать
+        if inventory_overflow():
+            return False
 
     while item_taking_off():
         _accept()

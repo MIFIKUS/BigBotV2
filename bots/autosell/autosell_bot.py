@@ -1,13 +1,13 @@
-from general.funcs.acc_info import get_server_id
+from general.funcs.acc_info import get_server_id, get_global_server_id
 from general.funcs.item_name_work import get_item_id, get_item_sharp
 from general.packets.price import get_minimal_price_for_item
 
-from l2m_ui_funcs.actions_in_menus.settings.settings import turn_off_auto_collect
+from l2m_ui_funcs.actions_in_menus.settings.settings import turn_off_auto_collect, turn_on_auto_collect, exit_from_settings
 from l2m_ui_funcs.actions_in_menus.market.market import (take_off_item_from_sell, take_item_to_sell, sell_item,
                                                          collect_income, open_global_market, cancel_selling_item, exit_from_market,
                                                          open_sell_menu)
 
-from bots.autosell.funcs.ingame.menus.market import go_to_sell_menu, set_price
+from bots.autosell.funcs.ingame.menus.market import go_to_sell_menu, set_price, erase_price
 from bots.autosell.funcs.image.sale_menu import (no_items_to_replace, check_if_all_items_are_replaced, get_old_price,
                                                  get_equiped_item_cords, get_item_name, get_set_price)
 
@@ -30,6 +30,9 @@ def run():
         is_global = bool(is_global)
 
         if is_global:
+            server_id = get_global_server_id(server_id)
+            print(f'ID сервера для глобал маркета {server_id}')
+
             open_global_market()
             open_sell_menu()
         else:
@@ -48,7 +51,10 @@ def run():
                 old_price = get_old_price()
                 print(f'Старая цена {old_price}')
 
-                take_off_item_from_sell()
+                if not take_off_item_from_sell(): #Проверка переполнен ли инвентарь
+                    print('Инвентарь переполнен')
+                    break
+
                 take_item_to_sell(x, y)
 
                 item_name = get_item_name()
@@ -76,10 +82,17 @@ def run():
                 while get_set_price() != new_price:
                     set_price(new_price)
 
+                    if get_set_price() != new_price:
+                        erase_price()
+
                 sell_item()
 
         collect_income()
     exit_from_market()
+
+    turn_on_auto_collect(True)
+    exit_from_settings()
+
 
 
 

@@ -1,4 +1,4 @@
-from general.funcs.checks import check_color
+from general.funcs.checks import check, check_color
 
 
 def loading_complete() -> bool:
@@ -89,3 +89,14 @@ def there_is_cancel_button() -> bool:
     area_of_screenshot = (700, 900, 701, 901)
 
     return check_color(color, screenshot_name, area_of_screenshot)
+
+
+def inventory_overflow() -> bool:
+    """Проверка на то, что инвентарь переполнен"""
+    screenshot_name = 'bots\\autosell\\imgs\\screenshots\\is_inventory_overflow.png'
+    template_name = 'bots\\autosell\\imgs\\templates\\inventory_is_overflow.png'
+    template_name_2 = 'bots\\autosell\\imgs\\templates\\inventory_is_overflow_2.png'
+
+    area_of_screenshot = None
+
+    return check(screenshot_name, template_name, area_of_screenshot) or check(screenshot_name, template_name_2, area_of_screenshot)

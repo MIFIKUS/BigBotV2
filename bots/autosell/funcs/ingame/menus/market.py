@@ -3,6 +3,8 @@ from l2m_ui_funcs.actions_in_menus.market import market
 
 from main_funcs import mouse
 
+from bots.autosell.config import AMOUNT_OF_CLICKS_TO_ERASE
+
 import time
 
 
@@ -50,3 +52,8 @@ def set_price(price: int):
 
         mouse.move_and_click(cords[0], cords[1])
 
+
+def erase_price():
+    """Нажимает на кнопку стереть если неправильно ввел цену"""
+    for _ in range(AMOUNT_OF_CLICKS_TO_ERASE):
+        mouse.move_and_click(1300, 720)

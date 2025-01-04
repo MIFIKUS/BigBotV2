@@ -5,8 +5,9 @@ from main_funcs import image
 from general.funcs import string_work
 
 from general.lists.servers import ALL_SERVERS_IDS
+from general.lists.global_servers import GLOBAL_SERVERS_IDS
 
-from difflib import SequenceMatcher
+import string
 
 
 def get_server_id() -> str or bool:
@@ -34,3 +35,21 @@ def get_server_id() -> str or bool:
         if server == server_name:
             return server_id
     return False
+
+
+def get_global_server_id(local_server_id: str) -> str:
+    """Получает ID глобал маркета от ID локального сервера"""
+    server_name = ''
+
+    for server, server_id in ALL_SERVERS_IDS.items():
+        if server_id == local_server_id:
+            server_name = server
+            break
+
+    server_name = server_name.replace(' ', '').lower()
+    for i in string.digits:
+        server_name = server_name.replace(i, '')
+
+    for server, server_id in GLOBAL_SERVERS_IDS.items():
+        if server.lower() == server_name:
+            return server_id
