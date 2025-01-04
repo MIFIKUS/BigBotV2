@@ -22,7 +22,8 @@ def get_minimal_price_for_item(server_id: str, item_id: str, sharp: int) -> int 
 
     answer = requests.post(GET_PRICE_URL, json=request_data, headers=HEADERS).json()
 
-    if answer.get('list') and len(answer.get('list')) > 0:
-        return int(answer.get('list')[0].get('sale_price'))
+    if not isinstance(answer, str):
+        if answer.get('list') and len(answer.get('list')) > 0:
+            return int(answer.get('list')[0].get('sale_price'))
     return False
 
