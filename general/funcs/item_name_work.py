@@ -1,3 +1,4 @@
+from bots.alchemy.extensions import items_grade
 from general.lists.all_items_ids import ALL_ITEMS
 from string import digits
 
@@ -22,7 +23,6 @@ def get_item_id(item_name: str) -> str or bool:
 
 def get_item_sharp(item_name: str) -> int:
     """Получает заточку предмета"""
-
     item_name = item_name.replace('+', '')
 
     sharp = ''
@@ -35,4 +35,75 @@ def get_item_sharp(item_name: str) -> int:
         sharp = 0
 
     return int(sharp)
+
+
+def is_item_accessory(item_name: str) -> bool:
+    """Проверка на то, что предмет является бижей"""
+    item_name = item_name.lower()
+
+    ACCESSORY_NAMES = ('кольцо', 'ожерелье', 'пояс', 'серьга')
+
+    for i in ACCESSORY_NAMES:
+        if i in item_name:
+            return True
+    return False
+
+
+def is_item_piece(item_name: str) -> bool:
+    """Проверка на то, что предмет является кусочком"""
+    item_name = item_name.lower()
+
+    PIECE_NAMES = ('авадон', 'зубе', 'молнии', 'кронвист')
+
+    for i in PIECE_NAMES:
+        if i in item_name:
+            return True
+    return False
+
+
+def get_item_grade(item_name, color: str) -> str:
+    """Получает грейд предмета"""
+    sharp = get_item_sharp(item_name)
+    is_accessory = is_item_accessory(item_name)
+    is_piece = is_item_piece(item_name)
+
+    if color == 'blue':
+        if not is_accessory and not is_piece:
+            if sharp != 0:
+                return items_grade.BLUE_SHARP
+            else:
+                return items_grade.BLUE
+
+        if is_piece:
+            if sharp == 8:
+                return items_grade.PIECE_PLUS_8
+            else:
+                return items_grade.PIECE_NOT_PLUS_8
+
+        match sharp:
+            case 0:
+                return items_grade.ACCESSORY_PLUS_0
+            case 1:
+                return items_grade.ACCESSORY_PLUS_1
+            case 2:
+                return items_grade.ACCESSORY_PLUS_2
+            case 3:
+                return items_grade.ACCESSORY_PLUS_3
+            case 4:
+                return items_grade.ACCESSORY_PLUS_4
+            case 5:
+                return items_grade.ACCESSORY_PLUS_5
+
+    if color == 'green':
+        if sharp != 0:
+            return items_grade.GREEN_SHARP
+        else:
+            return items_grade.GREEN
+
+    if color == 'red':
+        if sharp != 0:
+            return items_grade.RED_SHARP
+        else:
+            return items_grade.RED
+
 

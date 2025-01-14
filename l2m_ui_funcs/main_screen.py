@@ -20,6 +20,7 @@ def lock_screen():
 
 def open_menu():
     """Открывает меню"""
+    time.sleep(1)
     while not menu_opened():
         mouse.move_and_click(1775, 85)
         time.sleep(0.5)
@@ -43,6 +44,21 @@ def open_adena_market():
     """Открывает адена шоп"""
     while not adena_market_opened():
         mouse.move_and_click(1430, 90)
+        time.sleep(0.5)
+
+
+def open_alchemy():
+    """Открывает меню алхимии"""
+    while not alchemy_opened():
+        mouse.move_and_click(1775, 340)
+        time.sleep(0.5)
+
+
+def open_craft_menu():
+    """Открывает меню создания"""
+    while not craft_menu_opened():
+        mouse.move_and_click(1515, 460)
+        time.sleep(0.5)
 
 
 def open_market():

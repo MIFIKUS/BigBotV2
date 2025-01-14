@@ -33,6 +33,22 @@ def menu_opened() -> bool:
     return check(screenshot_name, template_name, (1750, 60, 1800, 115))
 
 
+def alchemy_opened() -> bool:
+    """Проверка на то, что меню алхимм открыто"""
+    template_name = 'l2m_ui_funcs\\imgs\\templates\\alchemy_opened.png'
+    screenshot_name = 'l2m_ui_funcs\\imgs\\screenshots\\is_alchemy_opened.png'
+
+    return check(screenshot_name, template_name, (1530, 70, 1735, 115))
+
+
+def craft_menu_opened() -> bool:
+    """Проверка на то, что меню создания открыто"""
+    template_name = 'l2m_ui_funcs\\imgs\\templates\\craft_menu_opened.png'
+    screenshot_name = 'l2m_ui_funcs\\imgs\\screenshots\\is_craft_menu_opened.png'
+
+    return check(screenshot_name, template_name, (1515, 70, 1735, 120))
+
+
 def adena_market_opened() -> bool:
     """Проверка на то, открыт ли адена шоп"""
     template_name = 'l2m_ui_funcs\\imgs\\templates\\adena_market_opened.png'

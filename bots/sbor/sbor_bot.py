@@ -119,7 +119,7 @@ def collect_sellers():
     """Проходит по торговцам"""
     grocer_pos = 0
     sklad_pos = 2
-    buyer_pos = 3
+    buyer_pos = 4
 
     map.teleport_to_town()
 

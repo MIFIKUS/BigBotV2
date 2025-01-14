@@ -4,6 +4,7 @@ import cv2
 import pyscreenshot
 import numpy as np
 import pytesseract
+import PIL.ImageGrab
 
 
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
@@ -43,9 +44,9 @@ def get_matching_image_cords(main_image_name, template_image_name, threshold=0.8
 def take_screenshot(image_name, area_of_screenshot=None):
     """Делает скриншот"""
     if area_of_screenshot:
-        main_screen = pyscreenshot.grab(bbox=area_of_screenshot)
+        main_screen = PIL.ImageGrab.grab(bbox=area_of_screenshot)
     else:
-        main_screen = pyscreenshot.grab()
+        main_screen = PIL.ImageGrab.grab()
     main_screen.save(image_name)
 
 
@@ -70,7 +71,7 @@ def image_to_string(image_name: str, is_digits: bool, custom_config='') -> str:
     return pytesseract.image_to_string(image_name, lang='rus', config='--psm 3')
 
 
-def delete_all_colors_except_one(image_name: str, color: [int], color_min_list=None, color_max_list=None):
+def delete_all_colors_except_one(image_name: str, color: [int], color_min_list=None, color_max_list=None, new_image_name=''):
     """Удаляет с картинки все цвета кроме одного"""
     im = cv2.imread(image_name)
 
@@ -99,5 +100,8 @@ def delete_all_colors_except_one(image_name: str, color: [int], color_min_list=N
     inverse_cachement_mask = cv2.bitwise_not(mask)
     im[inverse_cachement_mask > 0] = [0, 0, 0]
 
-    cv2.imwrite(image_name, mask)
+    if new_image_name:
+        cv2.imwrite(new_image_name, mask)
+    else:
+        cv2.imwrite(image_name, mask)
 

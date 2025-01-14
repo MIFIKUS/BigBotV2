@@ -1,4 +1,5 @@
 from main_funcs import image
+import time
 
 
 def check(screenshot_name: str, template_name: str, area_of_screenshot: tuple or None) -> bool:
@@ -12,7 +13,6 @@ def check(screenshot_name: str, template_name: str, area_of_screenshot: tuple or
 def check_color(color: list[int], screenshot_name: str, area_of_screenshot: tuple) -> bool:
     """Макет для проверки цвета, в основном используется для проверки того, активна ли менюшка"""
     image.take_screenshot(screenshot_name, area_of_screenshot)
-
     img_color = image.get_main_color(screenshot_name)
 
     print(img_color)
@@ -21,6 +21,7 @@ def check_color(color: list[int], screenshot_name: str, area_of_screenshot: tupl
 
     color_red, color_green, color_blue = color
     img_color_red, img_color_green, img_color_blue = img_color
+
 
     if (color_red - threshold) <= img_color_red <= (color_red + threshold) and \
        (color_green - threshold) <= img_color_green <= (color_green + threshold) and \

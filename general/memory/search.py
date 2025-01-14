@@ -1,5 +1,7 @@
-import ctypes
+from main_funcs.windows import get_window_pid
 from ctypes import wintypes
+import ctypes
+
 
 kernel32 = ctypes.WinDLL('kernel32', use_last_error=True)
 
@@ -21,15 +23,15 @@ class MEMORY_BASIC_INFORMATION(ctypes.Structure):
     ]
 
 
-# Функция поиска строки UTF-16 LE в памяти процесса
-def search_utf16_in_process(pid, search_string):
-    # Преобразуем строку в UTF-16 LE
-    search_bytes = search_string.encode('utf-16le')
+def find_addresses(target: str) -> list:
+    """Ищет адреса памяти строки или числа"""
+    search_bytes = target.encode('utf-16le')
     buffer_size = 0x1000  # Размер блока чтения (4 КБ)
     overlap = len(search_bytes)  # Перекрытие равно размеру искомой строки
 
-    # Открываем процесс для чтения
-    process_handle = kernel32.OpenProcess(PROCESS_QUERY_INFORMATION | PROCESS_VM_READ, False, pid)
+    found_addresses = []
+
+    process_handle = kernel32.OpenProcess(PROCESS_QUERY_INFORMATION | PROCESS_VM_READ, False, get_window_pid())
     if not process_handle:
         raise ctypes.WinError(ctypes.get_last_error())
 
@@ -57,41 +59,38 @@ def search_utf16_in_process(pid, search_string):
                         start = 0
                         while (offset := data.find(search_bytes, start)) != -1:
                             # Печатаем адрес, где найдена строка
-                            print(f"String found at address: 0x{address + offset:x}")
-
-                            # Чтение и декодирование строки по найденному адресу
                             found_address = address + offset
-                            print(f"Reading string from address 0x{found_address:x}...")
 
-                            # Читаем строку UTF-16 LE
-                            decoded_string = read_unicode_string(process_handle, found_address)
-                            print(f"Found string: {decoded_string}")
+                            found_addresses.append(found_address)
 
-                            start = offset + 1  # Ищем дальше в текущем блоке
-
-                    # Сдвиг адреса на размер блока минус перекрытие
                     address += buffer_size - overlap
             else:
                 address += mbi.RegionSize
     finally:
         kernel32.CloseHandle(process_handle)
 
-
-# Функция для чтения строки в формате UTF-16 LE
-def read_unicode_string(process_handle, address, max_length=256):
-    # Чтение данных из памяти
-    buffer = (ctypes.c_char * max_length)()
-    bytes_read = ctypes.c_size_t()
-    if kernel32.ReadProcessMemory(process_handle, ctypes.c_void_p(address), buffer, max_length,
-                                  ctypes.byref(bytes_read)):
-        data = bytes(buffer[:bytes_read.value])
-
-        # Преобразуем данные в строку, удаляя нулевые байты
-        return data.decode('utf-16le', errors='ignore').rstrip('\x00')
-    return ""
+    return found_addresses
 
 
-# Пример вызова
-if __name__ == "__main__":
-    pid = int(input("Enter process ID: "))
-    search_utf16_in_process(pid, "Вы чувствуете вибрацию энергии мощной магии.")
+def sort_addresses(target: str, addresses_list: list) -> list:
+    """Сортирует адреса из списка. Чтобы в них было значение из target"""
+    found_addresses = []
+
+    process_handle = kernel32.OpenProcess(PROCESS_QUERY_INFORMATION | PROCESS_VM_READ, False, get_window_pid())
+
+    for address in addresses_list:
+        buffer = (ctypes.c_char * 256)()
+        bytes_read = ctypes.c_size_t()
+        if kernel32.ReadProcessMemory(process_handle, ctypes.c_void_p(address), buffer, 256,
+                                      ctypes.byref(bytes_read)):
+            data = bytes(buffer[:bytes_read.value])
+
+            # Преобразуем данные в строку, удаляя нулевые байты
+            found_string = data.decode('utf-16le', errors='ignore').rstrip('\x00')
+
+            if target in found_string:
+                found_addresses.append(address)
+
+    return found_addresses
+
+

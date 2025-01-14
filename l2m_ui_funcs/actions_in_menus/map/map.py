@@ -13,6 +13,7 @@ def open_favorites():
 
 def click_on_town():
     """Нажимает на нужный город в избранном"""
+    mouse.move_and_click(150, 320)
     while not town_opened():
         mouse.move_and_click(150, 320)
 

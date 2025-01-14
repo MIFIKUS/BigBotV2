@@ -4,6 +4,7 @@ from l2m_ui_funcs.actions_in_menus.respawn.respawn import respawn, get_lost_item
 import win32gui
 import win32com.client
 import win32con
+import win32process
 
 
 def switch_windows(func):
@@ -44,3 +45,11 @@ def find_l2m_windows() -> list:
     hwnd_list = [hwnd for hwnd in hwnd_list if 'Lineage2M' in win32gui.GetWindowText(hwnd)]
 
     return [hwnd for hwnd in hwnd_list if 'Lineage2M' in win32gui.GetWindowText(hwnd)]
+
+
+def get_window_pid() -> int:
+    """Возвращает PID окна которое находится сверху"""
+    hwnd = win32gui.GetForegroundWindow()
+    _, pid = win32process.GetWindowThreadProcessId(hwnd)
+
+    return pid
