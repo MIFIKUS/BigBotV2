@@ -5,7 +5,7 @@ from string import digits
 
 def get_item_id(item_name: str) -> str or bool:
     """Получает ID предмета, если не удалось, возвращает False"""
-    item_name = item_name.replace('+', '').lower()
+    item_name = item_name.replace('+', '').replace(' ', '').lower()
 
     item_name_fixed = ''
 

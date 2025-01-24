@@ -1,13 +1,9 @@
-from main_funcs.windows import get_window_pid
 from ctypes import wintypes
 import ctypes
-
 
 kernel32 = ctypes.WinDLL('kernel32', use_last_error=True)
 
 # Флаги для открытия процесса
-PROCESS_QUERY_INFORMATION = 0x0400
-PROCESS_VM_READ = 0x0010
 
 
 # Структура для информации о памяти
@@ -23,17 +19,12 @@ class MEMORY_BASIC_INFORMATION(ctypes.Structure):
     ]
 
 
-def find_addresses(target: str) -> list:
-    """Ищет адреса памяти строки или числа"""
-    search_bytes = target.encode('utf-16le')
+def find_addresses(process_handle, target_list: list) -> dict:
+    """Ищет адреса памяти для каждого элемента в списке target_list"""
     buffer_size = 0x1000  # Размер блока чтения (4 КБ)
-    overlap = len(search_bytes)  # Перекрытие равно размеру искомой строки
 
-    found_addresses = []
-
-    process_handle = kernel32.OpenProcess(PROCESS_QUERY_INFORMATION | PROCESS_VM_READ, False, get_window_pid())
-    if not process_handle:
-        raise ctypes.WinError(ctypes.get_last_error())
+    # Словарь для хранения найденных адресов для каждого элемента
+    results = {target: [] for target in target_list}
 
     try:
         mbi = MEMORY_BASIC_INFORMATION()
@@ -47,7 +38,6 @@ def find_addresses(target: str) -> list:
                 while address < region_end:
                     # Вычисляем размер буфера для чтения
                     size_to_read = min(buffer_size, region_end - address)
-
                     # Читаем память
                     buffer = (ctypes.c_char * size_to_read)()
                     bytes_read = ctypes.c_size_t()
@@ -55,42 +45,107 @@ def find_addresses(target: str) -> list:
                                                   ctypes.byref(bytes_read)):
                         data = bytes(buffer[:bytes_read.value])
 
-                        # Ищем строку в прочитанных данных
-                        start = 0
-                        while (offset := data.find(search_bytes, start)) != -1:
-                            # Печатаем адрес, где найдена строка
-                            found_address = address + offset
+                        # Ищем каждый элемент из списка target_list
+                        for target in target_list:
+                            if isinstance(target, str):
+                                search_bytes = target.encode('utf-16le')
+                                start = 0
+                                while (offset := data.find(search_bytes, start)) != -1:
+                                    found_address = address + offset
+                                    results[target].append(found_address)
+                                    start = offset + len(search_bytes)
+                            elif isinstance(target, (int, float)):
+                                if len(str(target)) == 1:
+                                    length = 1
+                                else:
+                                    length = 4
+                                search_bytes = target.to_bytes(length, 'little', signed=isinstance(target, int))
+                                start = 0
+                                while (offset := data.find(search_bytes, start)) != -1:
+                                    found_address = address + offset
+                                    results[target].append(found_address)
+                                    start = offset + len(search_bytes)
 
-                            found_addresses.append(found_address)
+                    address += buffer_size
 
-                    address += buffer_size - overlap
             else:
                 address += mbi.RegionSize
+    except:
+        pass
+    return results
+
+
+def sort_addresses(process_handle, target_dict: dict) -> dict:
+    """Сортирует адреса памяти в словаре, оставляя только те, которые содержат целевые значения"""
+
+    try:
+        sorted_results = {}
+
+        for target, addresses in target_dict.items():
+            print(target)
+            valid_addresses = []
+
+            for address in addresses:
+
+                buffer = (ctypes.c_char * 256)()
+                bytes_read = ctypes.c_size_t()
+
+                if kernel32.ReadProcessMemory(process_handle, ctypes.c_void_p(address), buffer, 256, ctypes.byref(bytes_read)):
+                    data = bytes(buffer[:bytes_read.value])
+
+                    if isinstance(target, str):
+                        # Преобразуем данные в строку
+                        found_string = data.decode('utf-16le', errors='ignore').rstrip('\x00')
+                        if target in found_string:
+                            valid_addresses.append(address)
+                    elif isinstance(target, (int, float)):
+                        # Преобразуем данные в число
+                        if len(str(target)) == 1:
+                            lenght = 1
+                        else:
+                            lenght = 4
+
+                        target_bytes = target.to_bytes(lenght, 'little', signed=isinstance(target, int))
+                        if data.startswith(target_bytes):
+                            valid_addresses.append(address)
+
+            sorted_results[target] = valid_addresses
+
+
+        return valid_addresses
+
     finally:
-        kernel32.CloseHandle(process_handle)
-
-    return found_addresses
+        pass
 
 
-def sort_addresses(target: str, addresses_list: list) -> list:
-    """Сортирует адреса из списка. Чтобы в них было значение из target"""
-    found_addresses = []
+def get_value(process_handle, address: int, var_type: str or int, is_sharp=False):
+    """Получает значения по адресу памяти"""
+    if isinstance(var_type, int):
+        if is_sharp:
+            value = ctypes.c_uint8()
+        else:
+            value = ctypes.c_uint()
+        bytes_read = ctypes.c_size_t()
+        kernel32.ReadProcessMemory(
+            process_handle,
+            ctypes.c_void_p(address),  # Адрес памяти
+            ctypes.byref(value),  # Буфер для чтения
+            ctypes.sizeof(value),  # Размер буфера
+            ctypes.byref(bytes_read)  # Реально прочитанные байты
+        )
 
-    process_handle = kernel32.OpenProcess(PROCESS_QUERY_INFORMATION | PROCESS_VM_READ, False, get_window_pid())
+        return value.value
 
-    for address in addresses_list:
+    elif isinstance(var_type, str):
         buffer = (ctypes.c_char * 256)()
         bytes_read = ctypes.c_size_t()
-        if kernel32.ReadProcessMemory(process_handle, ctypes.c_void_p(address), buffer, 256,
-                                      ctypes.byref(bytes_read)):
+
+        if kernel32.ReadProcessMemory(process_handle, ctypes.c_void_p(address), buffer, 256, ctypes.byref(bytes_read)):
             data = bytes(buffer[:bytes_read.value])
+            
+        return data.decode('utf-16le', errors='ignore').rstrip('\x00')
 
-            # Преобразуем данные в строку, удаляя нулевые байты
-            found_string = data.decode('utf-16le', errors='ignore').rstrip('\x00')
-
-            if target in found_string:
-                found_addresses.append(address)
-
-    return found_addresses
+    else:
+        raise Exception('Есть поддержка только int и str')
 
 

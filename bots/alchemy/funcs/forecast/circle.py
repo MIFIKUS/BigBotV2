@@ -1,11 +1,22 @@
-from l2m_ui_funcs.actions_in_menus.alchemy.alchemy import repeat_forecast
-from l2m_ui_funcs.actions_in_menus.alchemy._checks import get_forecast_color
+from main_funcs import image
+from difflib import SequenceMatcher
+from bots.alchemy.extensions.forecast_colors_names import FORECAST_COLORS_NAMES
+from general.funcs.string_work import delete_junk_symbols
 
-import time
 
+def get_forecast_name() -> str:
+    """Получает строку которая написана в круге"""
+    screenshot_name = 'bots\\alchemy\\imgs\\screenshots\\forecast_name.png'
+    area_of_screenshot = (525, 675, 1345, 720)
+    color = [245, 245, 245]
 
-def get_necessary_forecast_color(colors: list):
-    """Повторяет прогноз пока не будет нужный цвет круга"""
-    while get_forecast_color() not in colors:
-        repeat_forecast()
-        time.sleep(0.65y)
+    image.take_screenshot(screenshot_name, area_of_screenshot)
+    image.delete_all_colors_except_one(screenshot_name, color)
+
+    forecast_name = image.image_to_string(screenshot_name, False)
+    forecast_name = delete_junk_symbols(forecast_name)
+    forecast_name = forecast_name.replace(' ', '').lower()
+
+    for name in FORECAST_COLORS_NAMES.keys():
+        if SequenceMatcher(a=name.replace(' ', '').lower(), b=forecast_name).ratio() > 0.9:
+            return name

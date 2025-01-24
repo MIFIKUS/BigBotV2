@@ -1,10 +1,17 @@
 from l2m_ui_funcs.main_screen import unlock_screen, lock_screen
 from l2m_ui_funcs.actions_in_menus.respawn.respawn import respawn, get_lost_items, dead
 
+from ctypes.wintypes import HWND, DWORD
+import ctypes
+
 import win32gui
 import win32com.client
 import win32con
 import win32process
+
+
+user32 = ctypes.WinDLL("user32", use_last_error=True)
+GetWindowThreadProcessId = user32.GetWindowThreadProcessId
 
 
 def switch_windows(func):
@@ -49,7 +56,7 @@ def find_l2m_windows() -> list:
 
 def get_window_pid() -> int:
     """Возвращает PID окна которое находится сверху"""
-    hwnd = win32gui.GetForegroundWindow()
-    _, pid = win32process.GetWindowThreadProcessId(hwnd)
-
-    return pid
+    hwnd = find_l2m_windows()[0]
+    pid = DWORD()
+    GetWindowThreadProcessId(HWND(hwnd), ctypes.byref(pid))
+    return pid.value
