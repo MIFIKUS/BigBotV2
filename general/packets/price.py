@@ -2,6 +2,7 @@ from general.packets.request_consts import HEADERS, GET_PRICE_URL
 from general.database.remote.jwt import get_jwt_token
 
 from general.lists.blue_items import BLUE_ITEMS
+from general.lists.servers import ALL_SERVERS_IDS
 
 import requests
 
@@ -10,6 +11,28 @@ import aiohttp
 
 
 def get_minimal_price_for_item(server_id: str, item_id: str, sharp: int) -> int or bool:
+    """Получает минимальную цену для предмета по пакетам"""
+    HEADERS['Authorization'] = get_jwt_token()
+
+    request_data = {"game_server_id": server_id,
+               "game_items":
+                   {'game_item_key': item_id,
+                    'top': '1',
+               "search": [
+                   {"key": "Enchant",
+                    "from": sharp,
+                    "to": sharp}]
+                    }
+               }
+
+    answer = requests.post(GET_PRICE_URL, json=request_data, headers=HEADERS).json()
+    print(answer)
+    if answer.get('list') and len(answer.get('list')) > 0 and answer.get('list') != ['']:
+        return int(answer.get('list')[0].get('sale_price'))
+    return False
+
+
+async def async_get_minimal_price_for_item(server_id: str, item_id: str, sharp: int) -> int or bool:
     """Получает минимальную цену для предмета по пакетам"""
     HEADERS['Authorization'] = get_jwt_token()
 
@@ -77,3 +100,59 @@ async def get_cheapest_blue_item(server_id: str) -> str:
     cheapest_item_id = cheapest_item[0]
 
     return cheapest_item_id
+
+
+async def get_avg_price(item_id: str, item_sharp: int) -> float or int:
+    """Получает среднюю цену среди всех серверов для шмотки"""
+    tasks = []
+    for server_id in ALL_SERVERS_IDS.values():
+        tasks.append(async_get_minimal_price_for_item(server_id, item_id, item_sharp))
+
+    all_prices = await asyncio.gather(*tasks)
+
+    return sum(all_prices) / len(all_prices)
+
+
+def get_prices_for_list_of_items(server_id: str, items_list: list[tuple], need_to_search_avg: bool) -> dict:
+    """Получает цены для указанного списка шмоток\need_to_search_avg значит, что нужно ли искать avg цену если шмотки нет на ауке"""
+    if len(items_list) > 20:
+        raise Exception("Длина списка шмоток не должна превышать 20")
+
+    HEADERS['Authorization'] = get_jwt_token()
+    request_data = []
+    for item in items_list:
+        if not item:
+            continue
+        item_id = item[0]
+        item_sharp = item[1]
+
+        data = {"game_item_key": item_id, "top": "1", "search": [{"key": "Enchant", "from": item_sharp, "to": item_sharp}]}
+        request_data.append(data)
+
+    full_request_data = {"game_server_id": server_id, "game_items": request_data}
+    result = requests.post(GET_PRICE_URL, json=full_request_data, headers=HEADERS).json()
+
+    prices = {}
+
+    for item_market_info, item_info in zip(result['list'], items_list):
+        if not item_info:
+            continue
+
+        item_id = item_info[0]
+        item_sharp = item_info[1]
+
+        if not item_market_info:
+            if need_to_search_avg:
+                price = get_avg_price(item_id, item_sharp)
+                print(f'avg price {price}')
+            else:
+                price = 0
+
+        else:
+            price = int(item_market_info['sale_price'])
+
+        prices[(item_id, item_sharp)] = price
+
+    return prices
+
+

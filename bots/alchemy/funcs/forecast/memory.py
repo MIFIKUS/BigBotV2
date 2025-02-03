@@ -58,14 +58,14 @@ def get_forecast_addresses(process_handle, slots: list) -> dict:
                 item_id_found = True
 
             print(f'{len(found_addresses['item_sharp_addresses'])} адресов заточки предмета найдено')
-            if len(found_addresses['item_sharp_addresses']) != 1:
+            if len(found_addresses['item_sharp_addresses']) > 4:
                 found_addresses['item_sharp_addresses'] = search.sort_addresses(process_handle, {item_sharp: found_addresses['item_sharp_addresses']})
-                if len(found_addresses['item_sharp_addresses']) < 100:
-                    close_forecast()
-                    exit_from_alchemy()
-                    open_menu()
-                    open_alchemy()
-                    open_forecast()
+                #if len(found_addresses['item_sharp_addresses']) < 100:
+                #    close_forecast()
+                #    exit_from_alchemy()
+                #    open_menu()
+                #    open_alchemy()
+                #    open_forecast()
             else:
                 sharp_found = True
 
@@ -85,8 +85,7 @@ def get_color(process_handle, address: int) -> str or bool:
 
     for color_name, color in FORECAST_COLORS_NAMES.items():
         if color_name in color_raw:
-            pass
-    #        return color
+            return color
     return False
 
 

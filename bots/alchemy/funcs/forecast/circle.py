@@ -1,6 +1,8 @@
 from main_funcs import image
 from difflib import SequenceMatcher
+
 from bots.alchemy.extensions.forecast_colors_names import FORECAST_COLORS_NAMES
+
 from general.funcs.string_work import delete_junk_symbols
 
 
@@ -20,3 +22,9 @@ def get_forecast_name() -> str:
     for name in FORECAST_COLORS_NAMES.keys():
         if SequenceMatcher(a=name.replace(' ', '').lower(), b=forecast_name).ratio() > 0.9:
             return name
+
+
+def get_forecast_color() -> str:
+    """Получает цвет круга по надписи в алхимии"""
+    forecast_name = get_forecast_name()
+    return FORECAST_COLORS_NAMES[forecast_name]
