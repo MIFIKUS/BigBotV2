@@ -1,5 +1,6 @@
 from l2m_ui_funcs.main_screen import unlock_screen, lock_screen
 from l2m_ui_funcs.actions_in_menus.respawn.respawn import respawn, get_lost_items, dead
+from l2m_ui_funcs.actions_in_menus.locations.locations import tp_to_last_location
 
 from ctypes.wintypes import HWND, DWORD
 import ctypes
@@ -33,6 +34,7 @@ def switch_windows(func):
         if dead():
             respawn()
             get_lost_items()
+            tp_to_last_location()
 
         unlock_screen()
         func()

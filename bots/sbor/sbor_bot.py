@@ -4,6 +4,7 @@ from l2m_ui_funcs.actions_in_menus.bonuses import bonuses
 from l2m_ui_funcs.actions_in_menus.battle_pass import battle_pass
 from l2m_ui_funcs.actions_in_menus.map import map
 from l2m_ui_funcs.actions_in_menus.sellers import sellers
+from l2m_ui_funcs.actions_in_menus.locations.locations import tp_to_last_location
 
 from bots.sbor.funcs.ingame.menus import adena_market
 from l2m_ui_funcs.main_screen import *
@@ -158,5 +159,6 @@ def run():
     collect_bonuses()
     collect_battle_pass()
     collect_sellers()
+    tp_to_last_location()
 
 
