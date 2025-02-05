@@ -82,7 +82,8 @@ def collect_bonuses():
         if not bonuses.bonus_unused() or bonuses.bonus_unavailable() or bonuses.bonus_for_diamonds() or bonuses.bonus_for_compas():
             continue
 
-        bonuses.get_bonus()
+        if bonuses.get_bonus() is False:
+            break
 
     bonuses.exit_from_bonuses()
 

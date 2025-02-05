@@ -8,7 +8,8 @@ import ctypes
 import win32gui
 import win32com.client
 import win32con
-import win32process
+
+import time
 
 
 user32 = ctypes.WinDLL("user32", use_last_error=True)
@@ -31,6 +32,7 @@ def switch_windows(func):
             except:
                 pass
 
+        time.sleep(1)
         if dead():
             respawn()
             get_lost_items()

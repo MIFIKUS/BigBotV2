@@ -1,19 +1,23 @@
-from PyQt6.QtWidgets import QApplication, QWidget
-
-import sys # Только для доступа к аргументам командной строки
-
-# Приложению нужен один (и только один) экземпляр QApplication.
-# Передаём sys.argv, чтобы разрешить аргументы командной строки для приложения.
-# Если не будете использовать аргументы командной строки, QApplication([]) тоже работает
-app = QApplication(sys.argv)
-
-# Создаём виджет Qt — окно.
-window = QWidget()
-window.show()  # Важно: окно по умолчанию скрыто.
-
-# Запускаем цикл событий.
-app.exec()
+from version import VERSION
+from PySide6 import QtWidgets  # Импорт модуля QtWidgets из библиотеки PySide6
+import sys
 
 
-# Приложение не доберётся сюда, пока вы не выйдете и цикл
-# событий не остановится.
+app = QtWidgets.QApplication(sys.argv)
+
+
+def set_window() -> QtWidgets.QWidget:
+    """Задает параметры главного окна"""
+    window = QtWidgets.QWidget()
+
+    window.setWindowTitle(f"BigBot {VERSION}")
+    window.setFixedSize(1280, 720)
+
+    return window
+
+window = set_window()
+
+window.show()
+
+# Запуск основного цикла обработки событий приложения
+sys.exit(app.exec())

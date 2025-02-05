@@ -18,7 +18,11 @@ def click_on_bonus(bonus_pos):
 
 def get_bonus():
     """Получает бонус"""
+    counter = 0
+
     while bonus_unused():
+        if counter > 10:
+            return False
         mouse.move_and_click(1400, 555)
     time.sleep(0.5)
 
