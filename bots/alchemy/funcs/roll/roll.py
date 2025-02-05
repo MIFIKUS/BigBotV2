@@ -55,6 +55,8 @@ def make_roll(process_handle, server_id: str, colors: list, slots: list, items_a
 
         found = False
 
+        prev_found_item_id = None
+
         while not found:
             data, item_id_addresses, sharp_addresses = get_data_from_memory(process_handle, item_id_addresses, sharp_addresses)
 
@@ -65,6 +67,10 @@ def make_roll(process_handle, server_id: str, colors: list, slots: list, items_a
                 for item in slot_data['items']:
                     if int(item['id']) == (data['id']):
                         if int(item['sharp']) == int(data['sharp']):
+                            if prev_found_item_id == int(data['id']):
+                                prev_found_item_id = None
+                                break
+
                             time.sleep(1)
                             if forecast_opened():
                                 close_forecast()
@@ -72,6 +78,7 @@ def make_roll(process_handle, server_id: str, colors: list, slots: list, items_a
                             if not forecast_opened():
                                 open_forecast()
                             if color in colors:
+                                prev_found_item_id = int(data['id'])
                                 items_info = collect_items_info()
                                 prices = get_prices_for_each_slot(server_id, items_info)
                                 print(prices)
