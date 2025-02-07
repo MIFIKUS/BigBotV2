@@ -2,6 +2,8 @@ from general.funcs.checks import check
 from general.funcs.string_work import delete_junk_symbols
 from main_funcs import image
 
+import time
+
 
 def character_in_clan() -> bool:
     """Проверка на то, что персонаж состоит в клане"""
@@ -29,6 +31,8 @@ def no_more_contributions() -> bool:
     color_max = [255, 255, 255]
 
     custom_config = '--psm 10 -c tessedit_char_whitelist=0123456789'
+
+    time.sleep(1)
 
     image.take_screenshot(screenshot_name, area_of_screenshot)
     image.delete_all_colors_except_one(screenshot_name, None, color_min, color_max)

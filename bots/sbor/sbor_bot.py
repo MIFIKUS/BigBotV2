@@ -38,10 +38,11 @@ def collect_messages():
     open_messages()
 
     messages.collect()
-    time.sleep(1.5)
+    for _ in range(2):
+        time.sleep(1.5)
 
-    if messages.energy_collect_available():
-        messages.decline_collect_energy()
+        if messages.energy_collect_available():
+            messages.decline_collect_energy()
 
     messages.exit_from_messages()
 
