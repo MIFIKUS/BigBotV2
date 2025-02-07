@@ -1,29 +1,31 @@
 from version import VERSION
 
-from PySide6.QtGui import QAction, QFontDatabase, QFont
+from gui.fonts.fonts import load_fonts
+from gui.imgs.imgs import load_imgs
+
+from gui.extensions.numbers import custom_number
+
+from PySide6.QtGui import QAction, QIcon
 from PySide6.QtWidgets import (
     QApplication, QLabel, QMainWindow, QWidget, QVBoxLayout,
-    QScrollArea, QSizePolicy, QSpacerItem, QPushButton, QHBoxLayout
+    QScrollArea, QSizePolicy, QSpacerItem, QPushButton, QHBoxLayout, QProgressBar, QGridLayout
 )
 from PySide6.QtCore import Qt
 
+from bots.autosell import autosell_bot
+from bots.sbor import sbor_bot
+
+
 import sys
+import random
+
 app = QApplication(sys.argv)
 app.setStyle('Fusion')
 
-font_id = QFontDatabase.addApplicationFont("fonts\\sf\\SF-Pro-Display-Black.otf")
-font_families = QFontDatabase.applicationFontFamilies(font_id)
 
-if font_families:
-    font_name = font_families[0]
+fonts = load_fonts()
+imgs = load_imgs()
 
-font_name = font_families[0]  # Получаем имя шрифта
-normal_font = QFont(font_name, 12)  # Обычный шрифт
-bold_font = QFont(font_name, 12, QFont.Bold)  # Жирный шрифт
-italic_font = QFont(font_name, 12)  # Создаем обычный шрифт и затем устанавливаем курсив
-
-# Установка курсивного стиля
-italic_font.setStyle(QFont.StyleItalic)
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -31,6 +33,8 @@ class MainWindow(QMainWindow):
 
         self.setWindowTitle(f"BigBot v.{VERSION}")
         self.setFixedSize(1280, 720)
+
+        self.setWindowIcon(QIcon("gui\\imgs\\logo.jpg"))
 
         self.init_menu()
         self.bot_menu()
@@ -103,12 +107,17 @@ class MainWindow(QMainWindow):
         self.accounts_scroll_layout.setAlignment(Qt.AlignmentFlag.AlignTop)
 
         # Добавляем элементы в макет
-        for i in ['Алхимия', 'Перстановка', 'Сборщик', '123', '23']:
-            label = self._create_bot_widget(self.scroll_layout, i, '')
+        for i in ['Перстановка', 'Сборщик']:
+            match i:
+                case 'Перстановка':
+                    label = self._create_autosell_widget()
+                case 'Сборщик':
+                    label = self._create_sbor_widget()
+
             self.scroll_layout.addWidget(label)
 
         for i in range(50):
-            label = self._create_account_widget(self.scroll_layout, str(i), '123123')
+            label = self._create_account_widget(self.scroll_layout, str(i), random.randint(0, 10000), 10000, random.randint(1, 1000), random.randint(10_000, 100_000_000))
             self.accounts_scroll_layout.addWidget(label)
 
         self.scroll_widget.setLayout(self.scroll_layout)
@@ -129,92 +138,168 @@ class MainWindow(QMainWindow):
         # Устанавливаем главный макет
         self.setCentralWidget(central_widget)
 
-    def _create_bot_widget(self, layout: QVBoxLayout, bot_name: str, bot_img_path: str) -> QWidget:
+    def _create_autosell_widget(self):
+        return self._create_bot_widget('Перестановка', autosell_bot.start)
+
+    def _create_sbor_widget(self):
+        return self._create_bot_widget('Сборщик', sbor_bot.start)
+
+
+    def _create_bot_widget(self, bot_name: str, bot_func) -> QWidget:
         """Макет для создания виджета ботов"""
         bot_widget = QWidget(self)
+        bot_widget.setMinimumHeight(100)  # Минимальная высота 150 пикселей
+        bot_widget.setMaximumHeight(100)
 
-        bot_widget.setMinimumHeight(150)  # Минимальная высота 100 пикселей
-        bot_widget.setMaximumHeight(150)
-
-        # Создаём макет
-        bot_layout = QVBoxLayout(bot_widget)
+        # Создаём горизонтальный макет
+        bot_layout = QHBoxLayout(bot_widget)
 
         bot_label = QLabel(bot_name)
-        bot_label.setFont(italic_font)
+        bot_label.setFont(fonts['regular'])
         bot_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        bot_label.setFixedHeight(self.height() * 0.05)
-
         start_button = QPushButton('Старт')
+        start_button.setFont(fonts['regular'])
         start_button.setCursor(Qt.PointingHandCursor)
 
-        start_button.setFixedHeight(self.height() * 0.1)
+        start_button.clicked.connect(bot_func)
 
+        # Устанавливаем фиксированную высоту для кнопки и метки
+        bot_label.setFixedHeight(self.height() * 0.1)
+        start_button.setFixedHeight(self.height() * 0.1)
+        start_button.setFixedWidth(self.width()* 0.2)
+
+        # Добавляем виджеты в макет
         bot_layout.addWidget(bot_label)
         bot_layout.addWidget(start_button)
 
+        # Настройка стилей
         bot_widget.setStyleSheet("""
             QWidget {
-                   border: none;  /* Серый цвет рамки */
-                   border-radius: 5px;      /* Скругленные углы */
-                   background-color: #32383b;
-               }
+                border: none;
+                border-radius: 5px;
+                background-color: #32383b;
+            }
             QWidget:hover {
-                   background-color: #232729;
-               }
+                background-color: #232729;
+            }
             QLabel, QPushButton {
                 border: none;
                 cursor: pointer;
             }
             QPushButton {
+                border-radius: 10px;
                 background-color: #822f61;
                 font-size: 16px;
             }
             QPushButton:hover {
                 background-color: #6b2750;
-                font-size: 16px;
             }
-            
             QLabel {
                 color: white;
                 background: none;
                 font-size: 24px;
             }
-            """)
+        """)
+
         bot_widget.setLayout(bot_layout)
         return bot_widget
 
-    def _create_account_widget(self, layout: QVBoxLayout, acc_name: str, pid: str) -> QWidget:
-        acc_widget = QWidget()
+    def _create_account_widget(self, layout: QVBoxLayout, acc_name: str, current_hp: int, max_hp: int, diamonds: int, adena: int) -> QWidget:
 
+        diamonds = custom_number(diamonds)
+        adena = custom_number(adena)
+
+        acc_widget = QWidget()
+        acc_widget.setCursor(Qt.CursorShape.PointingHandCursor)
+
+        # Устанавливаем фиксированную высоту
         acc_widget.setMinimumHeight(100)  # Минимальная высота 100 пикселей
         acc_widget.setMaximumHeight(100)
 
-        # Создаём горизонтальный макет
-        acc_layout = QHBoxLayout(acc_widget)
+        # Создаём сеточный макет
+        acc_layout = QGridLayout(acc_widget)
 
-        acc_label = QLabel(f"{acc_name}({pid})")
-
+        # Метка с именем аккаунта
+        acc_label = QLabel(f"{acc_name}")
+        acc_label.setFont(fonts['ultralight'])
         acc_label.setAlignment(
-            Qt.AlignmentFlag.AlignLeft)  # Выравнивание по левому краю и по центру по вертикали
-          # Выравнивание по правому краю и по центру по вертикали
+            Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter)  # Выравнивание по левому краю и по центру по вертикали
+        acc_label.setFixedHeight(30)  # Устанавливаем фиксированную высоту
 
-        acc_label.setFixedHeight(100)  # Устанавливаем фиксированную высоту
+        # Прогресс-бар для HP
+        hp_bar = QProgressBar()
+        hp_bar.setMinimum(0)
+        hp_bar.setMaximum(max_hp)
+        hp_bar.setValue(current_hp)
+        hp_bar.setFixedHeight(30)
+        hp_bar.setMaximumWidth(150)
+        hp_bar.setFormat("%v/%m")
+        hp_bar.setFont(fonts['regular'])
 
+        # Изображение алмаза
+        diamond_img = QLabel()
+        diamond_img.setPixmap(imgs['diamond'])
+        diamond_img.setAlignment(Qt.AlignmentFlag.AlignVCenter)
 
-        acc_layout.addWidget(acc_label)
+        diamond_img.setFixedHeight(30)
 
+        diamond_img.setAlignment(
+            Qt.AlignmentFlag.AlignRight| Qt.AlignmentFlag.AlignVCenter)  # Выравнивание по правому краю и по верхнему краю
 
+        adena_img = QLabel()
+        adena_img.setPixmap(imgs['adena'])
+        adena_img.setAlignment(Qt.AlignmentFlag.AlignRight| Qt.AlignmentFlag.AlignVCenter)
+
+        adena_img.setFixedHeight(30)
+
+        diamonds_label = QLabel(diamonds)
+        diamonds_label.setFixedHeight(30)
+        diamonds_label.setAlignment(Qt.AlignmentFlag.AlignVCenter)
+
+        adena_label = QLabel(adena)
+        adena_label.setFixedHeight(30)
+        adena_label.setAlignment(Qt.AlignmentFlag.AlignVCenter)
+
+        # Добавляем виджеты в макет
+        acc_layout.addWidget(acc_label, 0, 0)  # Первая строка, первый столбец
+        acc_layout.addWidget(hp_bar, 1, 0)  # Вторая строка, первый столбец
+
+        acc_layout.addWidget(diamond_img, 0, 1)  # Первая и вторая строки, второй столбец (занимает две строки)
+        acc_layout.addWidget(diamonds_label, 0,2)
+
+        acc_layout.addWidget(adena_img, 1, 1)
+        acc_layout.addWidget(adena_label, 1, 2)
+
+        # Настройка выравнивания
+        acc_layout.setAlignment(Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignTop)
+
+        # Стилизация
         acc_widget.setStyleSheet("""
             QWidget {
                 border: none;  /* Серый цвет рамки */
                 border-radius: 5px;      /* Скругленные углы */
                 background-color: #32383b;
             }
+            QWidget:hover {
+                background-color: #232729;
+            }
             QLabel {
                 color: white;
                 background: none;
-                font-size: 24px;
+                font-size: 18px;
+            }
+            QProgressBar {
+                background-color: #216e3a;
+                text-align: center;
+                border-radius: 10px;
+                font-size: 11px;
+                color: black;
+            }
+            QProgressBar::chunk {
+                background-color: #31b55d;
+                border-radius: 10px;
+                text-align: center;
             }
         """)
 

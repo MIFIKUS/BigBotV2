@@ -13,6 +13,8 @@ from bots.autosell.funcs.image.sale_menu import (no_items_to_replace, check_if_a
 
 from bots.autosell.funcs.calculations.price import calculate_price
 
+from main_funcs import windows
+
 
 def run():
     server_id = get_server_id()
@@ -95,6 +97,8 @@ def run():
 
 
 
+def start():
+    windows.switch_windows(run)
 
 
 

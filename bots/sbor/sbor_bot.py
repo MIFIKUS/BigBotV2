@@ -9,6 +9,8 @@ from l2m_ui_funcs.actions_in_menus.locations.locations import tp_to_last_locatio
 from bots.sbor.funcs.ingame.menus import adena_market
 from l2m_ui_funcs.main_screen import *
 
+from main_funcs.windows import switch_windows
+
 import time
 
 
@@ -164,3 +166,5 @@ def run():
     tp_to_last_location()
 
 
+def start():
+    switch_windows(run)
