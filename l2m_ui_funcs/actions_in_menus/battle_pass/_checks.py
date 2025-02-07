@@ -6,8 +6,9 @@ def rewards_in_battle_pass_available(battle_pass_num: int) -> bool:
     template_name = 'bots\\sbor\\imgs\\templates\\rewards_in_battle_pass_available.png'
     screenshot_name = 'bots\\sbor\\imgs\\screenshots\\is_rewards_in_battle_pass_available.png'
     area_of_screenshot = (45 + (battle_pass_num * 340), 140, 385 + (battle_pass_num * 340), 170)
+    threshold = 0.7
 
-    return check(screenshot_name, template_name, area_of_screenshot)
+    return check(screenshot_name, template_name, area_of_screenshot, threshold)
 
 
 def rewards_in_sub_battle_pass_available(sub_battle_pass_num: int) -> bool:

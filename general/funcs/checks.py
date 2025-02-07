@@ -2,12 +2,12 @@ from main_funcs import image
 import time
 
 
-def check(screenshot_name: str, template_name: str, area_of_screenshot: tuple or None) -> bool:
+def check(screenshot_name: str, template_name: str, area_of_screenshot: tuple or None, threshold=0.8) -> bool:
     """Макет для проверки картинки, в основном используется для проверки открыты ли менюшки"""
 
     image.take_screenshot(screenshot_name, area_of_screenshot)
 
-    return image.matching(screenshot_name, template_name)
+    return image.matching(screenshot_name, template_name, threshold)
 
 
 def check_color(color: list[int], screenshot_name: str, area_of_screenshot: tuple) -> bool:

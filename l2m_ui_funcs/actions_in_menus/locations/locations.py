@@ -10,6 +10,7 @@ def open_locations_menu():
         mouse.move_and_click(350, 185)
         time.sleep(1)
 
+
 def tp_to_last_location(need_to_auto_hunt=True):
     """Телепортирует персонажа в последнюю локацию"""
     open_locations_menu()
