@@ -32,13 +32,13 @@ def switch_windows(func):
             except:
                 pass
 
+        unlock_screen()
         time.sleep(1)
         if dead():
             respawn()
             get_lost_items()
             tp_to_last_location()
 
-        unlock_screen()
         func()
         lock_screen()
 
