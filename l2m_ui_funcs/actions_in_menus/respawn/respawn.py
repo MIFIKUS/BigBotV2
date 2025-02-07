@@ -57,6 +57,8 @@ def respawn():
 def get_lost_items():
     """Получает пропавшие из-за смерти вещи"""
     open_respawn_menu()
+    time.sleep(1)
+
     if not nothing_to_revive():
         click_on_items()
         get_items()
