@@ -1,6 +1,6 @@
 from version import VERSION
 
-from general.git.update import get_last_version, update_project
+from general.git.update import get_last_version, update_project, get_new_versions_description
 
 from gui.fonts.fonts import load_fonts
 from gui.imgs.imgs import load_imgs
@@ -17,6 +17,7 @@ from PySide6.QtCore import Qt
 from bots.autosell import autosell_bot
 from bots.sbor import sbor_bot
 
+from gui.update_screen import UpdateDialog
 
 import sys
 import random
@@ -59,11 +60,15 @@ class MainWindow(QMainWindow):
         exit_action = QAction("Открыть папку логов", self)
         file_menu.addAction(exit_action)
 
-        help_menu = menubar.addMenu("Настройки")
-        about_action = QAction("Расписание", self)
-        help_menu.addAction(about_action)
-        about_action = QAction("Обновить", self)
-        help_menu.addAction(about_action)
+        settings_menu = menubar.addMenu("Настройки")
+
+        schedule = QAction("Расписание", self)
+        update = QAction("Обновить", self)
+
+        settings_menu.addAction(schedule)
+        settings_menu.addAction(update)
+
+        update.triggered.connect(self._update)
 
         self.setStyleSheet("""
              QWidget {background-color:#1f1f1f;}
@@ -316,6 +321,18 @@ class MainWindow(QMainWindow):
 
     def _update(self):
         """Обновляет проект"""
+        new_versions = get_new_versions_description()
+        update_dialog = UpdateDialog([
+        "Коммит 1: Исправлена ошибка в модуле",
+        "Коммит 2: Добавлена новая функция",
+        "Коммит 3: Обновлён README",
+        "Коммит 4: Улучшена производительность",
+        "Коммит 5: Исправлены тесты",
+        "Коммит 6: Добавлены новые тесты",
+        "Коммит 7: Обновлены зависимости",
+    ])
+        update_dialog.exec()
+
 
 
 window = MainWindow()

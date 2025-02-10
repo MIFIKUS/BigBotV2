@@ -2,10 +2,11 @@ import git
 import requests
 import os
 
+repo_path = os.getcwd()
+
 
 def update_project():
     """Подтягивает обновления с гита"""
-    repo_path = os.getcwd()
     repo = git.Repo(repo_path)
 
     repo.git.reset('--hard')
@@ -25,4 +26,17 @@ def get_last_version() -> str:
     return base64.b64decode(content).decode("utf-8").strip().split(' ')[-1].replace("'", "")
 
 
-update_project()
+def get_new_versions_description() -> list:
+    """Получает описание новых версий"""
+    repo = git.Repo(repo_path)
+
+    repo.remotes['origin'].fetch()
+
+    local_branch = repo.heads['master']
+    remote_branch = repo.remotes['origin'].refs['master']
+
+    unfetched_commits = list(repo.iter_commits(f"{remote_branch}..{local_branch}"))
+    commit_messages = [commit.message.strip() for commit in unfetched_commits]
+
+    return commit_messages
+
