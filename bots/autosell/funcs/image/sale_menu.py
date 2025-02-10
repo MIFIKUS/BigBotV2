@@ -17,7 +17,7 @@ def get_old_price() -> int or bool:
     image.take_screenshot(image_name, area_of_screenshot)
     image.delete_all_colors_except_one(image_name, None, color_min, color_max)
 
-    price = image.image_to_string(image_name, True)
+    price = image.image_to_string(image_name, True, '--psm 6 -c tessedit_char_whitelist=0123456789/')
     price = string_work.delete_junk_symbols(price)
 
     try:
