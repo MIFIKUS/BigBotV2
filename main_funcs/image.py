@@ -71,7 +71,7 @@ def image_to_string(image_name: str, is_digits: bool, custom_config='') -> str:
     return pytesseract.image_to_string(image_name, lang='rus', config='--psm 3')
 
 
-def delete_all_colors_except_one(image_name: str, color: [int], color_min_list=None, color_max_list=None, new_image_name=''):
+def delete_all_colors_except_one(image_name: str, color, color_min_list=None, color_max_list=None, new_image_name=''):
     """Удаляет с картинки все цвета кроме одного"""
     im = cv2.imread(image_name)
 

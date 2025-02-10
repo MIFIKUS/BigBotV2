@@ -11,7 +11,7 @@ def get_old_price() -> int or bool:
     """Получает предыдущую цену шмотки, при неудаче возвращает False"""
     image_name = 'bots\\autosell\\imgs\\screenshots\\previous_price.png'
     area_of_screenshot = (1011, 325, 1150, 365)
-    color_min = [60, 70, 70]
+    color_min = [70, 80, 80]
     color_max = [255, 255, 255]
 
     image.take_screenshot(image_name, area_of_screenshot)
