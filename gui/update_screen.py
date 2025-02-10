@@ -11,6 +11,11 @@ class UpdateComplete(QDialog):
         super().__init__()
         self.setWindowTitle('Обновление')
         self.setFixedSize(400, 100)
+
+        self.setStyleSheet("""
+            background-color: #1f1f1f;
+        """)
+
         fonts = load_fonts()
 
         label = QLabel('Обновление завершено, перезагрузите бота', alignment=Qt.AlignmentFlag.AlignCenter)

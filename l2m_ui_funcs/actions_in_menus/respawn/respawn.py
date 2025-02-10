@@ -7,6 +7,7 @@ def open_respawn_menu():
     """Открывает меню возвращения предметов и опыта после смерти"""
     while not respawn_menu_opened():
         mouse.move_and_click(1260, 80)
+        time.sleep(1)
 
 
 def close_respawn_menu():
@@ -51,13 +52,13 @@ def choose_adena():
 def respawn():
     """Воскрешает персонажа"""
     mouse.move_and_click(900, 870)
-    time.sleep(3)
+    time.sleep(7)
 
 
 def get_lost_items():
     """Получает пропавшие из-за смерти вещи"""
     open_respawn_menu()
-    time.sleep(1)
+    time.sleep(2)
 
     if not nothing_to_revive():
         click_on_items()

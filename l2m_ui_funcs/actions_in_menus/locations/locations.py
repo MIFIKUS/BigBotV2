@@ -6,10 +6,8 @@ import time
 
 def open_locations_menu():
     """Открывает меню локаций"""
-    while not locations_menu_opened():
-        mouse.move_and_click(350, 185)
-        time.sleep(1)
-
+    #while not locations_menu_opened():
+    mouse.move_and_click(350, 185)
 
 def tp_to_last_location(need_to_auto_hunt=True):
     """Телепортирует персонажа в последнюю локацию"""

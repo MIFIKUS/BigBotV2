@@ -31,11 +31,11 @@ def turn_off_auto_collect():
     """Отключает автоподбор снаряжения"""
     def _turn_off_auto_collect_equipment():
         while not equipment_auto_collect_off():
-            mouse.move_and_click(1700, 290)
+            mouse.move_and_click(1700, 360)
 
     def _turn_off_items_auto_collect():
         while not items_auto_collect_off():
-            mouse.move_and_click(1700, 500)
+            mouse.move_and_click(1700, 520)
 
     open_attack_menu()
     open_collect_menu()
@@ -48,11 +48,11 @@ def turn_on_auto_collect(need_to_open_menu: bool):
     """Включает автоподбор снаряжения"""
     def _turn_on_auto_collect_equipment():
         while equipment_auto_collect_off():
-            mouse.move_and_click(1220, 360)
+            mouse.move_and_click(1220, 420)
 
     def _turn_on_items_auto_collect():
         while items_auto_collect_off():
-            mouse.move_and_click(1450, 500)
+            mouse.move_and_click(1450, 520)
 
     if need_to_open_menu:
         open_menu()

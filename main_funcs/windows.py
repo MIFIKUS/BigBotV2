@@ -32,7 +32,7 @@ def switch_windows(func):
             except:
                 pass
 
-        time.sleep(1)
+        time.sleep(0.2)
         unlock_screen()
         time.sleep(1)
         if dead():

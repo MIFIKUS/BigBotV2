@@ -23,7 +23,7 @@ def equipment_auto_collect_off() -> bool:
     """Проверка на то, что автоподбор снаряжения выключен"""
     screenshot_name = 'l2m_ui_funcs\\imgs\\screenshots\\is_equipment_auto_collect_off.png'
     color = [60, 70, 85]
-    area_of_screenshot = (1750, 305, 1751, 306)
+    area_of_screenshot = (1750, 349, 1751, 350)
 
     return check_color(color, screenshot_name, area_of_screenshot)
 
@@ -32,7 +32,7 @@ def items_auto_collect_off() -> bool:
     """Проверка на то, что автоподбор предметов выключен"""
     screenshot_name = 'l2m_ui_funcs\\imgs\\screenshots\\is_items_auto_collect_off.png'
     color = [60, 70, 85]
-    area_of_screenshot = (1775, 520, 1776, 521)
+    area_of_screenshot = (1775, 505, 1776, 506)
 
     return check_color(color, screenshot_name, area_of_screenshot)
 
