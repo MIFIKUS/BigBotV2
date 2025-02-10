@@ -1,5 +1,7 @@
 from version import VERSION
 
+from general.git.update import get_last_version, update_project
+
 from gui.fonts.fonts import load_fonts
 from gui.imgs.imgs import load_imgs
 
@@ -26,12 +28,18 @@ app.setStyle('Fusion')
 fonts = load_fonts()
 imgs = load_imgs()
 
+GIT_VERSION = get_last_version()
+
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        self.setWindowTitle(f"BigBot v.{VERSION}")
+        if VERSION == GIT_VERSION:
+            self.setWindowTitle(f"BigBot v.{VERSION}")
+        else:
+            self.setWindowTitle(f"BigBot v.{VERSION} УСТАРЕЛО")
+
         self.setFixedSize(1280, 720)
 
         self.setWindowIcon(QIcon("gui\\imgs\\logo.jpg"))
@@ -306,6 +314,8 @@ class MainWindow(QMainWindow):
         acc_widget.setLayout(acc_layout)
         return acc_widget
 
+    def _update(self):
+        """Обновляет проект"""
 
 
 window = MainWindow()
