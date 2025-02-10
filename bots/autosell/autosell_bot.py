@@ -15,6 +15,8 @@ from bots.autosell.funcs.calculations.price import calculate_price
 
 from main_funcs import windows
 
+import time
+
 
 def run():
     server_id = get_server_id()
@@ -88,6 +90,8 @@ def run():
                         erase_price()
 
                 sell_item()
+
+                time.sleep(0.3)
 
         collect_income()
     exit_from_market()
