@@ -35,7 +35,7 @@ def get_new_versions_description() -> list:
     local_branch = repo.heads['master']
     remote_branch = repo.remotes['origin'].refs['master']
 
-    unfetched_commits = list(repo.iter_commits(f"{remote_branch}..{local_branch}"))
+    unfetched_commits = list(repo.iter_commits(f"{local_branch}..{remote_branch}"))
     commit_messages = [commit.message.strip() for commit in unfetched_commits]
 
     return commit_messages

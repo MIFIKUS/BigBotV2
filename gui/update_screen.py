@@ -89,7 +89,6 @@ class UpdateDialog(QDialog):
         # Устанавливаем основной layout для окна
         self.setLayout(main_layout)
 
-
     def _update(self):
         update_project()
         self.close()

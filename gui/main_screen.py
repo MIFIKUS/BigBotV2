@@ -322,15 +322,7 @@ class MainWindow(QMainWindow):
     def _update(self):
         """Обновляет проект"""
         new_versions = get_new_versions_description()
-        update_dialog = UpdateDialog([
-        "Коммит 1: Исправлена ошибка в модуле",
-        "Коммит 2: Добавлена новая функция",
-        "Коммит 3: Обновлён README",
-        "Коммит 4: Улучшена производительность",
-        "Коммит 5: Исправлены тесты",
-        "Коммит 6: Добавлены новые тесты",
-        "Коммит 7: Обновлены зависимости",
-    ])
+        update_dialog = UpdateDialog(new_versions)
         update_dialog.exec()
 
 
