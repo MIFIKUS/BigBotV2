@@ -69,12 +69,15 @@ def get_equiped_item_cords() -> tuple or bool:
 
     image.take_screenshot(screenshot_name, area_of_screenshot)
 
-    while not (cords := image.get_matching_image_cords(screenshot_name, template_name)):
+    cords = None
+    while not cords:
         mouse.move(1600, 520)
         mouse.wheel_down(17)
         time.sleep(2)
 
-    image.take_screenshot(screenshot_name, area_of_screenshot)
+        image.take_screenshot(screenshot_name, area_of_screenshot)
+        cords = image.get_matching_image_cords(screenshot_name, template_name)
+
 
     if not cords:
         return False
