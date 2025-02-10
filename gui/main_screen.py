@@ -54,6 +54,7 @@ class MainWindow(QMainWindow):
 
         menubar.setStyleSheet("""
             background-color: black;
+            color: white
         """)
 
         file_menu = menubar.addMenu("Боты")
