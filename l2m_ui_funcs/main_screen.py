@@ -47,6 +47,19 @@ def open_adena_market():
         time.sleep(0.5)
 
 
+def open_classes_menu():
+    """Открывает меню классов"""
+    while not classes_opened():
+        mouse.move_and_click(1430, 220)
+        time.sleep(0.5)
+
+
+def open_aghathions_menu():
+    """Открывает меню агатионов"""
+    while not aghations_opened():
+        mouse.move_and_click(1520, 220)
+
+
 def open_alchemy():
     """Открывает меню алхимии"""
     while not alchemy_opened():

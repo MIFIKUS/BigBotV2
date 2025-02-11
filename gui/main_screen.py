@@ -1,11 +1,12 @@
 from version import VERSION
 
-from general.git.update import get_last_version, update_project, get_new_versions_description
+from general.git.update import get_last_version, get_new_versions_description
 
 from gui.fonts.fonts import load_fonts
 from gui.imgs.imgs import load_imgs
 
 from gui.extensions.numbers import custom_number
+from gui.context_menus import *
 
 from PySide6.QtGui import QAction, QIcon
 from PySide6.QtWidgets import (
@@ -16,6 +17,7 @@ from PySide6.QtCore import Qt
 
 from bots.autosell import autosell_bot
 from bots.sbor import sbor_bot
+from bots.booster.fuse import fuse_bot
 
 from gui.update_screen import UpdateDialog
 
@@ -121,12 +123,14 @@ class MainWindow(QMainWindow):
         self.accounts_scroll_layout.setAlignment(Qt.AlignmentFlag.AlignTop)
 
         # Добавляем элементы в макет
-        for i in ['Перстановка', 'Сборщик']:
+        for i in ['Перстановка', 'Сборщик', 'Бустер']:
             match i:
                 case 'Перстановка':
                     label = self._create_autosell_widget()
                 case 'Сборщик':
                     label = self._create_sbor_widget()
+                case 'Бустер':
+                    label = self._create_booster_widget()
 
             self.scroll_layout.addWidget(label)
 
@@ -158,6 +162,16 @@ class MainWindow(QMainWindow):
     def _create_sbor_widget(self):
         return self._create_bot_widget('Сборщик', sbor_bot.start)
 
+    def _create_booster_widget(self):
+        self.widget =  self._create_bot_widget('Бустера', fuse_bot.start)
+        self.widget.setContextMenuPolicy(Qt.CustomContextMenu)
+        self.widget.customContextMenuRequested.connect(self.show_context_menu)
+
+        return self.widget
+
+    def show_context_menu(self, pos: QPoint):
+        """Вызывает функцию контекстного меню из другого файла."""
+        booster_context_menu(self.widget, pos)
 
     def _create_bot_widget(self, bot_name: str, bot_func) -> QWidget:
         """Макет для создания виджета ботов"""
