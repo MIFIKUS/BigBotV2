@@ -61,6 +61,7 @@ def show_all():
         time.sleep(0.5)
     time.sleep(1)
 
+
 def repeat():
     """Повторяет слияние"""
     while repeat_available():
