@@ -59,7 +59,7 @@ def show_all():
     while not repeat_available() or exit_available():
         mouse.move_and_click(930, 950)
         time.sleep(0.5)
-
+    time.sleep(1)
 
 def repeat():
     """Повторяет слияние"""
