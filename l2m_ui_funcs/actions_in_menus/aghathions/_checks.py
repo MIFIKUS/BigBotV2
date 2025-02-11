@@ -31,7 +31,7 @@ def confirm_list_opened() -> bool:
 def fuse_available() -> bool:
     """Проверка на то, что есть возможность синтеза"""
     screenshot_name = 'bots\\booster\\fuse\\imgs\\screenshots\\is_fuse_available.png'
-    color = [215, 100, 100]
+    color = [215, 100, 10]
     area_of_screenshot = (1380, 930, 1381, 931)
 
     return check_color(color, screenshot_name, area_of_screenshot)

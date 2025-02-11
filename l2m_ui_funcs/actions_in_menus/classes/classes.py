@@ -51,7 +51,7 @@ def auto_select() -> bool or None:
 def fuse():
     """Сливает карты"""
     while not show_all_available():
-        mouse.move_and_click(1360, 950)
+        mouse.move_and_click(1400, 950)
 
 
 def show_all():
