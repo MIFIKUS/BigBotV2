@@ -17,6 +17,7 @@ def fuse_classes():
 
         while classes.repeat_available():
             classes.repeat()
+            classes.show_all()
         classes.exit_fuse()
 
         classes.reopen_fuse_menu()
