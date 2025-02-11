@@ -59,7 +59,7 @@ def repeat_available() -> bool:
     """Проверка на то, что повтор доступен"""
     template_name = 'bots\\booster\\fuse\\imgs\\templates\\repeat_available.png'
     screenshot_name = 'bots\\booster\\fuse\\imgs\\screenshots\\is_show_all_available.png'
-    area_of_screenshot = (940, 910, 1120, 1295)
+    area_of_screenshot = (940, 910, 1300, 990)
 
     return check(screenshot_name, template_name, area_of_screenshot)
 
