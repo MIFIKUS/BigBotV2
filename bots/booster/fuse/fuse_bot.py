@@ -15,8 +15,13 @@ def fuse_classes():
         classes.fuse()
         classes.show_all()
 
+        if classes.go_to_result_available():
+            classes.go_to_result()
+
         while classes.repeat_available():
             classes.repeat()
+            if classes.go_to_result_available():
+                classes.go_to_result()
             classes.show_all()
         classes.exit_fuse()
 

@@ -73,6 +73,15 @@ def exit_available() -> bool:
     return check(screenshot_name, template_name, area_of_screenshot)
 
 
+def go_to_result_available() -> bool:
+    """Проверка на то, что есть кнопка перейти к результату"""
+    template_name = 'bots\\booster\\fuse\\imgs\\templates\\go_to_result.png'
+    screenshot_name = 'bots\\booster\\fuse\\imgs\\screenshots\\is_go_to_result_available.png'
+    area_of_screenshot = (750, 910, 1110, 990)
+
+    return check(screenshot_name, template_name, area_of_screenshot)
+
+
 def confirm_red_available() -> bool:
     """Проверка на то, что есть классы для подтверждения"""
     template_name = 'l2m_ui_funcs\\imgs\\templates\\red_dot.png'

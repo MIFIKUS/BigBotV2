@@ -56,7 +56,7 @@ def fuse():
 
 def show_all():
     """Нажимает показать все"""
-    while not repeat_available() or exit_available():
+    while not repeat_available() and not exit_available():
         mouse.move_and_click(930, 950)
         time.sleep(0.5)
     time.sleep(1)
@@ -73,6 +73,13 @@ def exit_fuse():
     """Закрывает результат слияния"""
     while exit_available():
         mouse.move_and_click(950, 950)
+
+
+def go_to_result():
+    """Нажимает на кнопку перейти к результату"""
+    while go_to_result_available():
+        mouse.move_and_click(930, 950)
+    time.sleep(3)
 
 
 def reopen_fuse_menu():
