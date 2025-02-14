@@ -15,13 +15,14 @@ def fuse_classes():
         print('Нажат автовыбор')
         classes.fuse()
         print('Нажата кнопка фьюза')
-        classes.show_all()
-        print('Нажата кнопка показать все')
 
         if classes.go_to_result_available():
             print('Есть кнопка перейти к результату')
             classes.go_to_result()
             print('Нажал на кнопку перейти к результату')
+        else:
+            classes.show_all()
+            print('Нажата кнопка показать все')
 
         while classes.repeat_available():
             print('Есть возможность повтора')
@@ -31,8 +32,9 @@ def fuse_classes():
                 print('Есть кнопка перейти к результату')
                 classes.go_to_result()
                 print('Нажал на кнопку перейти к результату')
-            print('Нажата кнопка показать все')
-            classes.show_all()
+            else:
+                print('Нажата кнопка показать все')
+                classes.show_all()
         classes.exit_fuse()
 
         classes.reopen_fuse_menu()
