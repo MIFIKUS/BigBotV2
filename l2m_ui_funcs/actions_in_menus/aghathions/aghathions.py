@@ -56,9 +56,13 @@ def fuse():
 
 def show_all():
     """Нажимает показать все"""
+    counter = 0
     while not repeat_available() and not exit_available():
         mouse.move_and_click(930, 950)
         time.sleep(0.1)
+        if counter == 10:
+            break
+        counter += 1
 
 
 def repeat():
