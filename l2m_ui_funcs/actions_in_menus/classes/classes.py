@@ -43,7 +43,6 @@ def auto_select() -> bool or None:
     Если больше нет карт для слияния возвращает False"""
     while not fuse_available():
         mouse.move_and_click(1000, 950)
-        time.sleep(1)
         if no_more_fuse():
             return False
 
@@ -58,15 +57,12 @@ def show_all():
     """Нажимает показать все"""
     while not repeat_available() and not exit_available():
         mouse.move_and_click(930, 950)
-        time.sleep(0.5)
-    time.sleep(1)
 
 
 def repeat():
     """Повторяет слияние"""
     while repeat_available():
         mouse.move_and_click(1110, 950)
-        time.sleep(0.5)
 
 
 def exit_fuse():
