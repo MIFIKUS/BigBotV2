@@ -1,3 +1,5 @@
+import time
+
 from l2m_ui_funcs.actions_in_menus.classes import classes
 from l2m_ui_funcs.actions_in_menus.aghathions import aghathions
 from l2m_ui_funcs.main_screen import open_classes_menu, open_menu, open_aghathions_menu
@@ -19,6 +21,7 @@ def fuse_classes():
         if classes.go_to_result_available():
             print('Есть кнопка перейти к результату')
             classes.go_to_result()
+            time.sleep(2)
             print('Нажал на кнопку перейти к результату')
         else:
             classes.show_all()
@@ -31,6 +34,7 @@ def fuse_classes():
             if classes.go_to_result_available():
                 print('Есть кнопка перейти к результату')
                 classes.go_to_result()
+                time.sleep(2)
                 print('Нажал на кнопку перейти к результату')
             else:
                 print('Нажата кнопка показать все')
@@ -60,6 +64,7 @@ def fuse_aghations():
         if aghathions.go_to_result_available():
             print('Есть кнопка перейти к результату')
             aghathions.go_to_result()
+            time.sleep(2)
             print('Нажал на кнопку перейти к результату')
         else:
             aghathions.show_all()
@@ -72,6 +77,7 @@ def fuse_aghations():
             if aghathions.go_to_result_available():
                 print('Есть кнопка перейти к результату')
                 aghathions.go_to_result()
+                time.sleep(2)
                 print('Нажал на кнопку перейти к результату')
             else:
                 print('Нажата кнопка показать все')
