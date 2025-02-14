@@ -54,6 +54,7 @@ def fuse():
         mouse.move_and_click(1400, 950)
         time.sleep(0.5)
 
+
 def show_all():
     """Нажимает показать все"""
     while not repeat_available() and not exit_available():

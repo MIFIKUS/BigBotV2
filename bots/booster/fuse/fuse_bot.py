@@ -64,6 +64,8 @@ def fuse_aghations():
             print('есть повтор')
             aghathions.repeat()
             print('повтор')
+            if aghathions.show_all_available():
+                aghathions.show_all()
         aghathions.exit_fuse()
 
         aghathions.reopen_fuse_menu()
