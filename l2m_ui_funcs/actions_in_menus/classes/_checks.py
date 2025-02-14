@@ -21,11 +21,11 @@ def fuses_list_opened() -> bool:
 
 def confirm_list_opened() -> bool:
     """Проверка на то, что меню подтверждения открыто"""
-    screenshot_name = 'bots\\booster\\fuse\\imgs\\screenshots\\is_confirm_list_opened.png'
-    color = [245, 245, 245]
-    area_of_screenshot = (1151, 189, 1152, 190)
+    template_name = 'bots\\booster\\fuse\\imgs\\templates\\confirm_menu_opened.png'
+    screenshot_name = 'bots\\booster\\fuse\\imgs\\screenshots\\is_confirm_menu_opened.png'
+    area_of_screenshot = (55, 935, 1300, 1000)
 
-    return check_color(color, screenshot_name, area_of_screenshot)
+    return check(screenshot_name, template_name, area_of_screenshot)
 
 
 def fuse_available() -> bool:
