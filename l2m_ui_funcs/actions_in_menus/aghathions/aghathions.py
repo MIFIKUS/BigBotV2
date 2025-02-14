@@ -20,7 +20,7 @@ def open_aghathions_list():
 def open_fuses_list():
     """Открывает вкладку Синтез"""
     while not fuses_list_opened():
-        mouse.move_and_click(790, 190)
+        mouse.move_and_click(400, 190)
 
 
 def open_confirm_list():
