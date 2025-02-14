@@ -5,7 +5,7 @@ def aghathions_list_opened() -> bool:
     """Проверка на то, что вкладка Класс открыта"""
     screenshot_name = 'bots\\booster\\fuse\\imgs\\screenshots\\is_aghathions_list_opened.png'
     color = [245, 245, 245]
-    area_of_screenshot = (108, 186, 109, 187)
+    area_of_screenshot = (109, 186, 110, 187)
 
     return check_color(color, screenshot_name, area_of_screenshot)
 
