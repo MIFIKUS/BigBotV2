@@ -64,6 +64,15 @@ def repeat_available() -> bool:
     return check(screenshot_name, template_name, area_of_screenshot)
 
 
+def go_to_result_available() -> bool:
+    """Проверка на то, что есть кнопка перейти к результату"""
+    template_name = 'bots\\booster\\fuse\\imgs\\templates\\go_to_result.png'
+    screenshot_name = 'bots\\booster\\fuse\\imgs\\screenshots\\is_go_to_result_available.png'
+    area_of_screenshot = (750, 910, 1110, 990)
+
+    return check(screenshot_name, template_name, area_of_screenshot)
+
+
 def exit_available() -> bool:
     """Проверка на то, что есть кнопка выхода по середине, и больше нет карт для слияния"""
     template_name = 'bots\\booster\\fuse\\imgs\\templates\\exit_available.png'

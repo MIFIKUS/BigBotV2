@@ -14,7 +14,7 @@ def exit_aghathions_menu():
 def open_aghathions_list():
     """Открывает вкладку Классы"""
     while not aghathions_list_opened():
-        mouse.move_and_click(370, 190)
+        mouse.move_and_click(150, 190)
 
 
 def open_fuses_list():
@@ -68,6 +68,13 @@ def repeat():
     while repeat_available():
         mouse.move_and_click(1110, 950)
         time.sleep(0.5)
+
+
+def go_to_result():
+    """Нажимает на кнопку перейти к результату"""
+    while go_to_result_available():
+        mouse.move_and_click(930, 950)
+    time.sleep(3)
 
 
 def exit_fuse():

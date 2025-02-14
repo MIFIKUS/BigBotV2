@@ -57,15 +57,26 @@ def fuse_aghations():
         print('автовыбор')
         aghathions.fuse()
         print('фьюз')
-        aghathions.show_all()
-        print('показать все')
+        if aghathions.go_to_result_available():
+            print('Есть кнопка перейти к результату')
+            aghathions.go_to_result()
+            print('Нажал на кнопку перейти к результату')
+        else:
+            aghathions.show_all()
+            print('Нажата кнопка показать все')
 
         while aghathions.repeat_available():
             print('есть повтор')
             aghathions.repeat()
             print('повтор')
-            if aghathions.show_all_available():
+            if aghathions.go_to_result_available():
+                print('Есть кнопка перейти к результату')
+                aghathions.go_to_result()
+                print('Нажал на кнопку перейти к результату')
+            else:
+                print('Нажата кнопка показать все')
                 aghathions.show_all()
+
         aghathions.exit_fuse()
 
         aghathions.reopen_fuse_menu()
