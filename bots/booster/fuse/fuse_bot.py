@@ -12,16 +12,26 @@ def fuse_classes():
     classes.open_fuses_list()
 
     while classes.auto_select() is not False:
+        print('Нажат автовыбор')
         classes.fuse()
+        print('Нажата кнопка фьюза')
         classes.show_all()
+        print('Нажата кнопка показать все')
 
         if classes.go_to_result_available():
+            print('Есть кнопка перейти к результату')
             classes.go_to_result()
+            print('Нажал на кнопку перейти к результату')
 
         while classes.repeat_available():
+            print('Есть возможность повтора')
             classes.repeat()
+            print('Повтор')
             if classes.go_to_result_available():
+                print('Есть кнопка перейти к результату')
                 classes.go_to_result()
+                print('Нажал на кнопку перейти к результату')
+            print('Нажата кнопка показать все')
             classes.show_all()
         classes.exit_fuse()
 
