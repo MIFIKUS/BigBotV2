@@ -52,7 +52,7 @@ def fuse():
     """Сливает карты"""
     while not show_all_available():
         mouse.move_and_click(1400, 950)
-
+        time.sleep(0.5)
 
 def show_all():
     """Нажимает показать все"""
