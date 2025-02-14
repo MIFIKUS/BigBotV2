@@ -51,13 +51,19 @@ def fuse_aghations():
     open_aghathions_menu()
 
     aghathions.open_fuses_list()
+    print('список фьюзов открыт')
 
     while aghathions.auto_select() is not False:
+        print('автовыбор')
         aghathions.fuse()
+        print('фьюз')
         aghathions.show_all()
+        print('показать все')
 
         while aghathions.repeat_available():
+            print('есть повтор')
             aghathions.repeat()
+            print('повтор')
         aghathions.exit_fuse()
 
         aghathions.reopen_fuse_menu()
