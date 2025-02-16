@@ -188,7 +188,8 @@ class MainWindow(QMainWindow):
 
         start_button = QPushButton('Старт')
         start_button.setFont(fonts['regular'])
-        start_button.setCursor(Qt.PointingHandCursor)
+        start_button.setCursor(Qt.CursorShape.
+                               PointingHandCursor)
 
         start_button.clicked.connect(bot_func)
 
@@ -213,9 +214,9 @@ class MainWindow(QMainWindow):
             }
             QLabel, QPushButton {
                 border: none;
-                cursor: pointer;
             }
             QPushButton {
+                color: white;
                 border-radius: 10px;
                 background-color: #822f61;
                 font-size: 16px;

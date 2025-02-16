@@ -22,6 +22,7 @@ class UpdateComplete(QDialog):
         label.setFont(fonts['regular'])
 
         label.setStyleSheet("""
+            color: white;
             font-size: 16px;
         """)
 
@@ -37,6 +38,11 @@ class UpdateDialog(QDialog):
         super().__init__()
         self.setWindowTitle("Обновление")
         self.setFixedSize(500, 300)
+
+        self.setStyleSheet("""
+            background-color: #1f1f1f;
+        """)
+
         fonts = load_fonts()
         main_layout = QVBoxLayout()
 
@@ -52,6 +58,10 @@ class UpdateDialog(QDialog):
                 scroll_layout.addWidget(label)
         else:
             label = QLabel('Новых обновлений нет', alignment=Qt.AlignmentFlag.AlignCenter)
+
+            label.setStyleSheet("""
+                color: white;
+            """)
 
             label.setFont(fonts['regular'])
 
