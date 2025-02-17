@@ -72,12 +72,11 @@ def get_equiped_item_cords() -> tuple or bool:
     cords = None
     while not cords:
         mouse.move(1600, 520)
-        mouse.wheel_down(17)
+        mouse.wheel_down(1)
         time.sleep(2)
 
         image.take_screenshot(screenshot_name, area_of_screenshot)
-        cords = image.get_matching_image_cords(screenshot_name, template_name)
-
+        cords = image.get_matching_image_cords(screenshot_name, template_name, 0.75)
 
     if not cords:
         return False
