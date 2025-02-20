@@ -1,5 +1,7 @@
 from version import VERSION
 
+from general.logs.logger import logger
+
 from general.git.update import get_last_version, get_new_versions_description
 
 from gui.fonts.fonts import load_fonts

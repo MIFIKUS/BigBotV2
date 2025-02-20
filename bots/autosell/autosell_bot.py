@@ -13,92 +13,109 @@ from bots.autosell.funcs.image.sale_menu import (no_items_to_replace, check_if_a
 
 from bots.autosell.funcs.calculations.price import calculate_price
 
+from general.logs.logger import logger
+
 from main_funcs import windows
 
 import time
 
 
 def run():
+    logger.info('Попытка получить ID сервера')
     server_id = get_server_id()
     if not server_id:
-        print('Не удалось определить ID сервера')
+        logger.info('Не удалось определить ID сервера')
         return False
 
-    print(f'Удалось определить ID сервера: {server_id}')
+    logger.info(f'Удалось определить ID сервера: {server_id}')
 
     turn_off_auto_collect()
 
-    print('Отключен автоподбор шмоток')
+    logger.info('Отключен автоподбор шмоток')
 
     for is_global in range(2):
         is_global = bool(is_global)
+        logger.info(f'Начало перестановки is_global: {is_global}')
 
         if is_global:
             server_id = get_global_server_id(server_id)
-            print(f'ID сервера для глобал маркета {server_id}')
+            logger.info(f'ID сервера для глобал маркета {server_id}')
 
             open_global_market()
+            logger.info('Открыта вкладка глобал маркета')
+
             open_sell_menu()
+            logger.info('Открыто меню продажи для глобал маркета')
         else:
             go_to_sell_menu()
+            logger.info('Открыто вкладка продажи')
 
         if no_items_to_replace(is_global):
-            print('Нет шмоток чтобы переставить')
+            logger.info('Нет шмоток чтобы переставить')
         else:
-            print('Есть шмотки чтобы переставить')
+            logger.info('Есть шмотки чтобы переставить')
 
             x, y = get_equiped_item_cords()
-
-            print(f'Координаты экипированной шмотки x: {x}, y: {y}')
+            logger.info(f'Координаты экипированной шмотки x: {x} y: {y}')
 
             while not check_if_all_items_are_replaced():
                 old_price = get_old_price()
-                print(f'Старая цена {old_price}')
+                logger.info(f'Старая цена {old_price}')
 
                 if not take_off_item_from_sell(): #Проверка переполнен ли инвентарь
-                    print('Инвентарь переполнен')
+                    logger.info('Инвентарь переполнен')
                     break
 
                 take_item_to_sell(x, y)
+                logger.info('Шмотка снята с продажа')
 
                 item_name = get_item_name()
-                print(f'Имя предмета {item_name}')
+                logger.info(f'Имя предмета {item_name}')
 
                 item_sharp = get_item_sharp(item_name)
-                print(f'Заточка предмета {item_sharp}')
+                logger.info(f'Заточка предмета {item_sharp}')
 
                 item_id = get_item_id(item_name)
-                print(f'ID предмета {item_id}')
+                logger.info(f'ID предмета {item_id}')
 
                 minimal_price = get_minimal_price_for_item(server_id, item_id, item_sharp)
 
-                print(f'Минимальная цена на сервере {minimal_price}')
+                logger.info(f'Минимальная цена на сервере {minimal_price}')
 
                 new_price = calculate_price(old_price, minimal_price, is_global)
 
-                if new_price is False:
-                    print('Красная шмотка стоит меньше нужного')
-                    cancel_selling_item()
-                    continue
+                logger.info(f'Новая цена {new_price}')
 
-                print(f'Цена которую нужно установить {new_price}')
+                if new_price is False:
+                    logger.info('Красная шмотка стоит меньше нужного')
+                    cancel_selling_item()
+                    logger.info('Отмена выставления шмотки на продажу')
+                    continue
 
                 while get_set_price() != new_price:
                     set_price(new_price)
+                    logger.info('Новая цена выставлена')
 
                     if get_set_price() != new_price:
+                        logger.info('Новая цена выставлена не правильно')
                         erase_price()
+                        logger.info('Цена стерта')
 
                 sell_item()
-
+                logger.info('Шмотка выставлена на продажу')
                 time.sleep(0.3)
 
         collect_income()
+        logger.info('Доход собран')
+
     exit_from_market()
+    logger.info('Вышел из аука')
 
     turn_on_auto_collect(True)
-    exit_from_settings()
+    logger.info('Включен автоподбор')
 
+    exit_from_settings()
+    logger.info('Вышел из меню настроек')
 
 
 def start():
