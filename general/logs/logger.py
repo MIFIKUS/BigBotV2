@@ -16,6 +16,7 @@ if not logger.handlers:
     console_handler.setLevel(logging.DEBUG)
     console_handler.setFormatter(formatter)
     logger.addHandler(console_handler)
+    logger.setLevel(logging.DEBUG)
 
     # Формируем имя файла с логами, включая текущую дату
     date_str = datetime.now().strftime("%Y-%m-%d")
