@@ -4,12 +4,12 @@ from general.logs.logger import logger
 ahk = AHK()
 
 
-def move(x: int, y: int):
+def move(x: int, y: int, relative=False):
     """Двигает мышку по координатам"""
     logger.debug(f'Перемещение курсора x: {x} y: {y}')
     while True:
         try:
-            ahk.mouse_move(x, y, speed=0)
+            ahk.mouse_move(x, y, speed=0, relative=relative)
             break
         except Exception:
             pass
@@ -66,3 +66,22 @@ def wheel_up(amount_of_spins: int):
         except:
             pass
 
+
+def press_down():
+    """Зажимает ЛКМ"""
+    while True:
+        try:
+            ahk.click(direction='D')
+            break
+        except:
+            pass
+
+
+def press_up():
+    """Отпускает ЛКМ"""
+    while True:
+        try:
+            ahk.click(direction='U')
+            break
+        except:
+            pass

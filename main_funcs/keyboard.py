@@ -24,3 +24,15 @@ def esc():
             break
         except:
             pass
+
+
+def type_text(text: str):
+    """Вводит текст"""
+    logger.debug(f'Вводит текст {text}')
+    while True:
+        try:
+            ahk.type(text)
+            break
+        except:
+            pass
+

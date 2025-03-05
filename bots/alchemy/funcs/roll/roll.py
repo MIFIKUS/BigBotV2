@@ -45,7 +45,7 @@ def get_data_from_memory(process_handle, item_id_addresses, sharp_addresses) -> 
     return {'id': item_id, 'sharp': sharp}, new_item_id_addresses, new_sharp_addresses
 
 
-def make_roll(process_handle, server_id: str, colors: list, slots: list, items_and_slots: dict, method: str, check_price: bool):
+def make_roll(process_handle, server_id: str, colors: list, slots: list, items: list, method: str, check_price: bool, min_price: int):
     """Основная функция для ролла"""
     if method == MEMORY:
         addresses = get_forecast_addresses(process_handle, slots)
@@ -60,11 +60,10 @@ def make_roll(process_handle, server_id: str, colors: list, slots: list, items_a
         while not found:
             data, item_id_addresses, sharp_addresses = get_data_from_memory(process_handle, item_id_addresses, sharp_addresses)
 
-            print(data)
-            for slot, slot_data in items_and_slots.items():
+            for item in items:
                 if found:
                     break
-                for item in slot_data['items']:
+                else:
                     if int(item['id']) == (data['id']):
                         if int(item['sharp']) == int(data['sharp']):
                             if prev_found_item_id == int(data['id']):
@@ -98,12 +97,15 @@ def make_roll(process_handle, server_id: str, colors: list, slots: list, items_a
                                     avg_roll_price += price * chance_price
 
                                 print(f'Авг цена ролла: {avg_roll_price}')
-                                if avg_roll_price >= 60:
+                                if check_price:
+                                    if avg_roll_price >= min_price:
+                                        found = True
+                                        break
+                                    else:
+                                        close_forecast()
+                                else:
                                     found = True
                                     break
-                                else:
-                                    close_forecast()
-
                 if found:
                     break
             else:

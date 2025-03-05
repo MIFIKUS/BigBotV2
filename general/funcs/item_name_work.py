@@ -107,3 +107,11 @@ def get_item_grade(item_name, color: str) -> str:
             return items_grade.RED
 
 
+def transform_item_name_to_market(item_name: str) -> str:
+    """Переводит название предмета в вид который подойдет на аукционе"""
+    item_name_new = []
+
+    for i in item_name.split(' '):
+        item_name_new.append(i.capitalize())
+
+    return ''.join(item_name_new)

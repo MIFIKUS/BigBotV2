@@ -52,7 +52,7 @@ def get_forecast_addresses(process_handle, slots: list) -> dict:
 
         if counter != 0:
             print(f'{len(found_addresses['item_id_addresses'])} адресов ID предмета найдено')
-            if len(found_addresses['item_id_addresses']) > 4:
+            if len(found_addresses['item_id_addresses']) > 5:
                 found_addresses['item_id_addresses'] = search.sort_addresses(process_handle, {int(item_id): found_addresses['item_id_addresses']})
             else:
                 item_id_found = True

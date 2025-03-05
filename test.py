@@ -1,4 +1,5 @@
-from general.git.update import update_project
+from bots.alchemy.alchemy_bot import roll
+from bots.alchemy.rolls.all_rolls import ROLL_00
 
 
-update_project()
+roll(ROLL_00)

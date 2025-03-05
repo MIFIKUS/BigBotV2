@@ -1,6 +1,11 @@
 from l2m_ui_funcs.actions_in_menus.market._checks import *
 from l2m_ui_funcs.checks import market_opened
+
+from general.lists.all_items_ids import ALL_ITEMS
+from general.funcs.item_name_work import transform_item_name_to_market
+
 from main_funcs import mouse
+from main_funcs import keyboard
 
 import time
 
@@ -81,3 +86,148 @@ def cancel_selling_item():
     """Отменят продажу шмотки"""
     while there_is_cancel_button():
         mouse.move_and_click(770, 925)
+
+
+def open_all_items():
+    """Нажимает кнопку Все на ауке"""
+    while not all_items_opened():
+        mouse.move_and_click(70, 380)
+
+
+def open_search_area():
+    """Открывает строку поиска"""
+    while not search_area_opened():
+        mouse.move_and_click(775, 275)
+
+
+def click_on_item_in_search_area():
+    """Нажимает на шмотку в строке поиска"""
+    while search_area_opened():
+        mouse.move_and_click(135, 300)
+
+
+def set_necessary_sharp(sharp: int):
+    """Устанавливает нужную заточку предмета и нажимает ок"""
+    def __set_sharp(start_drag, end_drag):
+        start_x = 315
+        end_x = 1770
+
+        mouse.move(start_x, 250)
+        mouse.press_down()
+
+        mouse.move(start_drag, 0, True)
+        mouse.click()
+
+        mouse.move(end_x, 250)
+        mouse.press_down()
+
+        mouse.move(-end_drag, 0, True)
+        mouse.click()
+
+    mouse.move_and_click(480, 300)
+
+    match sharp:
+        case 0:
+            __set_sharp(start_drag=0, end_drag=1460)
+        case 1:
+            __set_sharp(start_drag=130, end_drag=1325)
+        case 2:
+            __set_sharp(start_drag=265, end_drag=1190)
+        case 3:
+            __set_sharp(start_drag=395, end_drag=1060)
+        case 4:
+            __set_sharp(start_drag=530, end_drag=925)
+        case 5:
+            __set_sharp(start_drag=660, end_drag=795)
+        case 6:
+            __set_sharp(start_drag=795, end_drag=660)
+        case 7:
+            __set_sharp(start_drag=925, end_drag=530)
+        case 8:
+            __set_sharp(start_drag=1060, end_drag=395)
+        case 9:
+            __set_sharp(start_drag=1190, end_drag=265)
+        case 10:
+            __set_sharp(start_drag=1325, end_drag=130)
+        case 11:
+            __set_sharp(start_drag=1455, end_drag=0)
+
+    mouse.move_and_click(1100, 955)
+    while not no_item_on_market() and not get_item_price_after_set_sharp():
+        time.sleep(0.1)
+
+
+def click_on_item_in_list():
+    """Нажимает на предмет в списке шмоток на ауке"""
+    mouse.move_and_click(700, 450)
+
+
+def click_to_buy_item():
+    while not buy_menu_opened():
+        mouse.move_and_click(700, 470)
+
+
+def buy_item() -> bool:
+    """Нажимает кнопку купить. Если удалось купить возвращает True если нет, возвращает False"""
+    while not bought_menu_opened():
+        mouse.move_and_click(1080, 925)
+
+    statement = get_buy_statement()
+
+    while bought_menu_opened():
+        mouse.move_and_click(930, 900)
+
+    return statement
+
+
+def buy_item_by_id(item_id: str, sharp: int, price: int) -> bool:
+    """Покупает предмет на ауке по id и уровню заточки"""
+    item_name = ALL_ITEMS.get(item_id)
+    item_name = transform_item_name_to_market(item_name)
+
+    open_all_items()
+
+    open_search_area()
+    keyboard.type_text(item_name)
+    click_on_item_in_search_area()
+
+    set_necessary_sharp(sharp)
+
+    for _ in range(2):
+        click_on_item_in_list()
+        time.sleep(2)
+
+    if get_item_price() != price:
+        return False
+
+    click_to_buy_item()
+
+    buy_statement = buy_item()
+    return buy_statement
+
+
+def set_price_for_1_piece():
+    """Выбирает цену за 1 штуку"""
+    while not price_for_1_piece_selected():
+        mouse.move_and_click(1760, 375)
+
+
+def set_sort_desc():
+    """Выбирает сортировку по увеличению цену (когда выбрана цена за 1 предмет)"""
+    while not price_sorted_desc():
+        mouse.move_and_click(1760, 375)
+
+
+def buy_cristal():
+    """Покупает кристалы для крафта зелени"""
+    while not get_item_price_after_set_sharp():
+        time.sleep(0.1)
+
+    set_price_for_1_piece()
+    set_sort_desc()
+
+    while not get_item_price():
+        click_on_item_in_list()
+        time.sleep(0.2)
+
+    buy_item()

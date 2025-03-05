@@ -1,4 +1,6 @@
 from general.funcs.checks import check, check_color
+from general.funcs.string_work import delete_junk_symbols
+from main_funcs import image
 
 
 def loading_complete() -> bool:
@@ -100,3 +102,122 @@ def inventory_overflow() -> bool:
     area_of_screenshot = None
 
     return check(screenshot_name, template_name, area_of_screenshot) or check(screenshot_name, template_name_2, area_of_screenshot)
+
+
+def all_items_opened() -> bool:
+    """Проверка на то, что кнопка все в ауке нажата"""
+    screenshot_name = 'l2m_ui_funcs\\imgs\\screenshots\\is_all_items_opened.png'
+    color = [245, 245, 245]
+    area_of_screenshot = (49, 377, 50, 378)
+
+    return check_color(color, screenshot_name, area_of_screenshot)
+
+
+def search_area_opened() -> bool:
+    """Проверка на то, что строка поиска открыта"""
+    screenshot_name = 'l2m_ui_funcs\\imgs\\screenshots\\is_search_area_opened.png'
+    template_name = 'l2m_ui_funcs\\imgs\\templates\\search_area_opened.png'
+
+    area_of_screenshot = (1600, 155, 1850, 240)
+
+    return check(screenshot_name, template_name, area_of_screenshot)
+
+
+def get_item_price() -> int or bool:
+    """Получает цену шмотки по картинке в финальном меню покупки"""
+    screenshot_name = 'l2m_ui_funcs\\imgs\\screenshots\\item_price.png'
+    area_of_screenshot = (1625, 450, 1720, 483)
+
+    image.take_screenshot(screenshot_name, area_of_screenshot)
+
+    item_price = image.image_to_string(screenshot_name, True)
+    item_price = delete_junk_symbols(item_price)
+
+    try:
+        return int(item_price)
+    except:
+        return False
+
+
+def get_item_price_after_set_sharp() -> int or bool:
+    """Получает цену шмотки в меню после выбора заточки"""
+    screenshot_name = 'l2m_ui_funcs\\imgs\\screenshots\\item_price_after_set_sharp.png'
+    area_of_screenshot = (1110, 445, 1200, 480)
+
+    image.take_screenshot(screenshot_name, area_of_screenshot)
+
+    item_price = image.image_to_string(screenshot_name, True)
+    item_price = delete_junk_symbols(item_price)
+
+    try:
+        return int(item_price)
+    except:
+        return False
+
+
+def no_item_on_market() -> bool:
+    """Проверка на то, что на аукионе нет предметов"""
+    screenshot_name = 'l2m_ui_funcs\\imgs\\screenshots\\is_no_items_on_market.png'
+    template_name = 'l2m_ui_funcs\\imgs\\templates\\no_items_on_market.png'
+
+    area_of_screenshot = (950, 605, 1185, 725)
+
+    return check(screenshot_name, template_name, area_of_screenshot)
+
+
+def buy_menu_opened() -> bool:
+    """Проверка на то, что меню покупки открыто"""
+    screenshot_name = 'l2m_ui_funcs\\imgs\\screenshots\\is_buy_menu_opened.png'
+    template_name = 'l2m_ui_funcs\\imgs\\templates\\buy_menu_opened.png'
+
+    area_of_screenshot = (935, 880, 1235, 960)
+
+    return check(screenshot_name, template_name, area_of_screenshot)
+
+
+def bought_menu_opened() -> bool:
+    """Проверка на то, что меню проверки купился ли предмет открыто"""
+    screenshot_name = 'l2m_ui_funcs\\imgs\\screenshots\\is_bought_menu_opened.png'
+    template_name = 'l2m_ui_funcs\\imgs\\templates\\bought_menu_opened.png'
+
+    area_of_screenshot = (795, 855, 1065, 935)
+
+    return check(screenshot_name, template_name, area_of_screenshot)
+
+
+def get_buy_statement() -> bool:
+    """Проверка удалось ли купить шмотку, если удалось возвращает True, если нет, то False"""
+    screenshot_name = 'l2m_ui_funcs\\imgs\\screenshots\\buy_statement.png'
+    area_of_screenshot = (1160, 295, 1280, 325)
+    color = [10, 200, 80]
+
+    while True:
+        image.take_screenshot(screenshot_name, area_of_screenshot)
+        image.delete_all_colors_except_one(screenshot_name, color)
+        statement = image.image_to_string(screenshot_name, False)
+
+        statement = delete_junk_symbols(statement).lower()
+
+        if statement == 'успех':
+            return True
+        elif statement == 'неудача':
+            return False
+
+
+def price_for_1_piece_selected() -> bool:
+    """Проверка на то, что выбрана цена за 1 штуку"""
+    screenshot_name = 'l2m_ui_funcs\\imgs\\screenshots\\is_price_for_1_piece_selected.png'
+    color = [245, 245, 200]
+    area_of_screenshot = (1760, 379, 1761, 380)
+
+    return check_color(color, screenshot_name, area_of_screenshot)
+
+
+def price_sorted_desc() -> bool:
+    """Проверка на то, что выбрана цена по уменьшению(когда выбрана цена за 1 штуку)"""
+    screenshot_name = 'l2m_ui_funcs\\imgs\\screenshots\\is_price_sorted_desc.png'
+    template_name = 'l2m_ui_funcs\\imgs\\templates\\price_sorted_desc.png'
+
+    area_of_screenshot = (1745, 365, 1775, 390)
+
+    return check(screenshot_name, template_name, area_of_screenshot)

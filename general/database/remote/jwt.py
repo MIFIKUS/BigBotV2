@@ -16,4 +16,4 @@ def get_jwt_token() -> str:
     result = cursor.fetchall()[0][0]
 
     logger.debug(f'Запрос jwt токена вернул: {result}')
-
+    return result

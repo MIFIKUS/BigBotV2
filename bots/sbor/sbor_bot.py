@@ -160,7 +160,7 @@ def collect_battle_pass():
                 if fail_counter > 100:
                     break
                 fail_counter += 1
-                time.sleep(0.1)
+                time.sleep(0.3)
 
         battle_pass.get_battle_pass_reward()
         logger.info(f'Собрал общую награду БП #{battle_pass_num}')
