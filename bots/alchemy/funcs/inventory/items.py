@@ -2,14 +2,22 @@ from main_funcs import image
 
 from general.funcs.string_work import delete_junk_symbols
 from general.funcs.item_name_work import get_item_id, get_item_grade, get_item_sharp
-from general.packets.price import get_minimal_price_for_item
+from general.packets.price import get_minimal_price_for_item, get_cheapest_blue_item
 
-from l2m_ui_funcs.actions_in_menus.alchemy.alchemy import click_on_item
+from l2m_ui_funcs.actions_in_menus.alchemy.alchemy import click_on_item, exit_from_alchemy
+from l2m_ui_funcs.actions_in_menus.market.market import buy_item_by_id, exit_from_market
+from l2m_ui_funcs.actions_in_menus.craft_menu.craft_menu import craft_green_item, exit_craft_menu
+
+
+from l2m_ui_funcs.main_screen import open_menu, open_alchemy, open_market, open_craft_menu
 
 from bots.alchemy.extensions.items_colors import *
+from bots.alchemy.extensions import items_grade
+
 from bots.alchemy.config import MAX_PRICE_FOR_BLUE
 
 import time
+import asyncio
 
 
 def get_item_info_from_inventory(row: int, server_id: str) -> tuple or bool:
@@ -42,7 +50,10 @@ def get_item_info_from_inventory(row: int, server_id: str) -> tuple or bool:
 
 def set_rolls_items(items: dict, server_id):
     """Выбирает из инвентаря шмотки нужные для ролла"""
-    for _ in range(2): #1 прокрутка вниз инвентаря при необходимости
+    roll_set = False
+    items_copy = items
+    while not roll_set:
+        items = items_copy
         for table in range(6):
             for row in range(4):
                 all_amount = 0
@@ -67,8 +78,30 @@ def set_rolls_items(items: dict, server_id):
                     click_on_item(table, row)
                     items[item_grade] -= 1
 
+        if sum(items.values()):
+            exit_from_alchemy()
 
+            if items.get(items_grade.BLUE):
+                if items[items_grade.BLUE]:
+                    open_menu()
+                    open_market()
 
+                    loop = asyncio.get_event_loop()
+
+                    for _ in range(items[items_grade.BLUE]):
+                        buy_item_id, buy_item_price = loop.run_until_complete(get_cheapest_blue_item(server_id))
+                        buy_item_by_id(buy_item_id, 0, buy_item_price)
+
+                    exit_from_market()
+
+                if items[items_grade.GREEN]:
+                    open_menu()
+                    open_craft_menu()
+                    craft_green_item()
+                    exit_craft_menu()
+
+            open_menu()
+            open_alchemy()
 
 
 

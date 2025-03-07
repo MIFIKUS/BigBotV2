@@ -2,12 +2,19 @@ from l2m_ui_funcs.actions_in_menus.market._checks import *
 from l2m_ui_funcs.checks import market_opened
 
 from general.lists.all_items_ids import ALL_ITEMS
-from general.funcs.item_name_work import transform_item_name_to_market
+from general.funcs.item_name_work import transform_item_name_to_market, get_item_id, get_item_sharp
+
+from general.packets.price import get_minimal_price_for_item, get_avg_price
+
+from bots.autosell.funcs.image.sale_menu import get_item_name
+from bots.autosell.funcs.ingame.menus.market import set_price, erase_price
+from bots.autosell.funcs.image.sale_menu import get_set_price
 
 from main_funcs import mouse
 from main_funcs import keyboard
 
 import time
+import asyncio
 
 
 def exit_from_market():
@@ -104,7 +111,7 @@ def click_on_item_in_search_area():
     """Нажимает на шмотку в строке поиска"""
     while search_area_opened():
         mouse.move_and_click(135, 300)
-
+        time.sleep(0.5)
 
 def set_necessary_sharp(sharp: int):
     """Устанавливает нужную заточку предмета и нажимает ок"""
@@ -124,7 +131,8 @@ def set_necessary_sharp(sharp: int):
         mouse.move(-end_drag, 0, True)
         mouse.click()
 
-    mouse.move_and_click(480, 300)
+    while not filters_menu_opened():
+        mouse.move_and_click(480, 300)
 
     match sharp:
         case 0:
@@ -191,7 +199,9 @@ def buy_item_by_id(item_id: str, sharp: int, price: int) -> bool:
     keyboard.type_text(item_name)
     click_on_item_in_search_area()
 
+    time.sleep(0.2)
     set_necessary_sharp(sharp)
+    time.sleep(0.2)
 
     for _ in range(2):
         click_on_item_in_list()
@@ -231,3 +241,58 @@ def buy_cristal():
         time.sleep(0.2)
 
     buy_item()
+
+
+def get_new_item_cords() -> tuple or bool:
+    """Возвращает координаты последней выпавшей шмотки"""
+    screenshot_name = 'l2m_ui_funcs\\imgs\\screenshots\\is_item_equiped.png'
+    template_name = 'general\\imgs\\templates\\item_is_equiped.png'
+    prev_area_of_screenshot = ()
+    for table in range(6):
+        for row in range(4):
+            area_of_screenshot = (1400 + (row * 100), 325 + (table * 100),
+                                  1500 + (row * 100), 425 + (table * 100))
+            if check(screenshot_name, template_name, area_of_screenshot):
+                return prev_area_of_screenshot[0] + 50, prev_area_of_screenshot[1] + 50
+            else:
+                prev_area_of_screenshot = area_of_screenshot
+
+    return False
+
+
+def sell_last_item(server_id: str):
+    """Выставляет на продажу последнюю выпавшую шмотку"""
+    new_item_cords = get_new_item_cords()
+    take_item_to_sell(new_item_cords[0], new_item_cords[1])
+
+    item_name = get_item_name()
+    item_id = get_item_id(item_name)
+    item_sharp = get_item_sharp(item_name)
+
+    price = get_minimal_price_for_item(server_id, item_id, item_sharp)
+    if not price:
+        loop = asyncio.get_event_loop()
+        price = int(loop.run_until_complete(get_avg_price(item_id, item_sharp)))
+
+    if price != 10:
+        price -= 1
+
+    while get_set_price() != price:
+        set_price(price)
+        if get_set_price() != price:
+            erase_price()
+
+    sell_item()
+
+
+def get_amount_of_slots() -> int:
+    """Получает количество свободных слотов"""
+    open_sell_menu()
+    time.sleep(2)
+
+    screenshot_name = 'l2m_ui_funcs\\imgs\\screenshots\\amount_of_slots.png'
+    area_of_screenshot = (150, 930, 235, 980)
+    image.take_screenshot(screenshot_name, area_of_screenshot)
+    return int(image.image_to_string(screenshot_name, True).replace('\n', '').split('/')[0])
+
+

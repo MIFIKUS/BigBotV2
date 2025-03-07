@@ -221,3 +221,13 @@ def price_sorted_desc() -> bool:
     area_of_screenshot = (1745, 365, 1775, 390)
 
     return check(screenshot_name, template_name, area_of_screenshot)
+
+
+def filters_menu_opened() -> bool:
+    """Проверка что меню фильтров открыто"""
+    screenshot_name = 'l2m_ui_funcs\\imgs\\screenshots\\is_filters_menu_opened.png'
+    template_name = 'l2m_ui_funcs\\imgs\\templates\\filters_menu_opened.png'
+
+    area_of_screenshot = (675, 925, 1185, 990)
+
+    return check(screenshot_name, template_name, area_of_screenshot)

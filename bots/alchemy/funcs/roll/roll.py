@@ -111,3 +111,6 @@ def make_roll(process_handle, server_id: str, colors: list, slots: list, items: 
             else:
                 repeat_forecast_instant()
                 continue
+
+            if forecast_opened():
+                close_forecast()

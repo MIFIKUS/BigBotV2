@@ -26,3 +26,40 @@ def get_forecast_color() -> str or bool:
             return color_name
 
     return False
+
+
+def need_to_reset_forecast_items() -> bool:
+    """Проверка на то, нужно ли сбрасывать предметы"""
+    screenshot_name = 'bots\\alchemy\\imgs\\screenshots\\need_to_reset_items.png'
+    color = [70, 75, 90]
+    area_of_screenshot = (170, 925, 171, 926)
+
+    return check_color(color, screenshot_name, area_of_screenshot)
+
+
+def reset_items_menu_opened() -> bool:
+    """Проверка на то, что меню сброса предметов открыто"""
+    screenshot_name = 'bots\\alchemy\\imgs\\screenshots\\is_reset_items_menu_opened.png'
+    template_name = 'l2m_ui_funcs\\imgs\\templates\\reset_items_button.png'
+    area_of_screenshot = (935, 660, 1220, 735)
+
+    return check(screenshot_name, template_name, area_of_screenshot)
+
+
+def start_roll_menu_opened() -> bool:
+    """Проверка на то, что меню старта ролла открыто"""
+    screenshot_name = 'bots\\alchemy\\imgs\\screenshots\\is_start_roll_menu_opened.png'
+    template_name = 'bots\\alchemy\\imgs\\templates\\start_roll_menu_opened.png'
+    area_of_screenshot = (935, 650, 1220, 735)
+
+    return check(screenshot_name, template_name, area_of_screenshot)
+
+
+def confirm_roll_button_available() -> bool:
+    """Проверка на то, что есть кнопка подтверждения результатов ролла"""
+    screenshot_name = 'bots\\alchemy\\imgs\\screenshots\\is_there_confirm_roll_button.png'
+    template_name = 'bots\\alchemy\\imgs\\templates\\confirm_roll_button.png'
+    area_of_screenshot = (785, 905, 1075, 990)
+
+    return check(screenshot_name, template_name, area_of_screenshot)
+

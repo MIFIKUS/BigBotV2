@@ -4,6 +4,8 @@ from general.database.remote.jwt import get_jwt_token
 from general.lists.blue_items import BLUE_ITEMS
 from general.lists.servers import ALL_SERVERS_IDS
 
+from general.logs.logger import logger
+
 import requests
 
 import asyncio
@@ -25,8 +27,13 @@ def get_minimal_price_for_item(server_id: str, item_id: str, sharp: int) -> int 
                     }
                }
 
+    logger.debug('Попытка получить минимальную цену шмотки')
+    logger.debug(f'request_data: {request_data}')
+
     answer = requests.post(GET_PRICE_URL, json=request_data, headers=HEADERS).json()
-    print(answer)
+
+    logger.debug(f'answer: {answer}')
+
     if answer.get('list') and len(answer.get('list')) > 0 and answer.get('list') != ['']:
         return int(answer.get('list')[0].get('sale_price'))
     return False
@@ -54,7 +61,7 @@ async def async_get_minimal_price_for_item(server_id: str, item_id: str, sharp: 
     return False
 
 
-async def get_cheapest_blue_item(server_id: str) -> str:
+async def get_cheapest_blue_item(server_id: str) -> tuple:
     """Получает самую дешевую синюю шмотку на ауке"""
     def _prepare_request_data() -> list:
         """Подготавливает данные для запроса, чтобы получалось по 20 шмоток за 1 запрос"""
@@ -97,9 +104,11 @@ async def get_cheapest_blue_item(server_id: str) -> str:
     ids_and_prices = _get_ids_and_prices(result)
 
     cheapest_item =  next(iter(sorted(ids_and_prices.items(), key=lambda item: item[1])))
-    cheapest_item_id = cheapest_item[0]
 
-    return cheapest_item_id
+    cheapest_item_id = cheapest_item[0]
+    cheapest_item_price = cheapest_item[1]
+
+    return cheapest_item_id, int(cheapest_item_price)
 
 
 async def get_avg_price(item_id: str, item_sharp: int) -> float or int:

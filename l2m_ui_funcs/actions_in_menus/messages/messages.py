@@ -11,9 +11,12 @@ def exit_from_messages():
 
 def collect():
     """Собирает бонусы из меню сообщений"""
+    fail_count = 0
     while collect_button_available():
         mouse.move_and_click(1580, 950)
-
+        if fail_count > 50:
+            return False
+        fail_count += 1
 
 def decline_collect_energy():
     """Нажимает отмена в меню сбора энергии Эйнсхад"""

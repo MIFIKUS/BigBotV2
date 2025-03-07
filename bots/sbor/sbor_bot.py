@@ -52,15 +52,16 @@ def collect_messages():
 
     logger.info('Открыто меню сообщений')
 
-    messages.collect()
+    collected = messages.collect()
     logger.info('Нажата кнопка собрать')
 
-    for _ in range(2):
-        time.sleep(1.5)
+    if collected:
+        for _ in range(2):
+            time.sleep(1.5)
 
-        if messages.energy_collect_available():
-            logger.info('Есть плашка с энергией')
-            messages.decline_collect_energy()
+            if messages.energy_collect_available():
+                logger.info('Есть плашка с энергией')
+                messages.decline_collect_energy()
 
     messages.exit_from_messages()
     logger.info('Вышел из меню сообщений')

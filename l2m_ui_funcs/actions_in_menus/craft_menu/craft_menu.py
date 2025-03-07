@@ -52,6 +52,9 @@ def craft():
     mouse.move_and_click(1550, 950)
     time.sleep(5)
 
+    for _ in range(10):
+        mouse.move_and_click(884, 950)
+
 
 def set_max():
     """Задает максимальное количество предметов для крафта"""

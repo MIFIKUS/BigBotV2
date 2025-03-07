@@ -51,3 +51,26 @@ def close_forecast():
     """Закрывает меню прогноза в меню алхимии"""
     while forecast_opened():
         keyboard.esc()
+
+
+def reset_forecast_items():
+    """Сбрасывает выбранные предметы в ролле"""
+    if need_to_reset_forecast_items():
+        while not reset_items_menu_opened():
+            mouse.move_and_click(205, 950)
+
+        while reset_items_menu_opened():
+            mouse.move_and_click(1070, 700)
+
+
+def start_roll():
+    """Запускает создание ролла, и подтверждает его"""
+    while not start_roll_menu_opened():
+        mouse.move_and_click(1400, 950)
+    while start_roll_menu_opened():
+        mouse.move_and_click(1090, 700)
+
+    while not confirm_roll_button_available():
+        mouse.move_and_click(930, 800)
+    while confirm_roll_button_available():
+        mouse.move_and_click(930, 950)
