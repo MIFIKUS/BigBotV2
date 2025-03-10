@@ -57,7 +57,7 @@ def collect_messages():
 
     if collected:
         for _ in range(2):
-            time.sleep(1.5)
+            time.sleep(3)
 
             if messages.energy_collect_available():
                 logger.info('Есть плашка с энергией')

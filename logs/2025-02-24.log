@@ -1,0 +1,291 @@
+2025-02-24 17:48:10 - logs - DEBUG - Список всех HWND окон линейки [3082814]
+2025-02-24 17:48:10 - logs - DEBUG - Открытик окна с HWND: 3082814
+2025-02-24 17:48:10 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_screen_locked.png координаты: (400, 200, 1250, 800)
+2025-02-24 17:48:10 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_screen_locked.png с l2m_ui_funcs\imgs\templates\screen_is_locked.png threshold: 0.8
+2025-02-24 17:48:10 - logs - DEBUG - Шаблон найден
+2025-02-24 17:48:10 - logs - DEBUG - Перемещение курсора x: 960 y: 540
+2025-02-24 17:48:10 - logs - DEBUG - Дергает мышку x: 100 y: 100 relative: True
+2025-02-24 17:48:10 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_screen_locked.png координаты: (400, 200, 1250, 800)
+2025-02-24 17:48:10 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_screen_locked.png с l2m_ui_funcs\imgs\templates\screen_is_locked.png threshold: 0.8
+2025-02-24 17:48:11 - logs - DEBUG - Шаблон найден
+2025-02-24 17:48:11 - logs - DEBUG - Перемещение курсора x: 960 y: 540
+2025-02-24 17:48:11 - logs - DEBUG - Дергает мышку x: 100 y: 100 relative: True
+2025-02-24 17:48:11 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_screen_locked.png координаты: (400, 200, 1250, 800)
+2025-02-24 17:48:11 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_screen_locked.png с l2m_ui_funcs\imgs\templates\screen_is_locked.png threshold: 0.8
+2025-02-24 17:48:11 - logs - DEBUG - Шаблон найден
+2025-02-24 17:48:11 - logs - DEBUG - Шаблон не найден
+2025-02-24 17:48:12 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_dead.png координаты: None
+2025-02-24 17:48:13 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_dead.png с l2m_ui_funcs\imgs\templates\dead.png threshold: 0.8
+2025-02-24 17:48:13 - logs - DEBUG - Шаблон найден
+2025-02-24 17:48:13 - logs - DEBUG - Шаблон не найден
+2025-02-24 17:48:13 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_dead.png координаты: None
+2025-02-24 17:48:14 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_dead.png с l2m_ui_funcs\imgs\templates\dead2.png threshold: 0.8
+2025-02-24 17:48:14 - logs - DEBUG - Шаблон найден
+2025-02-24 17:48:14 - logs - DEBUG - Шаблон не найден
+2025-02-24 17:48:14 - logs - INFO - Попытка получить ID сервера
+2025-02-24 17:48:15 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_menu_opened.png координаты: (1750, 60, 1800, 115)
+2025-02-24 17:48:15 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_menu_opened.png с l2m_ui_funcs\imgs\templates\menu_opened.png threshold: 0.8
+2025-02-24 17:48:15 - logs - DEBUG - Шаблон найден
+2025-02-24 17:48:15 - logs - DEBUG - Шаблон не найден
+2025-02-24 17:48:15 - logs - DEBUG - Перемещение курсора x: 1775 y: 85
+2025-02-24 17:48:15 - logs - DEBUG - Делает клик
+2025-02-24 17:48:16 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_menu_opened.png координаты: (1750, 60, 1800, 115)
+2025-02-24 17:48:16 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_menu_opened.png с l2m_ui_funcs\imgs\templates\menu_opened.png threshold: 0.8
+2025-02-24 17:48:16 - logs - DEBUG - Шаблон найден
+2025-02-24 17:48:16 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_settings_opened.png координаты: (1485, 65, 1740, 130)
+2025-02-24 17:48:16 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_settings_opened.png с l2m_ui_funcs\imgs\templates\settings_opened.png threshold: 0.8
+2025-02-24 17:48:16 - logs - DEBUG - Шаблон найден
+2025-02-24 17:48:16 - logs - DEBUG - Шаблон не найден
+2025-02-24 17:48:16 - logs - DEBUG - Перемещение курсора x: 1690 y: 815
+2025-02-24 17:48:16 - logs - DEBUG - Делает клик
+2025-02-24 17:48:17 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_settings_opened.png координаты: (1485, 65, 1740, 130)
+2025-02-24 17:48:17 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_settings_opened.png с l2m_ui_funcs\imgs\templates\settings_opened.png threshold: 0.8
+2025-02-24 17:48:17 - logs - DEBUG - Шаблон найден
+2025-02-24 17:48:17 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_information_menu_opened.png координаты: (905, 925, 906, 926)
+2025-02-24 17:48:17 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_information_menu_opened.png colors_amount: 1024
+2025-02-24 17:48:17 - logs - DEBUG - Основной цвет: (11, 15, 20)
+2025-02-24 17:48:17 - logs - DEBUG - Перемещение курсора x: 1570 y: 190
+2025-02-24 17:48:17 - logs - DEBUG - Делает клик
+2025-02-24 17:48:17 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_information_menu_opened.png координаты: (905, 925, 906, 926)
+2025-02-24 17:48:17 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_information_menu_opened.png colors_amount: 1024
+2025-02-24 17:48:17 - logs - DEBUG - Основной цвет: (215, 102, 11)
+2025-02-24 17:48:17 - logs - DEBUG - Создание скриншота general\imgs\screenshots\server_name.png координаты: (1200, 465, 1430, 512)
+2025-02-24 17:48:17 - logs - DEBUG - Перевод картинки в текст general\imgs\screenshots\server_name.png is_digits: False custom_config: 
+2025-02-24 17:48:18 - logs - DEBUG - Полученный текст: Леона 03
+
+2025-02-24 17:48:18 - logs - INFO - Удалось определить ID сервера: 8033
+2025-02-24 17:48:18 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_attack_menu_opened.png координаты: (80, 265, 290, 525)
+2025-02-24 17:48:18 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_attack_menu_opened.png с l2m_ui_funcs\imgs\templates\attack_menu_opened.png threshold: 0.8
+2025-02-24 17:48:18 - logs - DEBUG - Шаблон найден
+2025-02-24 17:48:18 - logs - DEBUG - Шаблон не найден
+2025-02-24 17:48:18 - logs - DEBUG - Перемещение курсора x: 180 y: 200
+2025-02-24 17:48:18 - logs - DEBUG - Делает клик
+2025-02-24 17:48:19 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_attack_menu_opened.png координаты: (80, 265, 290, 525)
+2025-02-24 17:48:19 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_attack_menu_opened.png с l2m_ui_funcs\imgs\templates\attack_menu_opened.png threshold: 0.8
+2025-02-24 17:48:19 - logs - DEBUG - Шаблон найден
+2025-02-24 17:48:19 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_collect_opened.png координаты: (134, 385, 135, 386)
+2025-02-24 17:48:19 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_collect_opened.png colors_amount: 1024
+2025-02-24 17:48:19 - logs - DEBUG - Основной цвет: (93, 94, 96)
+2025-02-24 17:48:19 - logs - DEBUG - Перемещение курсора x: 170 y: 395
+2025-02-24 17:48:19 - logs - DEBUG - Делает клик
+2025-02-24 17:48:20 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_collect_opened.png координаты: (134, 385, 135, 386)
+2025-02-24 17:48:20 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_collect_opened.png colors_amount: 1024
+2025-02-24 17:48:20 - logs - DEBUG - Основной цвет: (255, 255, 255)
+2025-02-24 17:48:20 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_equipment_auto_collect_off.png координаты: (1750, 349, 1751, 350)
+2025-02-24 17:48:20 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_equipment_auto_collect_off.png colors_amount: 1024
+2025-02-24 17:48:20 - logs - DEBUG - Основной цвет: (8, 9, 11)
+2025-02-24 17:48:20 - logs - DEBUG - Перемещение курсора x: 1700 y: 360
+2025-02-24 17:48:20 - logs - DEBUG - Делает клик
+2025-02-24 17:48:20 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_equipment_auto_collect_off.png координаты: (1750, 349, 1751, 350)
+2025-02-24 17:48:20 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_equipment_auto_collect_off.png colors_amount: 1024
+2025-02-24 17:48:20 - logs - DEBUG - Основной цвет: (69, 77, 91)
+2025-02-24 17:48:20 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_items_auto_collect_off.png координаты: (1775, 505, 1776, 506)
+2025-02-24 17:48:20 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_items_auto_collect_off.png colors_amount: 1024
+2025-02-24 17:48:20 - logs - DEBUG - Основной цвет: (7, 9, 10)
+2025-02-24 17:48:20 - logs - DEBUG - Перемещение курсора x: 1700 y: 520
+2025-02-24 17:48:20 - logs - DEBUG - Делает клик
+2025-02-24 17:48:20 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_items_auto_collect_off.png координаты: (1775, 505, 1776, 506)
+2025-02-24 17:48:20 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_items_auto_collect_off.png colors_amount: 1024
+2025-02-24 17:48:20 - logs - DEBUG - Основной цвет: (70, 78, 92)
+2025-02-24 17:48:20 - logs - INFO - Отключен автоподбор шмоток
+2025-02-24 17:48:20 - logs - INFO - Начало перестановки is_global: False
+2025-02-24 17:48:21 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_menu_opened.png координаты: (1750, 60, 1800, 115)
+2025-02-24 17:48:21 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_menu_opened.png с l2m_ui_funcs\imgs\templates\menu_opened.png threshold: 0.8
+2025-02-24 17:48:21 - logs - DEBUG - Шаблон найден
+2025-02-24 17:48:21 - logs - DEBUG - Шаблон не найден
+2025-02-24 17:48:21 - logs - DEBUG - Перемещение курсора x: 1775 y: 85
+2025-02-24 17:48:22 - logs - DEBUG - Делает клик
+2025-02-24 17:48:22 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_menu_opened.png координаты: (1750, 60, 1800, 115)
+2025-02-24 17:48:22 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_menu_opened.png с l2m_ui_funcs\imgs\templates\menu_opened.png threshold: 0.8
+2025-02-24 17:48:22 - logs - DEBUG - Шаблон найден
+2025-02-24 17:48:22 - logs - DEBUG - Шаблон не найден
+2025-02-24 17:48:22 - logs - DEBUG - Перемещение курсора x: 1775 y: 85
+2025-02-24 17:48:22 - logs - DEBUG - Делает клик
+2025-02-24 17:48:23 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_menu_opened.png координаты: (1750, 60, 1800, 115)
+2025-02-24 17:48:23 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_menu_opened.png с l2m_ui_funcs\imgs\templates\menu_opened.png threshold: 0.8
+2025-02-24 17:48:23 - logs - DEBUG - Шаблон найден
+2025-02-24 17:48:23 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_market_opened.png координаты: (1560, 65, 1745, 120)
+2025-02-24 17:48:23 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_market_opened.png с l2m_ui_funcs\imgs\templates\market_opened.png threshold: 0.8
+2025-02-24 17:48:23 - logs - DEBUG - Шаблон найден
+2025-02-24 17:48:23 - logs - DEBUG - Шаблон не найден
+2025-02-24 17:48:23 - logs - DEBUG - Перемещение курсора x: 1600 y: 450
+2025-02-24 17:48:23 - logs - DEBUG - Делает клик
+2025-02-24 17:48:24 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_market_opened.png координаты: (1560, 65, 1745, 120)
+2025-02-24 17:48:24 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_market_opened.png с l2m_ui_funcs\imgs\templates\market_opened.png threshold: 0.8
+2025-02-24 17:48:24 - logs - DEBUG - Шаблон найден
+2025-02-24 17:48:24 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_loading_complete.png координаты: (50, 275, 51, 276)
+2025-02-24 17:48:24 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_loading_complete.png colors_amount: 1024
+2025-02-24 17:48:24 - logs - DEBUG - Основной цвет: (51, 51, 51)
+2025-02-24 17:48:24 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_loading_complete.png координаты: (50, 275, 51, 276)
+2025-02-24 17:48:24 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_loading_complete.png colors_amount: 1024
+2025-02-24 17:48:24 - logs - DEBUG - Основной цвет: (51, 51, 51)
+2025-02-24 17:48:24 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_loading_complete.png координаты: (50, 275, 51, 276)
+2025-02-24 17:48:24 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_loading_complete.png colors_amount: 1024
+2025-02-24 17:48:24 - logs - DEBUG - Основной цвет: (255, 255, 255)
+2025-02-24 17:48:24 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_sell_menu_opened.png координаты: (355, 175, 356, 176)
+2025-02-24 17:48:24 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_sell_menu_opened.png colors_amount: 1024
+2025-02-24 17:48:24 - logs - DEBUG - Основной цвет: (163, 166, 170)
+2025-02-24 17:48:24 - logs - DEBUG - Перемещение курсора x: 400 y: 190
+2025-02-24 17:48:24 - logs - DEBUG - Делает клик
+2025-02-24 17:48:25 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_sell_menu_opened.png координаты: (355, 175, 356, 176)
+2025-02-24 17:48:25 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_sell_menu_opened.png colors_amount: 1024
+2025-02-24 17:48:25 - logs - DEBUG - Основной цвет: (140, 143, 148)
+2025-02-24 17:48:25 - logs - DEBUG - Перемещение курсора x: 400 y: 190
+2025-02-24 17:48:25 - logs - DEBUG - Делает клик
+2025-02-24 17:48:25 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_sell_menu_opened.png координаты: (355, 175, 356, 176)
+2025-02-24 17:48:25 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_sell_menu_opened.png colors_amount: 1024
+2025-02-24 17:48:25 - logs - DEBUG - Основной цвет: (255, 255, 255)
+2025-02-24 17:48:25 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_sold_menu_opened.png координаты: (603, 175, 604, 176)
+2025-02-24 17:48:25 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_sold_menu_opened.png colors_amount: 1024
+2025-02-24 17:48:25 - logs - DEBUG - Основной цвет: (166, 170, 176)
+2025-02-24 17:48:25 - logs - DEBUG - Перемещение курсора x: 650 y: 190
+2025-02-24 17:48:25 - logs - DEBUG - Делает клик
+2025-02-24 17:48:25 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_sold_menu_opened.png координаты: (603, 175, 604, 176)
+2025-02-24 17:48:25 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_sold_menu_opened.png colors_amount: 1024
+2025-02-24 17:48:25 - logs - DEBUG - Основной цвет: (255, 255, 255)
+2025-02-24 17:48:25 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_sell_menu_opened.png координаты: (355, 175, 356, 176)
+2025-02-24 17:48:25 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_sell_menu_opened.png colors_amount: 1024
+2025-02-24 17:48:25 - logs - DEBUG - Основной цвет: (163, 166, 170)
+2025-02-24 17:48:25 - logs - DEBUG - Перемещение курсора x: 400 y: 190
+2025-02-24 17:48:25 - logs - DEBUG - Делает клик
+2025-02-24 17:48:26 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_sell_menu_opened.png координаты: (355, 175, 356, 176)
+2025-02-24 17:48:26 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_sell_menu_opened.png colors_amount: 1024
+2025-02-24 17:48:26 - logs - DEBUG - Основной цвет: (255, 255, 255)
+2025-02-24 17:48:26 - logs - INFO - Открыто вкладка продажи
+2025-02-24 17:48:26 - logs - DEBUG - Создание скриншота bots\autosell\imgs\screenshots\are_there_items_to_autosell.png координаты: (235, 615, 1135, 655)
+2025-02-24 17:48:26 - logs - DEBUG - Сравнение bots\autosell\imgs\screenshots\are_there_items_to_autosell.png с bots\autosell\imgs\templates\no_items_to_autosell.png threshold: 0.8
+2025-02-24 17:48:26 - logs - DEBUG - Шаблон найден
+2025-02-24 17:48:26 - logs - INFO - Нет шмоток чтобы переставить
+2025-02-24 17:48:26 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_sold_menu_opened.png координаты: (603, 175, 604, 176)
+2025-02-24 17:48:26 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_sold_menu_opened.png colors_amount: 1024
+2025-02-24 17:48:26 - logs - DEBUG - Основной цвет: (166, 170, 176)
+2025-02-24 17:48:26 - logs - DEBUG - Перемещение курсора x: 650 y: 190
+2025-02-24 17:48:26 - logs - DEBUG - Делает клик
+2025-02-24 17:48:26 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_sold_menu_opened.png координаты: (603, 175, 604, 176)
+2025-02-24 17:48:26 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_sold_menu_opened.png colors_amount: 1024
+2025-02-24 17:48:26 - logs - DEBUG - Основной цвет: (255, 255, 255)
+2025-02-24 17:48:26 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_there_income.png координаты: (1580, 960, 1581, 961)
+2025-02-24 17:48:26 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_there_income.png colors_amount: 1024
+2025-02-24 17:48:26 - logs - DEBUG - Основной цвет: (29, 33, 39)
+2025-02-24 17:48:26 - logs - INFO - Доход собран
+2025-02-24 17:48:26 - logs - INFO - Начало перестановки is_global: True
+2025-02-24 17:48:26 - logs - INFO - ID сервера для глобал маркета 9031
+2025-02-24 17:48:26 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_global_market_opened.png координаты: (1335, 93, 1336, 94)
+2025-02-24 17:48:26 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_global_market_opened.png colors_amount: 1024
+2025-02-24 17:48:26 - logs - DEBUG - Основной цвет: (89, 89, 89)
+2025-02-24 17:48:26 - logs - DEBUG - Перемещение курсора x: 1400 y: 95
+2025-02-24 17:48:26 - logs - DEBUG - Делает клик
+2025-02-24 17:48:26 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_global_market_opened.png координаты: (1335, 93, 1336, 94)
+2025-02-24 17:48:26 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_global_market_opened.png colors_amount: 1024
+2025-02-24 17:48:26 - logs - DEBUG - Основной цвет: (56, 60, 65)
+2025-02-24 17:48:26 - logs - DEBUG - Перемещение курсора x: 1400 y: 95
+2025-02-24 17:48:26 - logs - DEBUG - Делает клик
+2025-02-24 17:48:27 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_global_market_opened.png координаты: (1335, 93, 1336, 94)
+2025-02-24 17:48:27 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_global_market_opened.png colors_amount: 1024
+2025-02-24 17:48:27 - logs - DEBUG - Основной цвет: (51, 51, 51)
+2025-02-24 17:48:27 - logs - DEBUG - Перемещение курсора x: 1400 y: 95
+2025-02-24 17:48:27 - logs - DEBUG - Делает клик
+2025-02-24 17:48:27 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_global_market_opened.png координаты: (1335, 93, 1336, 94)
+2025-02-24 17:48:27 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_global_market_opened.png colors_amount: 1024
+2025-02-24 17:48:27 - logs - DEBUG - Основной цвет: (51, 51, 51)
+2025-02-24 17:48:27 - logs - DEBUG - Перемещение курсора x: 1400 y: 95
+2025-02-24 17:48:27 - logs - DEBUG - Делает клик
+2025-02-24 17:48:27 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_global_market_opened.png координаты: (1335, 93, 1336, 94)
+2025-02-24 17:48:27 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_global_market_opened.png colors_amount: 1024
+2025-02-24 17:48:27 - logs - DEBUG - Основной цвет: (255, 255, 255)
+2025-02-24 17:48:27 - logs - INFO - Открыта вкладка глобал маркета
+2025-02-24 17:48:27 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_sell_menu_opened.png координаты: (355, 175, 356, 176)
+2025-02-24 17:48:27 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_sell_menu_opened.png colors_amount: 1024
+2025-02-24 17:48:27 - logs - DEBUG - Основной цвет: (174, 161, 163)
+2025-02-24 17:48:27 - logs - DEBUG - Перемещение курсора x: 400 y: 190
+2025-02-24 17:48:27 - logs - DEBUG - Делает клик
+2025-02-24 17:48:27 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_sell_menu_opened.png координаты: (355, 175, 356, 176)
+2025-02-24 17:48:28 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_sell_menu_opened.png colors_amount: 1024
+2025-02-24 17:48:28 - logs - DEBUG - Основной цвет: (255, 255, 255)
+2025-02-24 17:48:28 - logs - INFO - Открыто меню продажи для глобал маркета
+2025-02-24 17:48:28 - logs - DEBUG - Создание скриншота bots\autosell\imgs\screenshots\are_there_items_to_autosell.png координаты: (235, 615, 1135, 655)
+2025-02-24 17:48:28 - logs - DEBUG - Сравнение bots\autosell\imgs\screenshots\are_there_items_to_autosell.png с bots\autosell\imgs\templates\no_items_to_autosell_in_global_market.png threshold: 0.8
+2025-02-24 17:48:28 - logs - DEBUG - Шаблон найден
+2025-02-24 17:48:28 - logs - INFO - Нет шмоток чтобы переставить
+2025-02-24 17:48:28 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_sold_menu_opened.png координаты: (603, 175, 604, 176)
+2025-02-24 17:48:28 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_sold_menu_opened.png colors_amount: 1024
+2025-02-24 17:48:28 - logs - DEBUG - Основной цвет: (179, 163, 164)
+2025-02-24 17:48:28 - logs - DEBUG - Перемещение курсора x: 650 y: 190
+2025-02-24 17:48:28 - logs - DEBUG - Делает клик
+2025-02-24 17:48:28 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_sold_menu_opened.png координаты: (603, 175, 604, 176)
+2025-02-24 17:48:28 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_sold_menu_opened.png colors_amount: 1024
+2025-02-24 17:48:28 - logs - DEBUG - Основной цвет: (255, 255, 255)
+2025-02-24 17:48:28 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_there_income.png координаты: (1580, 960, 1581, 961)
+2025-02-24 17:48:28 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_there_income.png colors_amount: 1024
+2025-02-24 17:48:28 - logs - DEBUG - Основной цвет: (29, 33, 39)
+2025-02-24 17:48:28 - logs - INFO - Доход собран
+2025-02-24 17:48:28 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_market_opened.png координаты: (1560, 65, 1745, 120)
+2025-02-24 17:48:28 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_market_opened.png с l2m_ui_funcs\imgs\templates\market_opened.png threshold: 0.8
+2025-02-24 17:48:28 - logs - DEBUG - Шаблон найден
+2025-02-24 17:48:28 - logs - DEBUG - Перемещение курсора x: 1800 y: 100
+2025-02-24 17:48:28 - logs - DEBUG - Делает клик
+2025-02-24 17:48:29 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_market_opened.png координаты: (1560, 65, 1745, 120)
+2025-02-24 17:48:29 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_market_opened.png с l2m_ui_funcs\imgs\templates\market_opened.png threshold: 0.8
+2025-02-24 17:48:29 - logs - DEBUG - Шаблон найден
+2025-02-24 17:48:29 - logs - DEBUG - Шаблон не найден
+2025-02-24 17:48:29 - logs - INFO - Вышел из аука
+2025-02-24 17:48:30 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_menu_opened.png координаты: (1750, 60, 1800, 115)
+2025-02-24 17:48:30 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_menu_opened.png с l2m_ui_funcs\imgs\templates\menu_opened.png threshold: 0.8
+2025-02-24 17:48:30 - logs - DEBUG - Шаблон найден
+2025-02-24 17:48:30 - logs - DEBUG - Шаблон не найден
+2025-02-24 17:48:30 - logs - DEBUG - Перемещение курсора x: 1775 y: 85
+2025-02-24 17:48:30 - logs - DEBUG - Делает клик
+2025-02-24 17:48:31 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_menu_opened.png координаты: (1750, 60, 1800, 115)
+2025-02-24 17:48:31 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_menu_opened.png с l2m_ui_funcs\imgs\templates\menu_opened.png threshold: 0.8
+2025-02-24 17:48:31 - logs - DEBUG - Шаблон найден
+2025-02-24 17:48:31 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_settings_opened.png координаты: (1485, 65, 1740, 130)
+2025-02-24 17:48:31 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_settings_opened.png с l2m_ui_funcs\imgs\templates\settings_opened.png threshold: 0.8
+2025-02-24 17:48:31 - logs - DEBUG - Шаблон найден
+2025-02-24 17:48:31 - logs - DEBUG - Шаблон не найден
+2025-02-24 17:48:31 - logs - DEBUG - Перемещение курсора x: 1690 y: 815
+2025-02-24 17:48:31 - logs - DEBUG - Делает клик
+2025-02-24 17:48:32 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_settings_opened.png координаты: (1485, 65, 1740, 130)
+2025-02-24 17:48:32 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_settings_opened.png с l2m_ui_funcs\imgs\templates\settings_opened.png threshold: 0.8
+2025-02-24 17:48:32 - logs - DEBUG - Шаблон найден
+2025-02-24 17:48:32 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_attack_menu_opened.png координаты: (80, 265, 290, 525)
+2025-02-24 17:48:32 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_attack_menu_opened.png с l2m_ui_funcs\imgs\templates\attack_menu_opened.png threshold: 0.8
+2025-02-24 17:48:32 - logs - DEBUG - Шаблон найден
+2025-02-24 17:48:32 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_collect_opened.png координаты: (134, 385, 135, 386)
+2025-02-24 17:48:32 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_collect_opened.png colors_amount: 1024
+2025-02-24 17:48:32 - logs - DEBUG - Основной цвет: (93, 94, 96)
+2025-02-24 17:48:32 - logs - DEBUG - Перемещение курсора x: 170 y: 395
+2025-02-24 17:48:32 - logs - DEBUG - Делает клик
+2025-02-24 17:48:33 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_collect_opened.png координаты: (134, 385, 135, 386)
+2025-02-24 17:48:33 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_collect_opened.png colors_amount: 1024
+2025-02-24 17:48:33 - logs - DEBUG - Основной цвет: (255, 255, 255)
+2025-02-24 17:48:33 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_equipment_auto_collect_off.png координаты: (1750, 349, 1751, 350)
+2025-02-24 17:48:33 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_equipment_auto_collect_off.png colors_amount: 1024
+2025-02-24 17:48:33 - logs - DEBUG - Основной цвет: (69, 77, 91)
+2025-02-24 17:48:33 - logs - DEBUG - Перемещение курсора x: 1220 y: 420
+2025-02-24 17:48:33 - logs - DEBUG - Делает клик
+2025-02-24 17:48:33 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_equipment_auto_collect_off.png координаты: (1750, 349, 1751, 350)
+2025-02-24 17:48:33 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_equipment_auto_collect_off.png colors_amount: 1024
+2025-02-24 17:48:33 - logs - DEBUG - Основной цвет: (8, 9, 11)
+2025-02-24 17:48:33 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_items_auto_collect_off.png координаты: (1775, 505, 1776, 506)
+2025-02-24 17:48:33 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_items_auto_collect_off.png colors_amount: 1024
+2025-02-24 17:48:33 - logs - DEBUG - Основной цвет: (70, 78, 92)
+2025-02-24 17:48:33 - logs - DEBUG - Перемещение курсора x: 1450 y: 520
+2025-02-24 17:48:33 - logs - DEBUG - Делает клик
+2025-02-24 17:48:33 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_items_auto_collect_off.png координаты: (1775, 505, 1776, 506)
+2025-02-24 17:48:34 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_items_auto_collect_off.png colors_amount: 1024
+2025-02-24 17:48:34 - logs - DEBUG - Основной цвет: (7, 9, 10)
+2025-02-24 17:48:34 - logs - INFO - Включен автоподбор
+2025-02-24 17:48:34 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_settings_opened.png координаты: (1485, 65, 1740, 130)
+2025-02-24 17:48:34 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_settings_opened.png с l2m_ui_funcs\imgs\templates\settings_opened.png threshold: 0.8
+2025-02-24 17:48:34 - logs - DEBUG - Шаблон найден
+2025-02-24 17:48:34 - logs - DEBUG - Перемещение курсора x: 1800 y: 100
+2025-02-24 17:48:34 - logs - DEBUG - Делает клик
+2025-02-24 17:48:35 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_settings_opened.png координаты: (1485, 65, 1740, 130)
+2025-02-24 17:48:35 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_settings_opened.png с l2m_ui_funcs\imgs\templates\settings_opened.png threshold: 0.8
+2025-02-24 17:48:35 - logs - DEBUG - Шаблон найден
+2025-02-24 17:48:35 - logs - DEBUG - Шаблон не найден
+2025-02-24 17:48:35 - logs - INFO - Вышел из меню настроек
+2025-02-24 17:48:35 - logs - DEBUG - Перемещение курсора x: 70 y: 640
+2025-02-24 17:48:35 - logs - DEBUG - Делает клик
+2025-02-24 17:48:35 - logs - DEBUG - Перемещение курсора x: 940 y: 550
+2025-02-24 17:48:35 - logs - DEBUG - Делает клик

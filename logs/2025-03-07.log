@@ -1,0 +1,726 @@
+2025-03-07 12:14:33 - logs - DEBUG - Список всех HWND окон линейки [788534]
+2025-03-07 12:14:33 - logs - DEBUG - Открытик окна с HWND: 788534
+2025-03-07 12:14:33 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_screen_locked.png координаты: (400, 200, 1250, 800)
+2025-03-07 12:14:34 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_screen_locked.png с l2m_ui_funcs\imgs\templates\screen_is_locked.png threshold: 0.8
+2025-03-07 12:14:34 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:34 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:14:35 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_dead.png координаты: None
+2025-03-07 12:14:35 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_dead.png с l2m_ui_funcs\imgs\templates\dead.png threshold: 0.8
+2025-03-07 12:14:36 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:36 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:14:36 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_dead.png координаты: None
+2025-03-07 12:14:36 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_dead.png с l2m_ui_funcs\imgs\templates\dead2.png threshold: 0.8
+2025-03-07 12:14:36 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:36 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:14:37 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_menu_opened.png координаты: (1750, 60, 1800, 115)
+2025-03-07 12:14:37 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_menu_opened.png с l2m_ui_funcs\imgs\templates\menu_opened.png threshold: 0.8
+2025-03-07 12:14:37 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:37 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:14:37 - logs - DEBUG - Перемещение курсора x: 1775 y: 85
+2025-03-07 12:14:38 - logs - DEBUG - Делает клик
+2025-03-07 12:14:38 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_menu_opened.png координаты: (1750, 60, 1800, 115)
+2025-03-07 12:14:38 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_menu_opened.png с l2m_ui_funcs\imgs\templates\menu_opened.png threshold: 0.8
+2025-03-07 12:14:38 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:38 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_adena_shop_opened.png координаты: (1455, 70, 1745, 115)
+2025-03-07 12:14:38 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_adena_shop_opened.png с l2m_ui_funcs\imgs\templates\adena_market_opened.png threshold: 0.8
+2025-03-07 12:14:38 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:38 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:14:38 - logs - DEBUG - Перемещение курсора x: 1430 y: 90
+2025-03-07 12:14:38 - logs - DEBUG - Делает клик
+2025-03-07 12:14:39 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_adena_shop_opened.png координаты: (1455, 70, 1745, 115)
+2025-03-07 12:14:39 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_adena_shop_opened.png с l2m_ui_funcs\imgs\templates\adena_market_opened.png threshold: 0.8
+2025-03-07 12:14:39 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:39 - logs - INFO - Открыт адена шоп
+2025-03-07 12:14:39 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_there_cross_adena_shop.png координаты: (1510, 765, 1555, 815)
+2025-03-07 12:14:39 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_there_cross_adena_shop.png с bots\sbor\imgs\templates\cross_adena_shop.png threshold: 0.8
+2025-03-07 12:14:39 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:39 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:14:39 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_there_cross_adena_shop.png координаты: (1510, 765, 1555, 815)
+2025-03-07 12:14:39 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_there_cross_adena_shop.png с bots\sbor\imgs\templates\cross_adena_shop.png threshold: 0.8
+2025-03-07 12:14:39 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:39 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:14:39 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_there_cross_adena_shop.png координаты: (1510, 765, 1555, 815)
+2025-03-07 12:14:39 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_there_cross_adena_shop.png с bots\sbor\imgs\templates\cross_adena_shop.png threshold: 0.8
+2025-03-07 12:14:39 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:39 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_there_cross_adena_shop.png координаты: (1510, 765, 1555, 815)
+2025-03-07 12:14:39 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_there_cross_adena_shop.png с bots\sbor\imgs\templates\cross_adena_shop.png threshold: 0.8
+2025-03-07 12:14:39 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:39 - logs - DEBUG - Перемещение курсора x: 1535 y: 780
+2025-03-07 12:14:39 - logs - DEBUG - Делает клик
+2025-03-07 12:14:40 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_there_cross_adena_shop.png координаты: (1510, 765, 1555, 815)
+2025-03-07 12:14:40 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_there_cross_adena_shop.png с bots\sbor\imgs\templates\cross_adena_shop.png threshold: 0.8
+2025-03-07 12:14:40 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:40 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:14:40 - logs - INFO - Закрыто объявление
+2025-03-07 12:14:40 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_adena_opened.png координаты: (375, 188, 376, 189)
+2025-03-07 12:14:40 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_adena_opened.png colors_amount: 1024
+2025-03-07 12:14:40 - logs - DEBUG - Основной цвет: (163, 165, 170)
+2025-03-07 12:14:40 - logs - DEBUG - Перемещение курсора x: 420 y: 190
+2025-03-07 12:14:40 - logs - DEBUG - Делает клик
+2025-03-07 12:14:40 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_adena_opened.png координаты: (375, 188, 376, 189)
+2025-03-07 12:14:40 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_adena_opened.png colors_amount: 1024
+2025-03-07 12:14:40 - logs - DEBUG - Основной цвет: (255, 255, 255)
+2025-03-07 12:14:40 - logs - INFO - Открыта вкладка с покупкой за адену
+2025-03-07 12:14:40 - logs - DEBUG - Перемещение курсора x: 1690 y: 290
+2025-03-07 12:14:40 - logs - DEBUG - Делает клик
+2025-03-07 12:14:40 - logs - INFO - Открыт магазин #1
+2025-03-07 12:14:40 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_inner_shop_opened.png координаты: (1105, 865, 1106, 866)
+2025-03-07 12:14:40 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_inner_shop_opened.png colors_amount: 1024
+2025-03-07 12:14:40 - logs - DEBUG - Основной цвет: (14, 17, 22)
+2025-03-07 12:14:40 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_inner_shop_opened.png координаты: (1105, 865, 1106, 866)
+2025-03-07 12:14:40 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_inner_shop_opened.png colors_amount: 1024
+2025-03-07 12:14:40 - logs - DEBUG - Основной цвет: (14, 17, 22)
+2025-03-07 12:14:40 - logs - DEBUG - Перемещение курсора x: 1700 y: 990
+2025-03-07 12:14:40 - logs - DEBUG - Делает клик
+2025-03-07 12:14:40 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_inner_shop_opened.png координаты: (1105, 865, 1106, 866)
+2025-03-07 12:14:40 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_inner_shop_opened.png colors_amount: 1024
+2025-03-07 12:14:40 - logs - DEBUG - Основной цвет: (215, 103, 11)
+2025-03-07 12:14:40 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_nothing_to_buy.png координаты: (845, 800, 1015, 840)
+2025-03-07 12:14:40 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_nothing_to_buy.png с bots\sbor\imgs\templates\nothing_to_buy.png threshold: 0.8
+2025-03-07 12:14:40 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:40 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:14:40 - logs - INFO - Покупка
+2025-03-07 12:14:40 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_adena_opened.png координаты: (375, 188, 376, 189)
+2025-03-07 12:14:40 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_adena_opened.png colors_amount: 1024
+2025-03-07 12:14:40 - logs - DEBUG - Основной цвет: (25, 30, 37)
+2025-03-07 12:14:40 - logs - DEBUG - Перемещение курсора x: 1070 y: 900
+2025-03-07 12:14:41 - logs - DEBUG - Делает клик
+2025-03-07 12:14:41 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_adena_opened.png координаты: (375, 188, 376, 189)
+2025-03-07 12:14:41 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_adena_opened.png colors_amount: 1024
+2025-03-07 12:14:41 - logs - DEBUG - Основной цвет: (51, 51, 51)
+2025-03-07 12:14:41 - logs - DEBUG - Перемещение курсора x: 1070 y: 900
+2025-03-07 12:14:41 - logs - DEBUG - Делает клик
+2025-03-07 12:14:41 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_adena_opened.png координаты: (375, 188, 376, 189)
+2025-03-07 12:14:41 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_adena_opened.png colors_amount: 1024
+2025-03-07 12:14:41 - logs - DEBUG - Основной цвет: (51, 51, 51)
+2025-03-07 12:14:41 - logs - DEBUG - Перемещение курсора x: 1070 y: 900
+2025-03-07 12:14:41 - logs - DEBUG - Делает клик
+2025-03-07 12:14:41 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_adena_opened.png координаты: (375, 188, 376, 189)
+2025-03-07 12:14:41 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_adena_opened.png colors_amount: 1024
+2025-03-07 12:14:41 - logs - DEBUG - Основной цвет: (51, 51, 51)
+2025-03-07 12:14:41 - logs - DEBUG - Перемещение курсора x: 1070 y: 900
+2025-03-07 12:14:41 - logs - DEBUG - Делает клик
+2025-03-07 12:14:41 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_adena_opened.png координаты: (375, 188, 376, 189)
+2025-03-07 12:14:41 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_adena_opened.png colors_amount: 1024
+2025-03-07 12:14:41 - logs - DEBUG - Основной цвет: (51, 51, 51)
+2025-03-07 12:14:41 - logs - DEBUG - Перемещение курсора x: 1070 y: 900
+2025-03-07 12:14:41 - logs - DEBUG - Делает клик
+2025-03-07 12:14:41 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_adena_opened.png координаты: (375, 188, 376, 189)
+2025-03-07 12:14:42 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_adena_opened.png colors_amount: 1024
+2025-03-07 12:14:42 - logs - DEBUG - Основной цвет: (51, 51, 51)
+2025-03-07 12:14:42 - logs - DEBUG - Перемещение курсора x: 1070 y: 900
+2025-03-07 12:14:42 - logs - DEBUG - Делает клик
+2025-03-07 12:14:42 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_adena_opened.png координаты: (375, 188, 376, 189)
+2025-03-07 12:14:42 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_adena_opened.png colors_amount: 1024
+2025-03-07 12:14:42 - logs - DEBUG - Основной цвет: (51, 51, 51)
+2025-03-07 12:14:42 - logs - DEBUG - Перемещение курсора x: 1070 y: 900
+2025-03-07 12:14:42 - logs - DEBUG - Делает клик
+2025-03-07 12:14:42 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_adena_opened.png координаты: (375, 188, 376, 189)
+2025-03-07 12:14:42 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_adena_opened.png colors_amount: 1024
+2025-03-07 12:14:42 - logs - DEBUG - Основной цвет: (255, 255, 255)
+2025-03-07 12:14:42 - logs - DEBUG - Перемещение курсора x: 1690 y: 380
+2025-03-07 12:14:42 - logs - DEBUG - Делает клик
+2025-03-07 12:14:42 - logs - INFO - Открыт магазин #2
+2025-03-07 12:14:42 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_inner_shop_opened.png координаты: (1105, 865, 1106, 866)
+2025-03-07 12:14:42 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_inner_shop_opened.png colors_amount: 1024
+2025-03-07 12:14:42 - logs - DEBUG - Основной цвет: (1, 2, 2)
+2025-03-07 12:14:42 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_inner_shop_opened.png координаты: (1105, 865, 1106, 866)
+2025-03-07 12:14:42 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_inner_shop_opened.png colors_amount: 1024
+2025-03-07 12:14:42 - logs - DEBUG - Основной цвет: (1, 2, 2)
+2025-03-07 12:14:42 - logs - DEBUG - Перемещение курсора x: 1700 y: 990
+2025-03-07 12:14:42 - logs - DEBUG - Делает клик
+2025-03-07 12:14:42 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_inner_shop_opened.png координаты: (1105, 865, 1106, 866)
+2025-03-07 12:14:43 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_inner_shop_opened.png colors_amount: 1024
+2025-03-07 12:14:43 - logs - DEBUG - Основной цвет: (215, 103, 11)
+2025-03-07 12:14:43 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_nothing_to_buy.png координаты: (845, 800, 1015, 840)
+2025-03-07 12:14:43 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_nothing_to_buy.png с bots\sbor\imgs\templates\nothing_to_buy.png threshold: 0.8
+2025-03-07 12:14:43 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:43 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:14:43 - logs - INFO - Покупка
+2025-03-07 12:14:43 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_adena_opened.png координаты: (375, 188, 376, 189)
+2025-03-07 12:14:43 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_adena_opened.png colors_amount: 1024
+2025-03-07 12:14:43 - logs - DEBUG - Основной цвет: (22, 27, 34)
+2025-03-07 12:14:43 - logs - DEBUG - Перемещение курсора x: 1070 y: 900
+2025-03-07 12:14:43 - logs - DEBUG - Делает клик
+2025-03-07 12:14:43 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_adena_opened.png координаты: (375, 188, 376, 189)
+2025-03-07 12:14:43 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_adena_opened.png colors_amount: 1024
+2025-03-07 12:14:43 - logs - DEBUG - Основной цвет: (46, 46, 46)
+2025-03-07 12:14:43 - logs - DEBUG - Перемещение курсора x: 1070 y: 900
+2025-03-07 12:14:43 - logs - DEBUG - Делает клик
+2025-03-07 12:14:43 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_adena_opened.png координаты: (375, 188, 376, 189)
+2025-03-07 12:14:43 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_adena_opened.png colors_amount: 1024
+2025-03-07 12:14:43 - logs - DEBUG - Основной цвет: (46, 46, 46)
+2025-03-07 12:14:43 - logs - DEBUG - Перемещение курсора x: 1070 y: 900
+2025-03-07 12:14:43 - logs - DEBUG - Делает клик
+2025-03-07 12:14:43 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_adena_opened.png координаты: (375, 188, 376, 189)
+2025-03-07 12:14:43 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_adena_opened.png colors_amount: 1024
+2025-03-07 12:14:43 - logs - DEBUG - Основной цвет: (46, 46, 46)
+2025-03-07 12:14:43 - logs - DEBUG - Перемещение курсора x: 1070 y: 900
+2025-03-07 12:14:43 - logs - DEBUG - Делает клик
+2025-03-07 12:14:43 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_adena_opened.png координаты: (375, 188, 376, 189)
+2025-03-07 12:14:43 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_adena_opened.png colors_amount: 1024
+2025-03-07 12:14:43 - logs - DEBUG - Основной цвет: (46, 46, 46)
+2025-03-07 12:14:43 - logs - DEBUG - Перемещение курсора x: 1070 y: 900
+2025-03-07 12:14:44 - logs - DEBUG - Делает клик
+2025-03-07 12:14:44 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_adena_opened.png координаты: (375, 188, 376, 189)
+2025-03-07 12:14:44 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_adena_opened.png colors_amount: 1024
+2025-03-07 12:14:44 - logs - DEBUG - Основной цвет: (46, 46, 46)
+2025-03-07 12:14:44 - logs - DEBUG - Перемещение курсора x: 1070 y: 900
+2025-03-07 12:14:44 - logs - DEBUG - Делает клик
+2025-03-07 12:14:44 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_adena_opened.png координаты: (375, 188, 376, 189)
+2025-03-07 12:14:44 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_adena_opened.png colors_amount: 1024
+2025-03-07 12:14:44 - logs - DEBUG - Основной цвет: (255, 255, 255)
+2025-03-07 12:14:44 - logs - DEBUG - Перемещение курсора x: 1690 y: 470
+2025-03-07 12:14:44 - logs - DEBUG - Делает клик
+2025-03-07 12:14:44 - logs - INFO - Открыт магазин #3
+2025-03-07 12:14:44 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_inner_shop_opened.png координаты: (1105, 865, 1106, 866)
+2025-03-07 12:14:44 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_inner_shop_opened.png colors_amount: 1024
+2025-03-07 12:14:44 - logs - DEBUG - Основной цвет: (14, 17, 22)
+2025-03-07 12:14:44 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_inner_shop_opened.png координаты: (1105, 865, 1106, 866)
+2025-03-07 12:14:44 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_inner_shop_opened.png colors_amount: 1024
+2025-03-07 12:14:44 - logs - DEBUG - Основной цвет: (14, 17, 22)
+2025-03-07 12:14:44 - logs - DEBUG - Перемещение курсора x: 1700 y: 990
+2025-03-07 12:14:45 - logs - DEBUG - Делает клик
+2025-03-07 12:14:45 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_inner_shop_opened.png координаты: (1105, 865, 1106, 866)
+2025-03-07 12:14:45 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_inner_shop_opened.png colors_amount: 1024
+2025-03-07 12:14:45 - logs - DEBUG - Основной цвет: (107, 51, 5)
+2025-03-07 12:14:45 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_inner_shop_opened.png координаты: (1105, 865, 1106, 866)
+2025-03-07 12:14:45 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_inner_shop_opened.png colors_amount: 1024
+2025-03-07 12:14:45 - logs - DEBUG - Основной цвет: (107, 51, 5)
+2025-03-07 12:14:45 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_nothing_to_buy.png координаты: (845, 800, 1015, 840)
+2025-03-07 12:14:45 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_nothing_to_buy.png с bots\sbor\imgs\templates\nothing_to_buy.png threshold: 0.8
+2025-03-07 12:14:45 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:45 - logs - INFO - Нечего покупать
+2025-03-07 12:14:45 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_inner_shop_opened.png координаты: (1105, 865, 1106, 866)
+2025-03-07 12:14:45 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_inner_shop_opened.png colors_amount: 1024
+2025-03-07 12:14:45 - logs - DEBUG - Основной цвет: (107, 51, 5)
+2025-03-07 12:14:45 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_inner_shop_opened.png координаты: (1105, 865, 1106, 866)
+2025-03-07 12:14:45 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_inner_shop_opened.png colors_amount: 1024
+2025-03-07 12:14:45 - logs - DEBUG - Основной цвет: (107, 51, 5)
+2025-03-07 12:14:45 - logs - DEBUG - Перемещение курсора x: 780 y: 890
+2025-03-07 12:14:45 - logs - DEBUG - Делает клик
+2025-03-07 12:14:45 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_inner_shop_opened.png координаты: (1105, 865, 1106, 866)
+2025-03-07 12:14:45 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_inner_shop_opened.png colors_amount: 1024
+2025-03-07 12:14:45 - logs - DEBUG - Основной цвет: (14, 17, 22)
+2025-03-07 12:14:45 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_inner_shop_opened.png координаты: (1105, 865, 1106, 866)
+2025-03-07 12:14:45 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_inner_shop_opened.png colors_amount: 1024
+2025-03-07 12:14:45 - logs - DEBUG - Основной цвет: (14, 17, 22)
+2025-03-07 12:14:45 - logs - DEBUG - Перемещение курсора x: 1690 y: 560
+2025-03-07 12:14:45 - logs - DEBUG - Делает клик
+2025-03-07 12:14:45 - logs - INFO - Открыт магазин #4
+2025-03-07 12:14:45 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_inner_shop_opened.png координаты: (1105, 865, 1106, 866)
+2025-03-07 12:14:45 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_inner_shop_opened.png colors_amount: 1024
+2025-03-07 12:14:45 - logs - DEBUG - Основной цвет: (14, 17, 22)
+2025-03-07 12:14:45 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_inner_shop_opened.png координаты: (1105, 865, 1106, 866)
+2025-03-07 12:14:45 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_inner_shop_opened.png colors_amount: 1024
+2025-03-07 12:14:45 - logs - DEBUG - Основной цвет: (14, 17, 22)
+2025-03-07 12:14:45 - logs - DEBUG - Перемещение курсора x: 1700 y: 990
+2025-03-07 12:14:46 - logs - DEBUG - Делает клик
+2025-03-07 12:14:46 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_inner_shop_opened.png координаты: (1105, 865, 1106, 866)
+2025-03-07 12:14:46 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_inner_shop_opened.png colors_amount: 1024
+2025-03-07 12:14:46 - logs - DEBUG - Основной цвет: (1, 2, 2)
+2025-03-07 12:14:46 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_inner_shop_opened.png координаты: (1105, 865, 1106, 866)
+2025-03-07 12:14:46 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_inner_shop_opened.png colors_amount: 1024
+2025-03-07 12:14:46 - logs - DEBUG - Основной цвет: (107, 51, 5)
+2025-03-07 12:14:46 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_nothing_to_buy.png координаты: (845, 800, 1015, 840)
+2025-03-07 12:14:46 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_nothing_to_buy.png с bots\sbor\imgs\templates\nothing_to_buy.png threshold: 0.8
+2025-03-07 12:14:46 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:46 - logs - INFO - Нечего покупать
+2025-03-07 12:14:46 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_inner_shop_opened.png координаты: (1105, 865, 1106, 866)
+2025-03-07 12:14:46 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_inner_shop_opened.png colors_amount: 1024
+2025-03-07 12:14:46 - logs - DEBUG - Основной цвет: (107, 51, 5)
+2025-03-07 12:14:46 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_inner_shop_opened.png координаты: (1105, 865, 1106, 866)
+2025-03-07 12:14:46 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_inner_shop_opened.png colors_amount: 1024
+2025-03-07 12:14:46 - logs - DEBUG - Основной цвет: (107, 51, 5)
+2025-03-07 12:14:46 - logs - DEBUG - Перемещение курсора x: 780 y: 890
+2025-03-07 12:14:46 - logs - DEBUG - Делает клик
+2025-03-07 12:14:46 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_inner_shop_opened.png координаты: (1105, 865, 1106, 866)
+2025-03-07 12:14:46 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_inner_shop_opened.png colors_amount: 1024
+2025-03-07 12:14:46 - logs - DEBUG - Основной цвет: (1, 2, 2)
+2025-03-07 12:14:46 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_inner_shop_opened.png координаты: (1105, 865, 1106, 866)
+2025-03-07 12:14:46 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_inner_shop_opened.png colors_amount: 1024
+2025-03-07 12:14:46 - logs - DEBUG - Основной цвет: (1, 2, 2)
+2025-03-07 12:14:46 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_adena_opened.png координаты: (375, 188, 376, 189)
+2025-03-07 12:14:46 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_adena_opened.png colors_amount: 1024
+2025-03-07 12:14:46 - logs - DEBUG - Основной цвет: (245, 245, 245)
+2025-03-07 12:14:46 - logs - DEBUG - Перемещение курсора x: 1800 y: 100
+2025-03-07 12:14:46 - logs - DEBUG - Делает клик
+2025-03-07 12:14:46 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_adena_opened.png координаты: (375, 188, 376, 189)
+2025-03-07 12:14:46 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_adena_opened.png colors_amount: 1024
+2025-03-07 12:14:46 - logs - DEBUG - Основной цвет: (255, 255, 255)
+2025-03-07 12:14:46 - logs - DEBUG - Перемещение курсора x: 1800 y: 100
+2025-03-07 12:14:47 - logs - DEBUG - Делает клик
+2025-03-07 12:14:47 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_adena_opened.png координаты: (375, 188, 376, 189)
+2025-03-07 12:14:47 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_adena_opened.png colors_amount: 1024
+2025-03-07 12:14:47 - logs - DEBUG - Основной цвет: (189, 198, 215)
+2025-03-07 12:14:47 - logs - INFO - Вышел из адена шопа
+2025-03-07 12:14:48 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_menu_opened.png координаты: (1750, 60, 1800, 115)
+2025-03-07 12:14:48 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_menu_opened.png с l2m_ui_funcs\imgs\templates\menu_opened.png threshold: 0.8
+2025-03-07 12:14:48 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:48 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_messages_opened.png координаты: (1595, 70, 1735, 110)
+2025-03-07 12:14:48 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_messages_opened.png с l2m_ui_funcs\imgs\templates\messages_opened.png threshold: 0.8
+2025-03-07 12:14:48 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:48 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:14:48 - logs - DEBUG - Перемещение курсора x: 1425 y: 825
+2025-03-07 12:14:48 - logs - DEBUG - Делает клик
+2025-03-07 12:14:49 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_messages_opened.png координаты: (1595, 70, 1735, 110)
+2025-03-07 12:14:49 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_messages_opened.png с l2m_ui_funcs\imgs\templates\messages_opened.png threshold: 0.8
+2025-03-07 12:14:49 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:49 - logs - INFO - Открыто меню сообщений
+2025-03-07 12:14:49 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_collect_button_available.png координаты: (1695, 925, 1696, 926)
+2025-03-07 12:14:49 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_collect_button_available.png colors_amount: 1024
+2025-03-07 12:14:49 - logs - DEBUG - Основной цвет: (215, 102, 11)
+2025-03-07 12:14:49 - logs - DEBUG - Перемещение курсора x: 1580 y: 950
+2025-03-07 12:14:49 - logs - DEBUG - Делает клик
+2025-03-07 12:14:49 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_collect_button_available.png координаты: (1695, 925, 1696, 926)
+2025-03-07 12:14:49 - logs - DEBUG - Получение основного цвета для l2m_ui_funcs\imgs\screenshots\is_collect_button_available.png colors_amount: 1024
+2025-03-07 12:14:49 - logs - DEBUG - Основной цвет: (107, 51, 5)
+2025-03-07 12:14:49 - logs - INFO - Нажата кнопка собрать
+2025-03-07 12:14:50 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_energy_collect_opened.png координаты: (635, 435, 1230, 550)
+2025-03-07 12:14:50 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_energy_collect_opened.png с l2m_ui_funcs\imgs\templates\energy_collect_available.png threshold: 0.8
+2025-03-07 12:14:50 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:50 - logs - INFO - Есть плашка с энергией
+2025-03-07 12:14:50 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_energy_collect_opened.png координаты: (635, 435, 1230, 550)
+2025-03-07 12:14:50 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_energy_collect_opened.png с l2m_ui_funcs\imgs\templates\energy_collect_available.png threshold: 0.8
+2025-03-07 12:14:50 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:50 - logs - DEBUG - Перемещение курсора x: 790 y: 705
+2025-03-07 12:14:50 - logs - DEBUG - Делает клик
+2025-03-07 12:14:51 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_energy_collect_opened.png координаты: (635, 435, 1230, 550)
+2025-03-07 12:14:51 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_energy_collect_opened.png с l2m_ui_funcs\imgs\templates\energy_collect_available.png threshold: 0.8
+2025-03-07 12:14:51 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:51 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:14:52 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_energy_collect_opened.png координаты: (635, 435, 1230, 550)
+2025-03-07 12:14:52 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_energy_collect_opened.png с l2m_ui_funcs\imgs\templates\energy_collect_available.png threshold: 0.8
+2025-03-07 12:14:52 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:52 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:14:52 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_messages_opened.png координаты: (1595, 70, 1735, 110)
+2025-03-07 12:14:52 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_messages_opened.png с l2m_ui_funcs\imgs\templates\messages_opened.png threshold: 0.8
+2025-03-07 12:14:52 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:52 - logs - DEBUG - Перемещение курсора x: 1790 y: 95
+2025-03-07 12:14:52 - logs - DEBUG - Делает клик
+2025-03-07 12:14:52 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_messages_opened.png координаты: (1595, 70, 1735, 110)
+2025-03-07 12:14:52 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_messages_opened.png с l2m_ui_funcs\imgs\templates\messages_opened.png threshold: 0.8
+2025-03-07 12:14:52 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:52 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:14:52 - logs - INFO - Вышел из меню сообщений
+2025-03-07 12:14:53 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_menu_opened.png координаты: (1750, 60, 1800, 115)
+2025-03-07 12:14:53 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_menu_opened.png с l2m_ui_funcs\imgs\templates\menu_opened.png threshold: 0.8
+2025-03-07 12:14:53 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:53 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:14:53 - logs - DEBUG - Перемещение курсора x: 1775 y: 85
+2025-03-07 12:14:54 - logs - DEBUG - Делает клик
+2025-03-07 12:14:54 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_menu_opened.png координаты: (1750, 60, 1800, 115)
+2025-03-07 12:14:54 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_menu_opened.png с l2m_ui_funcs\imgs\templates\menu_opened.png threshold: 0.8
+2025-03-07 12:14:54 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:54 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_clan_menu_opened.png координаты: (1625, 70, 1735, 110)
+2025-03-07 12:14:54 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_clan_menu_opened.png с l2m_ui_funcs\imgs\templates\clan_menu_opened.png threshold: 0.8
+2025-03-07 12:14:54 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:54 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:14:54 - logs - DEBUG - Перемещение курсора x: 1600 y: 575
+2025-03-07 12:14:54 - logs - DEBUG - Делает клик
+2025-03-07 12:14:55 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_clan_menu_opened.png координаты: (1625, 70, 1735, 110)
+2025-03-07 12:14:55 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_clan_menu_opened.png с l2m_ui_funcs\imgs\templates\clan_menu_opened.png threshold: 0.8
+2025-03-07 12:14:55 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:55 - logs - INFO - Открыто меню клана
+2025-03-07 12:14:55 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_character_in_clan.png координаты: (840, 915, 1165, 985)
+2025-03-07 12:14:55 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_character_in_clan.png с bots\sbor\imgs\templates\character_in_clan.png threshold: 0.8
+2025-03-07 12:14:55 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:55 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:14:55 - logs - INFO - Персонаж не состоит в клане
+2025-03-07 12:14:55 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_clan_menu_opened.png координаты: (1625, 70, 1735, 110)
+2025-03-07 12:14:55 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_clan_menu_opened.png с l2m_ui_funcs\imgs\templates\clan_menu_opened.png threshold: 0.8
+2025-03-07 12:14:55 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:55 - logs - DEBUG - Перемещение курсора x: 1780 y: 90
+2025-03-07 12:14:55 - logs - DEBUG - Делает клик
+2025-03-07 12:14:55 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_clan_menu_opened.png координаты: (1625, 70, 1735, 110)
+2025-03-07 12:14:55 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_clan_menu_opened.png с l2m_ui_funcs\imgs\templates\clan_menu_opened.png threshold: 0.8
+2025-03-07 12:14:55 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:55 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:14:56 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_menu_opened.png координаты: (1750, 60, 1800, 115)
+2025-03-07 12:14:56 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_menu_opened.png с l2m_ui_funcs\imgs\templates\menu_opened.png threshold: 0.8
+2025-03-07 12:14:56 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:56 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:14:56 - logs - DEBUG - Перемещение курсора x: 1775 y: 85
+2025-03-07 12:14:56 - logs - DEBUG - Делает клик
+2025-03-07 12:14:57 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_menu_opened.png координаты: (1750, 60, 1800, 115)
+2025-03-07 12:14:57 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_menu_opened.png с l2m_ui_funcs\imgs\templates\menu_opened.png threshold: 0.8
+2025-03-07 12:14:57 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:57 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_bonuses_opened.png координаты: (1250, 65, 1735, 120)
+2025-03-07 12:14:57 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_bonuses_opened.png с l2m_ui_funcs\imgs\templates\bonuses_opened.png threshold: 0.8
+2025-03-07 12:14:57 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:57 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:14:57 - logs - DEBUG - Перемещение курсора x: 1775 y: 580
+2025-03-07 12:14:57 - logs - DEBUG - Делает клик
+2025-03-07 12:14:58 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_bonuses_opened.png координаты: (1250, 65, 1735, 120)
+2025-03-07 12:14:58 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_bonuses_opened.png с l2m_ui_funcs\imgs\templates\bonuses_opened.png threshold: 0.8
+2025-03-07 12:14:58 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:58 - logs - INFO - Открыто меню бонусов
+2025-03-07 12:14:58 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_no_more_bonuses.png координаты: (1600, 200, 1830, 310)
+2025-03-07 12:14:58 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_no_more_bonuses.png с bots\sbor\imgs\templates\no_more_bonuses.png threshold: 0.8
+2025-03-07 12:14:58 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:58 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:14:58 - logs - DEBUG - Перемещение курсора x: 1715 y: 250
+2025-03-07 12:14:58 - logs - DEBUG - Делает клик
+2025-03-07 12:14:58 - logs - INFO - Нажата кнопка получить бонус
+2025-03-07 12:14:58 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_bonus_unused.png координаты: (1375, 535, 1376, 536)
+2025-03-07 12:14:58 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_bonus_unused.png colors_amount: 1024
+2025-03-07 12:14:58 - logs - DEBUG - Основной цвет: (215, 102, 11)
+2025-03-07 12:14:58 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_bonus_unavailable.png координаты: (630, 460, 990, 505)
+2025-03-07 12:14:58 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_bonus_unavailable.png с bots\sbor\imgs\templates\bonus_unavailable.png threshold: 0.8
+2025-03-07 12:14:58 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:58 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:14:58 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_bonuses_diamond.png координаты: (1255, 530, 1575, 595)
+2025-03-07 12:14:58 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_bonuses_diamond.png с bots\sbor\imgs\templates\bonuses_diamond.png threshold: 0.8
+2025-03-07 12:14:58 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:58 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:14:58 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_bonuses_compas.png координаты: (1255, 530, 1575, 595)
+2025-03-07 12:14:58 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_bonuses_compas.png с bots\sbor\imgs\templates\bonuses_compas.png threshold: 0.8
+2025-03-07 12:14:58 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:58 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:14:58 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_bonus_unused.png координаты: (1375, 535, 1376, 536)
+2025-03-07 12:14:58 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_bonus_unused.png colors_amount: 1024
+2025-03-07 12:14:58 - logs - DEBUG - Основной цвет: (215, 102, 11)
+2025-03-07 12:14:58 - logs - DEBUG - Перемещение курсора x: 1400 y: 555
+2025-03-07 12:14:58 - logs - DEBUG - Делает клик
+2025-03-07 12:14:59 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_bonus_unused.png координаты: (1375, 535, 1376, 536)
+2025-03-07 12:14:59 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_bonus_unused.png colors_amount: 1024
+2025-03-07 12:14:59 - logs - DEBUG - Основной цвет: (21, 19, 20)
+2025-03-07 12:14:59 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_need_to_confirm_bonus.png координаты: (935, 670, 1220, 745)
+2025-03-07 12:14:59 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_need_to_confirm_bonus.png с bots\sbor\imgs\templates\need_to_confirm_bonus.png threshold: 0.8
+2025-03-07 12:14:59 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:59 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_need_to_confirm_bonus.png координаты: (935, 670, 1220, 745)
+2025-03-07 12:14:59 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_need_to_confirm_bonus.png с bots\sbor\imgs\templates\need_to_confirm_bonus.png threshold: 0.8
+2025-03-07 12:14:59 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:59 - logs - DEBUG - Перемещение курсора x: 1050 y: 710
+2025-03-07 12:14:59 - logs - DEBUG - Делает клик
+2025-03-07 12:14:59 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_need_to_confirm_bonus.png координаты: (935, 670, 1220, 745)
+2025-03-07 12:14:59 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_need_to_confirm_bonus.png с bots\sbor\imgs\templates\need_to_confirm_bonus.png threshold: 0.8
+2025-03-07 12:14:59 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:59 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:14:59 - logs - INFO - Бонус собран
+2025-03-07 12:14:59 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_no_more_bonuses.png координаты: (1600, 310, 1830, 420)
+2025-03-07 12:14:59 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_no_more_bonuses.png с bots\sbor\imgs\templates\no_more_bonuses.png threshold: 0.8
+2025-03-07 12:14:59 - logs - DEBUG - Шаблон найден
+2025-03-07 12:14:59 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:14:59 - logs - DEBUG - Перемещение курсора x: 1715 y: 360
+2025-03-07 12:15:00 - logs - DEBUG - Делает клик
+2025-03-07 12:15:00 - logs - INFO - Нажата кнопка получить бонус
+2025-03-07 12:15:00 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_bonus_unused.png координаты: (1375, 535, 1376, 536)
+2025-03-07 12:15:00 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_bonus_unused.png colors_amount: 1024
+2025-03-07 12:15:00 - logs - DEBUG - Основной цвет: (215, 102, 11)
+2025-03-07 12:15:00 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_bonus_unavailable.png координаты: (630, 460, 990, 505)
+2025-03-07 12:15:00 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_bonus_unavailable.png с bots\sbor\imgs\templates\bonus_unavailable.png threshold: 0.8
+2025-03-07 12:15:00 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:00 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:00 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_bonuses_diamond.png координаты: (1255, 530, 1575, 595)
+2025-03-07 12:15:00 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_bonuses_diamond.png с bots\sbor\imgs\templates\bonuses_diamond.png threshold: 0.8
+2025-03-07 12:15:00 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:00 - logs - INFO - Невозможно собрать бонус
+2025-03-07 12:15:00 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_no_more_bonuses.png координаты: (1600, 420, 1830, 530)
+2025-03-07 12:15:00 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_no_more_bonuses.png с bots\sbor\imgs\templates\no_more_bonuses.png threshold: 0.8
+2025-03-07 12:15:00 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:00 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:00 - logs - DEBUG - Перемещение курсора x: 1715 y: 470
+2025-03-07 12:15:00 - logs - DEBUG - Делает клик
+2025-03-07 12:15:00 - logs - INFO - Нажата кнопка получить бонус
+2025-03-07 12:15:00 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_bonus_unused.png координаты: (1375, 535, 1376, 536)
+2025-03-07 12:15:00 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_bonus_unused.png colors_amount: 1024
+2025-03-07 12:15:00 - logs - DEBUG - Основной цвет: (17, 22, 29)
+2025-03-07 12:15:00 - logs - INFO - Невозможно собрать бонус
+2025-03-07 12:15:00 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_no_more_bonuses.png координаты: (1600, 530, 1830, 640)
+2025-03-07 12:15:00 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_no_more_bonuses.png с bots\sbor\imgs\templates\no_more_bonuses.png threshold: 0.8
+2025-03-07 12:15:00 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:00 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:00 - logs - DEBUG - Перемещение курсора x: 1715 y: 580
+2025-03-07 12:15:00 - logs - DEBUG - Делает клик
+2025-03-07 12:15:00 - logs - INFO - Нажата кнопка получить бонус
+2025-03-07 12:15:00 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_bonus_unused.png координаты: (1375, 535, 1376, 536)
+2025-03-07 12:15:00 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_bonus_unused.png colors_amount: 1024
+2025-03-07 12:15:00 - logs - DEBUG - Основной цвет: (215, 102, 11)
+2025-03-07 12:15:00 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_bonus_unavailable.png координаты: (630, 460, 990, 505)
+2025-03-07 12:15:00 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_bonus_unavailable.png с bots\sbor\imgs\templates\bonus_unavailable.png threshold: 0.8
+2025-03-07 12:15:00 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:00 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:00 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_bonuses_diamond.png координаты: (1255, 530, 1575, 595)
+2025-03-07 12:15:00 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_bonuses_diamond.png с bots\sbor\imgs\templates\bonuses_diamond.png threshold: 0.8
+2025-03-07 12:15:00 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:00 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:00 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_bonuses_compas.png координаты: (1255, 530, 1575, 595)
+2025-03-07 12:15:00 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_bonuses_compas.png с bots\sbor\imgs\templates\bonuses_compas.png threshold: 0.8
+2025-03-07 12:15:00 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:00 - logs - INFO - Невозможно собрать бонус
+2025-03-07 12:15:00 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_no_more_bonuses.png координаты: (1600, 640, 1830, 750)
+2025-03-07 12:15:00 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_no_more_bonuses.png с bots\sbor\imgs\templates\no_more_bonuses.png threshold: 0.8
+2025-03-07 12:15:00 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:00 - logs - INFO - Больше нет бонусов
+2025-03-07 12:15:00 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_bonuses_opened.png координаты: (1250, 65, 1735, 120)
+2025-03-07 12:15:00 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_bonuses_opened.png с l2m_ui_funcs\imgs\templates\bonuses_opened.png threshold: 0.8
+2025-03-07 12:15:00 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:00 - logs - DEBUG - Перемещение курсора x: 1800 y: 85
+2025-03-07 12:15:01 - logs - DEBUG - Делает клик
+2025-03-07 12:15:01 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_bonuses_opened.png координаты: (1250, 65, 1735, 120)
+2025-03-07 12:15:01 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_bonuses_opened.png с l2m_ui_funcs\imgs\templates\bonuses_opened.png threshold: 0.8
+2025-03-07 12:15:01 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:01 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:01 - logs - INFO - Вышел из меню бонусов
+2025-03-07 12:15:02 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_menu_opened.png координаты: (1750, 60, 1800, 115)
+2025-03-07 12:15:02 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_menu_opened.png с l2m_ui_funcs\imgs\templates\menu_opened.png threshold: 0.8
+2025-03-07 12:15:02 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:02 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:02 - logs - DEBUG - Перемещение курсора x: 1775 y: 85
+2025-03-07 12:15:02 - logs - DEBUG - Делает клик
+2025-03-07 12:15:02 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_menu_opened.png координаты: (1750, 60, 1800, 115)
+2025-03-07 12:15:02 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_menu_opened.png с l2m_ui_funcs\imgs\templates\menu_opened.png threshold: 0.8
+2025-03-07 12:15:02 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:02 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_battle_pass_opened.png координаты: (1300, 65, 1740, 125)
+2025-03-07 12:15:02 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_battle_pass_opened.png с l2m_ui_funcs\imgs\templates\battle_pass_opened.png threshold: 0.8
+2025-03-07 12:15:02 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:02 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:02 - logs - DEBUG - Перемещение курсора x: 1510 y: 820
+2025-03-07 12:15:03 - logs - DEBUG - Делает клик
+2025-03-07 12:15:03 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_battle_pass_opened.png координаты: (1300, 65, 1740, 125)
+2025-03-07 12:15:03 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_battle_pass_opened.png с l2m_ui_funcs\imgs\templates\battle_pass_opened.png threshold: 0.8
+2025-03-07 12:15:03 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:03 - logs - INFO - Зашел в меню батл пасса
+2025-03-07 12:15:03 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_rewards_in_battle_pass_available.png координаты: (45, 140, 385, 170)
+2025-03-07 12:15:03 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_rewards_in_battle_pass_available.png с bots\sbor\imgs\templates\rewards_in_battle_pass_available.png threshold: 0.7
+2025-03-07 12:15:03 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:03 - logs - DEBUG - Перемещение курсора x: 220 y: 190
+2025-03-07 12:15:03 - logs - DEBUG - Делает клик
+2025-03-07 12:15:03 - logs - INFO - Нажал на батл пасс №0
+2025-03-07 12:15:03 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_rewards_in_sub_battle_pass_available.png координаты: (45, 250, 78, 280)
+2025-03-07 12:15:04 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_rewards_in_sub_battle_pass_available.png с bots\sbor\imgs\templates\rewards_in_sub_battle_pass_available.png threshold: 0.8
+2025-03-07 12:15:04 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:04 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:04 - logs - INFO - Нечего собирать в саб батл пассе №0
+2025-03-07 12:15:04 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_rewards_in_sub_battle_pass_available.png координаты: (45, 340, 78, 370)
+2025-03-07 12:15:04 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_rewards_in_sub_battle_pass_available.png с bots\sbor\imgs\templates\rewards_in_sub_battle_pass_available.png threshold: 0.8
+2025-03-07 12:15:04 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:04 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:04 - logs - INFO - Нечего собирать в саб батл пассе №1
+2025-03-07 12:15:04 - logs - DEBUG - Перемещение курсора x: 1445 y: 950
+2025-03-07 12:15:04 - logs - DEBUG - Делает клик
+2025-03-07 12:15:04 - logs - INFO - Собрал общую награду БП #0
+2025-03-07 12:15:04 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_rewards_in_battle_pass_available.png координаты: (385, 140, 725, 170)
+2025-03-07 12:15:04 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_rewards_in_battle_pass_available.png с bots\sbor\imgs\templates\rewards_in_battle_pass_available.png threshold: 0.7
+2025-03-07 12:15:04 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:04 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:04 - logs - INFO - Нечего собирать в БП №1
+2025-03-07 12:15:04 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_battle_pass_opened.png координаты: (1300, 65, 1740, 125)
+2025-03-07 12:15:04 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_battle_pass_opened.png с l2m_ui_funcs\imgs\templates\battle_pass_opened.png threshold: 0.8
+2025-03-07 12:15:04 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:04 - logs - DEBUG - Перемещение курсора x: 1800 y: 90
+2025-03-07 12:15:04 - logs - DEBUG - Делает клик
+2025-03-07 12:15:04 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_battle_pass_opened.png координаты: (1300, 65, 1740, 125)
+2025-03-07 12:15:04 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_battle_pass_opened.png с l2m_ui_funcs\imgs\templates\battle_pass_opened.png threshold: 0.8
+2025-03-07 12:15:04 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:04 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:04 - logs - INFO - Вышел из меню БП
+2025-03-07 12:15:04 - logs - INFO - Попытка телепортироваться в город
+2025-03-07 12:15:04 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_map_opened.png координаты: (1605, 70, 1735, 120)
+2025-03-07 12:15:04 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_map_opened.png с l2m_ui_funcs\imgs\templates\map_opened.png threshold: 0.8
+2025-03-07 12:15:04 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:04 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:04 - logs - DEBUG - Перемещение курсора x: 160 y: 235
+2025-03-07 12:15:04 - logs - DEBUG - Делает клик
+2025-03-07 12:15:06 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_map_opened.png координаты: (1605, 70, 1735, 120)
+2025-03-07 12:15:06 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_map_opened.png с l2m_ui_funcs\imgs\templates\map_opened.png threshold: 0.8
+2025-03-07 12:15:06 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:06 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_favorites_opened.png координаты: (170, 205, 171, 206)
+2025-03-07 12:15:06 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_favorites_opened.png colors_amount: 1024
+2025-03-07 12:15:06 - logs - DEBUG - Основной цвет: (255, 102, 0)
+2025-03-07 12:15:06 - logs - DEBUG - Перемещение курсора x: 150 y: 320
+2025-03-07 12:15:06 - logs - DEBUG - Делает клик
+2025-03-07 12:15:07 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_town_opened.png координаты: (1610, 695, 1611, 696)
+2025-03-07 12:15:07 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_town_opened.png colors_amount: 1024
+2025-03-07 12:15:07 - logs - DEBUG - Основной цвет: (216, 105, 12)
+2025-03-07 12:15:07 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_there_teleport_confirm_button.png координаты: (935, 670, 1220, 745)
+2025-03-07 12:15:07 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_there_teleport_confirm_button.png с bots\sbor\imgs\templates\teleport_confirm_button.png threshold: 0.8
+2025-03-07 12:15:07 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:07 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:07 - logs - DEBUG - Перемещение курсора x: 1600 y: 710
+2025-03-07 12:15:07 - logs - DEBUG - Делает клик
+2025-03-07 12:15:07 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_there_teleport_confirm_button.png координаты: (935, 670, 1220, 745)
+2025-03-07 12:15:07 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_there_teleport_confirm_button.png с bots\sbor\imgs\templates\teleport_confirm_button.png threshold: 0.8
+2025-03-07 12:15:07 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:07 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_there_teleport_confirm_button.png координаты: (935, 670, 1220, 745)
+2025-03-07 12:15:07 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_there_teleport_confirm_button.png с bots\sbor\imgs\templates\teleport_confirm_button.png threshold: 0.8
+2025-03-07 12:15:07 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:07 - logs - DEBUG - Перемещение курсора x: 1080 y: 710
+2025-03-07 12:15:07 - logs - DEBUG - Делает клик
+2025-03-07 12:15:07 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_there_teleport_confirm_button.png координаты: (935, 670, 1220, 745)
+2025-03-07 12:15:07 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_there_teleport_confirm_button.png с bots\sbor\imgs\templates\teleport_confirm_button.png threshold: 0.8
+2025-03-07 12:15:07 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:07 - logs - DEBUG - Перемещение курсора x: 1080 y: 710
+2025-03-07 12:15:07 - logs - DEBUG - Делает клик
+2025-03-07 12:15:07 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_there_teleport_confirm_button.png координаты: (935, 670, 1220, 745)
+2025-03-07 12:15:07 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_there_teleport_confirm_button.png с bots\sbor\imgs\templates\teleport_confirm_button.png threshold: 0.8
+2025-03-07 12:15:07 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:07 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:13 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_sellers_menu_opened.png координаты: (65, 160, 100, 520)
+2025-03-07 12:15:14 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_sellers_menu_opened.png с l2m_ui_funcs\imgs\templates\sellers_menu_opened.png threshold: 0.8
+2025-03-07 12:15:14 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:14 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:14 - logs - DEBUG - Перемещение курсора x: 350 y: 275
+2025-03-07 12:15:14 - logs - DEBUG - Делает клик
+2025-03-07 12:15:14 - logs - DEBUG - Создание скриншота l2m_ui_funcs\imgs\screenshots\is_sellers_menu_opened.png координаты: (65, 160, 100, 520)
+2025-03-07 12:15:14 - logs - DEBUG - Сравнение l2m_ui_funcs\imgs\screenshots\is_sellers_menu_opened.png с l2m_ui_funcs\imgs\templates\sellers_menu_opened.png threshold: 0.8
+2025-03-07 12:15:14 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:14 - logs - INFO - Открыл меню торговцев
+2025-03-07 12:15:14 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_sellers_event_1.png координаты: (65, 160, 180, 195)
+2025-03-07 12:15:14 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_sellers_event_1.png с bots\sbor\imgs\templates\sellers_event_1.png threshold: 0.8
+2025-03-07 12:15:14 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:14 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:14 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_sellers_event_1.png координаты: (65, 160, 180, 195)
+2025-03-07 12:15:14 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_sellers_event_1.png с bots\sbor\imgs\templates\sellers_event_2.png threshold: 0.8
+2025-03-07 12:15:14 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:14 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:14 - logs - INFO - Количество ивентов: 0
+2025-03-07 12:15:14 - logs - DEBUG - grocer_pos: 0 sklad_pos: 2 buyer_pos: 4
+2025-03-07 12:15:14 - logs - INFO - Собирает бакалейщика
+2025-03-07 12:15:14 - logs - DEBUG - Перемещение курсора x: 125 y: 190
+2025-03-07 12:15:14 - logs - DEBUG - Делает клик
+2025-03-07 12:15:15 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_seller.png координаты: (1470, 920, 1471, 921)
+2025-03-07 12:15:15 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_came_to_seller.png colors_amount: 1024
+2025-03-07 12:15:15 - logs - DEBUG - Основной цвет: (41, 41, 41)
+2025-03-07 12:15:15 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_event_seller.png координаты: (1380, 905, 1600, 990)
+2025-03-07 12:15:15 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_came_to_event_seller.png с bots\sbor\imgs\templates\came_to_event_seller.png threshold: 0.8
+2025-03-07 12:15:15 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:15 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:15 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_event.png координаты: (930, 665, 1225, 750)
+2025-03-07 12:15:15 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_came_to_event.png с bots\sbor\imgs\templates\came_to_event.png threshold: 0.8
+2025-03-07 12:15:15 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:15 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:15 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_seller.png координаты: (1470, 920, 1471, 921)
+2025-03-07 12:15:15 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_came_to_seller.png colors_amount: 1024
+2025-03-07 12:15:15 - logs - DEBUG - Основной цвет: (41, 41, 41)
+2025-03-07 12:15:15 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_event_seller.png координаты: (1380, 905, 1600, 990)
+2025-03-07 12:15:15 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_came_to_event_seller.png с bots\sbor\imgs\templates\came_to_event_seller.png threshold: 0.8
+2025-03-07 12:15:15 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:15 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:15 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_event.png координаты: (930, 665, 1225, 750)
+2025-03-07 12:15:15 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_came_to_event.png с bots\sbor\imgs\templates\came_to_event.png threshold: 0.8
+2025-03-07 12:15:15 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:15 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:15 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_seller.png координаты: (1470, 920, 1471, 921)
+2025-03-07 12:15:15 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_came_to_seller.png colors_amount: 1024
+2025-03-07 12:15:15 - logs - DEBUG - Основной цвет: (41, 41, 41)
+2025-03-07 12:15:15 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_event_seller.png координаты: (1380, 905, 1600, 990)
+2025-03-07 12:15:15 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_came_to_event_seller.png с bots\sbor\imgs\templates\came_to_event_seller.png threshold: 0.8
+2025-03-07 12:15:15 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:15 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:15 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_event.png координаты: (930, 665, 1225, 750)
+2025-03-07 12:15:15 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_came_to_event.png с bots\sbor\imgs\templates\came_to_event.png threshold: 0.8
+2025-03-07 12:15:15 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:15 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:15 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_seller.png координаты: (1470, 920, 1471, 921)
+2025-03-07 12:15:15 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_came_to_seller.png colors_amount: 1024
+2025-03-07 12:15:15 - logs - DEBUG - Основной цвет: (41, 41, 41)
+2025-03-07 12:15:15 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_event_seller.png координаты: (1380, 905, 1600, 990)
+2025-03-07 12:15:15 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_came_to_event_seller.png с bots\sbor\imgs\templates\came_to_event_seller.png threshold: 0.8
+2025-03-07 12:15:15 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:15 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:15 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_event.png координаты: (930, 665, 1225, 750)
+2025-03-07 12:15:15 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_came_to_event.png с bots\sbor\imgs\templates\came_to_event.png threshold: 0.8
+2025-03-07 12:15:15 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:15 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:15 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_seller.png координаты: (1470, 920, 1471, 921)
+2025-03-07 12:15:16 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_came_to_seller.png colors_amount: 1024
+2025-03-07 12:15:16 - logs - DEBUG - Основной цвет: (41, 41, 41)
+2025-03-07 12:15:16 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_event_seller.png координаты: (1380, 905, 1600, 990)
+2025-03-07 12:15:16 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_came_to_event_seller.png с bots\sbor\imgs\templates\came_to_event_seller.png threshold: 0.8
+2025-03-07 12:15:16 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:16 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:16 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_event.png координаты: (930, 665, 1225, 750)
+2025-03-07 12:15:16 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_came_to_event.png с bots\sbor\imgs\templates\came_to_event.png threshold: 0.8
+2025-03-07 12:15:16 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:16 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:16 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_seller.png координаты: (1470, 920, 1471, 921)
+2025-03-07 12:15:16 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_came_to_seller.png colors_amount: 1024
+2025-03-07 12:15:16 - logs - DEBUG - Основной цвет: (41, 41, 41)
+2025-03-07 12:15:16 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_event_seller.png координаты: (1380, 905, 1600, 990)
+2025-03-07 12:15:16 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_came_to_event_seller.png с bots\sbor\imgs\templates\came_to_event_seller.png threshold: 0.8
+2025-03-07 12:15:16 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:16 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:16 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_event.png координаты: (930, 665, 1225, 750)
+2025-03-07 12:15:16 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_came_to_event.png с bots\sbor\imgs\templates\came_to_event.png threshold: 0.8
+2025-03-07 12:15:16 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:16 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:16 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_seller.png координаты: (1470, 920, 1471, 921)
+2025-03-07 12:15:16 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_came_to_seller.png colors_amount: 1024
+2025-03-07 12:15:16 - logs - DEBUG - Основной цвет: (41, 41, 41)
+2025-03-07 12:15:16 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_event_seller.png координаты: (1380, 905, 1600, 990)
+2025-03-07 12:15:16 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_came_to_event_seller.png с bots\sbor\imgs\templates\came_to_event_seller.png threshold: 0.8
+2025-03-07 12:15:16 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:16 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:16 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_event.png координаты: (930, 665, 1225, 750)
+2025-03-07 12:15:16 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_came_to_event.png с bots\sbor\imgs\templates\came_to_event.png threshold: 0.8
+2025-03-07 12:15:16 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:16 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:16 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_seller.png координаты: (1470, 920, 1471, 921)
+2025-03-07 12:15:16 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_came_to_seller.png colors_amount: 1024
+2025-03-07 12:15:16 - logs - DEBUG - Основной цвет: (41, 41, 41)
+2025-03-07 12:15:16 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_event_seller.png координаты: (1380, 905, 1600, 990)
+2025-03-07 12:15:16 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_came_to_event_seller.png с bots\sbor\imgs\templates\came_to_event_seller.png threshold: 0.8
+2025-03-07 12:15:16 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:16 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:16 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_event.png координаты: (930, 665, 1225, 750)
+2025-03-07 12:15:16 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_came_to_event.png с bots\sbor\imgs\templates\came_to_event.png threshold: 0.8
+2025-03-07 12:15:16 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:16 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:16 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_seller.png координаты: (1470, 920, 1471, 921)
+2025-03-07 12:15:16 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_came_to_seller.png colors_amount: 1024
+2025-03-07 12:15:16 - logs - DEBUG - Основной цвет: (41, 41, 41)
+2025-03-07 12:15:16 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_event_seller.png координаты: (1380, 905, 1600, 990)
+2025-03-07 12:15:16 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_came_to_event_seller.png с bots\sbor\imgs\templates\came_to_event_seller.png threshold: 0.8
+2025-03-07 12:15:17 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:17 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:17 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_event.png координаты: (930, 665, 1225, 750)
+2025-03-07 12:15:17 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_came_to_event.png с bots\sbor\imgs\templates\came_to_event.png threshold: 0.8
+2025-03-07 12:15:17 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:17 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:17 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_seller.png координаты: (1470, 920, 1471, 921)
+2025-03-07 12:15:17 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_came_to_seller.png colors_amount: 1024
+2025-03-07 12:15:17 - logs - DEBUG - Основной цвет: (41, 41, 41)
+2025-03-07 12:15:17 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_event_seller.png координаты: (1380, 905, 1600, 990)
+2025-03-07 12:15:17 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_came_to_event_seller.png с bots\sbor\imgs\templates\came_to_event_seller.png threshold: 0.8
+2025-03-07 12:15:17 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:17 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:17 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_event.png координаты: (930, 665, 1225, 750)
+2025-03-07 12:15:17 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_came_to_event.png с bots\sbor\imgs\templates\came_to_event.png threshold: 0.8
+2025-03-07 12:15:17 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:17 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:17 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_seller.png координаты: (1470, 920, 1471, 921)
+2025-03-07 12:15:17 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_came_to_seller.png colors_amount: 1024
+2025-03-07 12:15:17 - logs - DEBUG - Основной цвет: (41, 41, 41)
+2025-03-07 12:15:17 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_event_seller.png координаты: (1380, 905, 1600, 990)
+2025-03-07 12:15:17 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_came_to_event_seller.png с bots\sbor\imgs\templates\came_to_event_seller.png threshold: 0.8
+2025-03-07 12:15:17 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:17 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:17 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_event.png координаты: (930, 665, 1225, 750)
+2025-03-07 12:15:17 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_came_to_event.png с bots\sbor\imgs\templates\came_to_event.png threshold: 0.8
+2025-03-07 12:15:17 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:17 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:17 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_seller.png координаты: (1470, 920, 1471, 921)
+2025-03-07 12:15:17 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_came_to_seller.png colors_amount: 1024
+2025-03-07 12:15:17 - logs - DEBUG - Основной цвет: (41, 41, 41)
+2025-03-07 12:15:17 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_event_seller.png координаты: (1380, 905, 1600, 990)
+2025-03-07 12:15:17 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_came_to_event_seller.png с bots\sbor\imgs\templates\came_to_event_seller.png threshold: 0.8
+2025-03-07 12:15:17 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:17 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:17 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_event.png координаты: (930, 665, 1225, 750)
+2025-03-07 12:15:17 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_came_to_event.png с bots\sbor\imgs\templates\came_to_event.png threshold: 0.8
+2025-03-07 12:15:17 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:17 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:17 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_seller.png координаты: (1470, 920, 1471, 921)
+2025-03-07 12:15:17 - logs - DEBUG - Получение основного цвета для bots\sbor\imgs\screenshots\is_came_to_seller.png colors_amount: 1024
+2025-03-07 12:15:17 - logs - DEBUG - Основной цвет: (41, 41, 41)
+2025-03-07 12:15:17 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_event_seller.png координаты: (1380, 905, 1600, 990)
+2025-03-07 12:15:17 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_came_to_event_seller.png с bots\sbor\imgs\templates\came_to_event_seller.png threshold: 0.8
+2025-03-07 12:15:17 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:17 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:17 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_event.png координаты: (930, 665, 1225, 750)
+2025-03-07 12:15:17 - logs - DEBUG - Сравнение bots\sbor\imgs\screenshots\is_came_to_event.png с bots\sbor\imgs\templates\came_to_event.png threshold: 0.8
+2025-03-07 12:15:17 - logs - DEBUG - Шаблон найден
+2025-03-07 12:15:17 - logs - DEBUG - Шаблон не найден
+2025-03-07 12:15:18 - logs - DEBUG - Создание скриншота bots\sbor\imgs\screenshots\is_came_to_seller.png координаты: (1470, 920, 1471, 921)
