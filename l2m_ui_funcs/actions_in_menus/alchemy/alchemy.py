@@ -23,9 +23,9 @@ def click_on_item_in_forecast(slot: int):
 
 def open_forecast():
     """Открывает прогноз в меню алхимии"""
-#    while not forecast_opened():
-    time.sleep(0.5)
-    keyboard.y()
+    while not forecast_opened():
+        time.sleep(0.5)
+        keyboard.y()
 
 
 def reset_forecast():

@@ -21,12 +21,15 @@ def get_data_from_memory(process_handle, item_id_addresses, sharp_addresses) -> 
     new_item_id_addresses = item_id_addresses
     new_sharp_addresses = sharp_addresses
 
+    item_id_found_address = None
+
     for item_id_address in item_id_addresses:
         item_id = get_item_id(process_handle, item_id_address)
         if not item_id:
             new_item_id_addresses.remove(item_id_address)
             continue
         else:
+            item_id_found_address = item_id_address
             break
     else:
         raise Exception('Адреса для ID предмета закончились. Среди них нет нужного')
@@ -42,7 +45,7 @@ def get_data_from_memory(process_handle, item_id_addresses, sharp_addresses) -> 
     else:
         raise Exception('Адреса для заточки предмета закончились. Среди них нет нужного')
 
-    return {'id': item_id, 'sharp': sharp}, new_item_id_addresses, new_sharp_addresses
+    return {'id': item_id, 'sharp': sharp}, new_item_id_addresses, new_sharp_addresses, item_id_found_address
 
 
 def make_roll(process_handle, server_id: str, colors: list, slots: list, items: list, method: str, check_price: bool, min_price: int):
@@ -58,7 +61,8 @@ def make_roll(process_handle, server_id: str, colors: list, slots: list, items: 
         prev_found_item_id = None
 
         while not found:
-            data, item_id_addresses, sharp_addresses = get_data_from_memory(process_handle, item_id_addresses, sharp_addresses)
+            time.sleep(0.1)
+            data, item_id_addresses, sharp_addresses, item_id_found_address = get_data_from_memory(process_handle, item_id_addresses, sharp_addresses)
 
             for item in items:
                 if found:
@@ -66,9 +70,7 @@ def make_roll(process_handle, server_id: str, colors: list, slots: list, items: 
                 else:
                     if int(item['id']) == (data['id']):
                         if int(item['sharp']) == int(data['sharp']):
-                            if prev_found_item_id == int(data['id']):
-                                prev_found_item_id = None
-                                break
+                            print(data['id'], data['sharp'])
 
                             time.sleep(1)
                             if forecast_opened():
@@ -77,8 +79,11 @@ def make_roll(process_handle, server_id: str, colors: list, slots: list, items: 
                             if not forecast_opened():
                                 open_forecast()
                             if color in colors:
-                                prev_found_item_id = int(data['id'])
+
                                 items_info = collect_items_info()
+
+
+                                print(f'items info {items_info}')
                                 prices = get_prices_for_each_slot(server_id, items_info)
                                 print(prices)
                                 chances = CHANCES.get(color)
@@ -90,6 +95,9 @@ def make_roll(process_handle, server_id: str, colors: list, slots: list, items: 
                                         continue
 
                                     price = prices.get(item_info[1])
+                                for item_info in items_info.items():
+                                    if not item_info[1]:
+                                        continue
                                     if not price:
                                         continue
                                     chance_price = chances.get(item_info[0])

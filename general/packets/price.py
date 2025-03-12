@@ -145,22 +145,22 @@ def get_prices_for_list_of_items(server_id: str, items_list: list[tuple], need_t
 
     for item_market_info, item_info in zip(result['list'], items_list):
         if not item_info:
-            continue
+            price = 0
+        else:
+            item_id = item_info[0]
+            item_sharp = item_info[1]
 
-        item_id = item_info[0]
-        item_sharp = item_info[1]
+            if not item_market_info:
+                if need_to_search_avg:
+                    loop = asyncio.get_event_loop()
+                    price = loop.run_until_complete(get_avg_price(item_id, item_sharp))
+                    print(f'avg price {price}')
 
-        if not item_market_info:
-            if need_to_search_avg:
-                loop = asyncio.get_event_loop()
-                price = loop.run_until_complete(get_avg_price(item_id, item_sharp))
-                print(f'avg price {price}')
+                else:
+                    price = 0
 
             else:
-                price = 0
-
-        else:
-            price = int(item_market_info['sale_price'])
+                price = int(item_market_info['sale_price'])
 
         prices[(item_id, item_sharp)] = price
 

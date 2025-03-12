@@ -51,11 +51,12 @@ def get_item_info_from_inventory(row: int, server_id: str) -> tuple or bool:
 def set_rolls_items(items: dict, server_id):
     """Выбирает из инвентаря шмотки нужные для ролла"""
     roll_set = False
-    items_copy = items
+    items_copy = items.copy()
     while not roll_set:
         items = items_copy
         for table in range(6):
             for row in range(4):
+                print(f'items: {items}')
                 all_amount = 0
                 for _, amount in items.items():
                     all_amount += amount
