@@ -20,6 +20,7 @@ from PySide6.QtCore import Qt
 from bots.autosell import autosell_bot
 from bots.sbor import sbor_bot
 from bots.booster.fuse import fuse_bot
+from bots.alchemy import alchemy_bot
 
 from gui.update_screen import UpdateDialog
 
@@ -125,7 +126,7 @@ class MainWindow(QMainWindow):
         self.accounts_scroll_layout.setAlignment(Qt.AlignmentFlag.AlignTop)
 
         # Добавляем элементы в макет
-        for i in ['Перстановка', 'Сборщик', 'Бустер']:
+        for i in ['Перстановка', 'Сборщик', 'Бустер', 'Алхимия']:
             match i:
                 case 'Перстановка':
                     label = self._create_autosell_widget()
@@ -133,6 +134,8 @@ class MainWindow(QMainWindow):
                     label = self._create_sbor_widget()
                 case 'Бустер':
                     label = self._create_booster_widget()
+                case 'Алхимия':
+                    label = self._create_alchemy_widget()
 
             self.scroll_layout.addWidget(label)
 
@@ -170,6 +173,9 @@ class MainWindow(QMainWindow):
         self.widget.customContextMenuRequested.connect(self.show_context_menu)
 
         return self.widget
+
+    def _create_alchemy_widget(self):
+        return self._create_bot_widget('Алхимия', alchemy_bot.start)
 
     def show_context_menu(self, pos: QPoint):
         """Вызывает функцию контекстного меню из другого файла."""

@@ -1,9 +1,11 @@
-from bots.alchemy.rolls import all_rolls
 from bots.alchemy.funcs.inventory.items import set_rolls_items
 from bots.alchemy.funcs.roll.roll import make_roll
+from bots.alchemy.rolls.all_rolls import ROLL_00
 
 from general.funcs.acc_info import get_server_id
 from general.memory.process import get_process_handle
+
+from main_funcs.windows import switch_windows
 
 from l2m_ui_funcs.main_screen import open_alchemy, open_menu, open_market
 
@@ -49,3 +51,11 @@ def roll(roll_info: dict):
         open_sell_menu()
         sell_last_item(server_id)
         exit_from_market()
+
+
+def run():
+    roll(ROLL_00)
+
+
+def start():
+    switch_windows(run)
