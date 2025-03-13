@@ -82,7 +82,6 @@ def make_roll(process_handle, server_id: str, colors: list, slots: list, items: 
 
                                 items_info = collect_items_info()
 
-
                                 print(f'items info {items_info}')
                                 prices = get_prices_for_each_slot(server_id, items_info)
                                 print(prices)

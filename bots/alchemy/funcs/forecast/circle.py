@@ -27,4 +27,4 @@ def get_forecast_name() -> str:
 def get_forecast_color() -> str:
     """Получает цвет круга по надписи в алхимии"""
     forecast_name = get_forecast_name()
-    return FORECAST_COLORS_NAMES[forecast_name]
+    return FORECAST_COLORS_NAMES.get(forecast_name)
