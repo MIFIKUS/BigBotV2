@@ -95,11 +95,11 @@ def set_rolls_items(items: dict, server_id):
 
                     exit_from_market()
 
-                if items[items_grade.GREEN]:
-                    open_menu()
-                    open_craft_menu()
-                    craft_green_item()
-                    exit_craft_menu()
+            if items.get(items_grade.GREEN):
+                open_menu()
+                open_craft_menu()
+                craft_green_item()
+                exit_craft_menu()
 
             open_menu()
             open_alchemy()
