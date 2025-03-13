@@ -37,6 +37,8 @@ def get_item_info_from_inventory(row: int, server_id: str) -> tuple or bool:
         item_name = delete_junk_symbols(item_name)
         item_name = item_name.replace('(привяз.)', '')
 
+        item_name = item_name.split('(')[0]
+
         item_id = get_item_id(item_name)
         item_grade = get_item_grade(item_name, color_str)
         item_sharp = get_item_sharp(item_name)
