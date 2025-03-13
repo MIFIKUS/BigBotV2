@@ -14,6 +14,8 @@ from bots.alchemy.extensions.forecast_color_chances import CHANCES
 
 from l2m_ui_funcs.actions_in_menus.alchemy.alchemy import repeat_forecast_instant, open_forecast, forecast_opened, close_forecast
 
+from l2m_ui_funcs.main_screen import alchemy_opened, open_menu, open_alchemy
+
 var = {1: {'items': {'id': '123123', 'sharp': 2, 'item_name': 'sdfsdf'}, 'red': False, 'no_crystals': True, 'check_price': True, 'min_price': False}}
 
 
@@ -58,11 +60,16 @@ def make_roll(process_handle, server_id: str, colors: list, slots: list, items: 
 
         found = False
 
-        prev_found_item_id = None
+        prev_data = None
 
         while not found:
             time.sleep(0.1)
             data, item_id_addresses, sharp_addresses, item_id_found_address = get_data_from_memory(process_handle, item_id_addresses, sharp_addresses)
+
+            if data == prev_data:
+                if not alchemy_opened():
+                    open_menu()
+                    open_alchemy()
 
             for item in items:
                 if found:
@@ -117,6 +124,7 @@ def make_roll(process_handle, server_id: str, colors: list, slots: list, items: 
                     break
             else:
                 repeat_forecast_instant()
+                prev_data = data
                 continue
 
             if forecast_opened():
