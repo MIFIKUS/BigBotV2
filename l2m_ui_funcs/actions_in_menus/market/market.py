@@ -245,19 +245,21 @@ def buy_cristal():
 
 def get_new_item_cords() -> tuple or bool:
     """Возвращает координаты последней выпавшей шмотки"""
-    screenshot_name = 'l2m_ui_funcs\\imgs\\screenshots\\is_item_equiped.png'
-    template_name = 'general\\imgs\\templates\\item_is_equiped.png'
-    prev_area_of_screenshot = ()
-    for table in range(6):
-        for row in range(4):
-            area_of_screenshot = (1400 + (row * 100), 325 + (table * 100),
-                                  1500 + (row * 100), 425 + (table * 100))
-            if check(screenshot_name, template_name, area_of_screenshot):
-                return prev_area_of_screenshot[0] + 50, prev_area_of_screenshot[1] + 50
-            else:
-                prev_area_of_screenshot = area_of_screenshot
+    while True:
+        screenshot_name = 'l2m_ui_funcs\\imgs\\screenshots\\is_item_equiped.png'
+        template_name = 'general\\imgs\\templates\\item_is_equiped.png'
+        prev_area_of_screenshot = ()
+        for table in range(6):
+            for row in range(4):
+                area_of_screenshot = (1400 + (row * 100), 325 + (table * 100),
+                                      1500 + (row * 100), 425 + (table * 100))
+                if check(screenshot_name, template_name, area_of_screenshot):
+                    return prev_area_of_screenshot[0] + 50, prev_area_of_screenshot[1] + 50
+                else:
+                    prev_area_of_screenshot = area_of_screenshot
+        mouse.move(1600, 520)
+        mouse.wheel_down(1)
 
-    return False
 
 
 def sell_last_item(server_id: str):
