@@ -74,3 +74,11 @@ def start_roll():
         mouse.move_and_click(930, 800)
     while confirm_roll_button_available():
         mouse.move_and_click(930, 950)
+
+
+def scroll_inventory():
+    """Прокручивает инвентарь вниз"""
+    mouse.move(1600, 400)
+    mouse.wheel_down(17)
+
+    time.sleep(0.5)

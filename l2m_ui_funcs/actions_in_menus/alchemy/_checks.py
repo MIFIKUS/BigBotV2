@@ -63,3 +63,12 @@ def confirm_roll_button_available() -> bool:
 
     return check(screenshot_name, template_name, area_of_screenshot)
 
+
+def item_equiped(column: int, row: int) -> bool:
+    """Проверка на то, одет ли предмет"""
+    screenshot_name = 'bots\\alchemy\\imgs\\screenshots\\is_item_equiped.png'
+    template_name = 'general\\imgs\\templates\\item_is_equiped.png'
+    area_of_screenshot = (1400 + (100 * column), 260 + (101 * row), 1500 + (100 * column), 361 + (101 * row))
+
+    return check(screenshot_name, template_name, area_of_screenshot)
+

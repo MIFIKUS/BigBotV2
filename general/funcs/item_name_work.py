@@ -1,6 +1,8 @@
 from bots.alchemy.extensions import items_grade
 from general.lists.all_items_ids import ALL_ITEMS
+
 from string import digits
+from difflib import SequenceMatcher
 
 
 def get_item_id(item_name: str) -> str or bool:
@@ -15,7 +17,7 @@ def get_item_id(item_name: str) -> str or bool:
 
     for item_id, name in ALL_ITEMS.items():
         name = name.replace(' ', '').lower()
-        if name == item_name_fixed:
+        if SequenceMatcher(a=name, b=item_name_fixed).ratio() > 0.9:
             return item_id
     else:
         return False

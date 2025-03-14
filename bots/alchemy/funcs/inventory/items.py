@@ -4,7 +4,7 @@ from general.funcs.string_work import delete_junk_symbols
 from general.funcs.item_name_work import get_item_id, get_item_grade, get_item_sharp
 from general.packets.price import get_minimal_price_for_item, get_cheapest_blue_item
 
-from l2m_ui_funcs.actions_in_menus.alchemy.alchemy import click_on_item, exit_from_alchemy
+from l2m_ui_funcs.actions_in_menus.alchemy.alchemy import click_on_item, exit_from_alchemy, scroll_inventory, item_equiped
 from l2m_ui_funcs.actions_in_menus.market.market import buy_item_by_id, exit_from_market
 from l2m_ui_funcs.actions_in_menus.craft_menu.craft_menu import craft_green_item, exit_craft_menu
 
@@ -53,33 +53,46 @@ def get_item_info_from_inventory(row: int, server_id: str) -> tuple or bool:
 def set_rolls_items(items: dict, server_id):
     """Выбирает из инвентаря шмотки нужные для ролла"""
     roll_set = False
-    items_copy = items.copy()
+    items_copy = items
     while not roll_set:
-        items = items_copy
-        for table in range(6):
-            for row in range(4):
-                print(f'items: {items}')
-                all_amount = 0
-                for _, amount in items.items():
-                    all_amount += amount
+        scrolls = 0
+        items = items_copy.copy()
+        inventory_end = False
+        while not inventory_end and not roll_set:
+            for table in range(scrolls, 6):
+                if inventory_end:
+                    break
+                for row in range(4):
+                    print(f'items: {items}')
+                    all_amount = 0
+                    for _, amount in items.items():
+                        all_amount += amount
 
-                if all_amount == 0:
-                    return
+                    if all_amount == 0:
+                        return
 
-                click_on_item(table, row)
-                time.sleep(0.3)
-                item_info = get_item_info_from_inventory(table, server_id)
+                    if item_equiped(row, table):
+                        inventory_end = True
+                        break
 
-                print(item_info)
-
-                if not item_info:
-                    continue
-
-                item_id, item_grade, price = item_info
-
-                if item_grade in items.keys() and items.get(item_grade) and price <= MAX_PRICE_FOR_BLUE:
                     click_on_item(table, row)
-                    items[item_grade] -= 1
+                    time.sleep(0.3)
+                    item_info = get_item_info_from_inventory(table, server_id)
+
+                    print(item_info)
+
+                    if not item_info:
+                        continue
+
+                    item_id, item_grade, price = item_info
+
+                    if item_grade in items.keys() and items.get(item_grade) and price <= MAX_PRICE_FOR_BLUE:
+                        click_on_item(table, row)
+                        items[item_grade] -= 1
+
+            if not inventory_end:
+                scroll_inventory()
+                scrolls += 1
 
         if sum(items.values()):
             exit_from_alchemy()

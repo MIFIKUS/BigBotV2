@@ -54,8 +54,9 @@ async def async_get_minimal_price_for_item(server_id: str, item_id: str, sharp: 
                     }
                }
 
-    answer = requests.post(GET_PRICE_URL, json=request_data, headers=HEADERS).json()
-    print(answer)
+    async with aiohttp.ClientSession() as session:
+        async with session.post(GET_PRICE_URL, json=request_data, headers=HEADERS) as response:
+            answer = await response.json()
     if answer.get('list') and len(answer.get('list')) > 0 and answer.get('list') != ['']:
         return int(answer.get('list')[0].get('sale_price'))
     return False
