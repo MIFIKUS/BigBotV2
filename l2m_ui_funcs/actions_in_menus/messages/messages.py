@@ -17,6 +17,7 @@ def collect():
         if fail_count > 50:
             return False
         fail_count += 1
+    return True
 
 def decline_collect_energy():
     """Нажимает отмена в меню сбора энергии Эйнсхад"""
