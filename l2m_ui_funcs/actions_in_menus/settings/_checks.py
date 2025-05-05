@@ -41,6 +41,6 @@ def information_menu_opened() -> bool:
     """Проверка на то, что вкладка информация открыта"""
     screenshot_name = 'l2m_ui_funcs\\imgs\\screenshots\\is_information_menu_opened.png'
     color = [215, 105, 10]
-    area_of_screenshot = (905, 925, 906, 926)
+    area_of_screenshot = (980, 873, 981, 874)
 
     return check_color(color, screenshot_name, area_of_screenshot)
