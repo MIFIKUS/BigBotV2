@@ -63,21 +63,21 @@ def open_aghathions_menu():
 def open_alchemy():
     """Открывает меню алхимии"""
     while not alchemy_opened():
-        mouse.move_and_click(1775, 340)
+        mouse.move_and_click(1700, 340)
         time.sleep(0.5)
 
 
 def open_craft_menu():
     """Открывает меню создания"""
     while not craft_menu_opened():
-        mouse.move_and_click(1515, 460)
+        mouse.move_and_click(1425, 460)
         time.sleep(0.5)
 
 
 def open_market():
     """Открывает аукцион"""
     while not market_opened():
-        mouse.move_and_click(1600, 450)
+        mouse.move_and_click(1500, 450)
         time.sleep(0.5)
 
 
@@ -91,7 +91,7 @@ def open_clan():
 def open_bonuses():
     """Открывает меню бонусов"""
     while not bonuses_opened():
-        mouse.move_and_click(1775, 580)
+        mouse.move_and_click(1500, 580)
         time.sleep(0.5)
 
 
