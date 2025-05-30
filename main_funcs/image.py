@@ -11,7 +11,7 @@ import PIL.ImageGrab
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
 
-def matching(main_image_name, template_image_name, threshold=0.8) -> bool:
+def matching(main_image_name, template_image_name, threshold=0.77) -> bool:
     """Сравнивает 2 изображения"""
     logger.debug(f'Сравнение {main_image_name} с {template_image_name} threshold: {threshold}')
     img_rgb = cv2.imread(main_image_name)
