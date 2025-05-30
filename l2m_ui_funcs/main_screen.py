@@ -84,14 +84,14 @@ def open_market():
 def open_clan():
     """Открывает меню клана"""
     while not clan_menu_opened():
-        mouse.move_and_click(1600, 575)
+        mouse.move_and_click(1515, 575)
         time.sleep(0.5)
 
 
 def open_bonuses():
     """Открывает меню бонусов"""
     while not bonuses_opened():
-        mouse.move_and_click(1500, 580)
+        mouse.move_and_click(1682, 580)
         time.sleep(0.5)
 
 
