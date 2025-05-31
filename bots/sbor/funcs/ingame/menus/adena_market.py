@@ -22,8 +22,8 @@ def close_ad():
 
 def open_adena():
     """Открывает вкладку адена в магазине"""
-    while not adena_opened():
-        mouse.move_and_click(700, 190)
+  #  while not adena_opened():
+    mouse.move_and_click(700, 190)
 
 
 def click_on_inner_shop(shop_num: int):
