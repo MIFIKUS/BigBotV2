@@ -39,7 +39,7 @@ def buy():
 
 def confirm_buy():
     """Подтверждает покупку"""
-    while not adena_opened():
+    for _ in range(3):
         mouse.move_and_click(1070, 900)
 
 
