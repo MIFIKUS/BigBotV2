@@ -63,7 +63,7 @@ def take_off_item_from_sell() -> bool:
 def take_item_to_sell(x: int, y: int):
     """Нажимает на шмотку в инвентаре, для дальнейшей продажи"""
     while not sell_item_menu_opened():
-        mouse.move_and_click(x, y-5)
+        mouse.move_and_click(x, y-8)
 
 
 def sell_item():
