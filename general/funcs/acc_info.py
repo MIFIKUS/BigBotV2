@@ -15,7 +15,7 @@ def get_server_id() -> str or bool:
     def _get_server_name() -> str:
         """Делает скриншот названия сервера, и возвращает эту строку"""
         image_name = 'general\\imgs\\screenshots\\server_name.png'
-        area_of_screenshot = (1200, 465, 1430, 512)
+        area_of_screenshot = (1200, 460, 1430, 512)
 
         image.take_screenshot(image_name, area_of_screenshot)
 
