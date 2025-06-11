@@ -50,48 +50,48 @@ def open_adena_market():
 def open_classes_menu():
     """Открывает меню классов"""
     while not classes_opened():
-        mouse.move_and_click(1430, 220)
+        mouse.move_and_click(1340, 220)
         time.sleep(0.5)
 
 
 def open_aghathions_menu():
     """Открывает меню агатионов"""
     while not aghations_opened():
-        mouse.move_and_click(1520, 220)
+        mouse.move_and_click(1430, 220)
 
 
 def open_alchemy():
     """Открывает меню алхимии"""
     while not alchemy_opened():
-        mouse.move_and_click(1700, 340)
+        mouse.move_and_click(1780, 340)
         time.sleep(0.5)
 
 
 def open_craft_menu():
     """Открывает меню создания"""
     while not craft_menu_opened():
-        mouse.move_and_click(1425, 460)
+        mouse.move_and_click(1350, 460)
         time.sleep(0.5)
 
 
 def open_market():
     """Открывает аукцион"""
     while not market_opened():
-        mouse.move_and_click(1500, 450)
+        mouse.move_and_click(1420, 450)
         time.sleep(0.5)
 
 
 def open_clan():
     """Открывает меню клана"""
     while not clan_menu_opened():
-        mouse.move_and_click(1515, 575)
+        mouse.move_and_click(1690, 450)
         time.sleep(0.5)
 
 
 def open_bonuses():
     """Открывает меню бонусов"""
     while not bonuses_opened():
-        mouse.move_and_click(1682, 580)
+        mouse.move_and_click(1420, 570)
         time.sleep(0.5)
 
 
